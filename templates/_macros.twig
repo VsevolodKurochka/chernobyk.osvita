@@ -1,0 +1,25 @@
+{% macro titleSection(options) %}
+	{% set heading_level = options.tag | default(2) %}
+	{% set size = options.size | default('md') %}
+	<h{{ heading_level }}
+		class="section__title section__title_{{ size }}
+		{{options.class}}">{{options.title|raw}}</h{{ heading_level }}>
+{% endmacro %}
+
+{% macro buttonModal(text, class) %}
+	<div class="section__button-outer {{class}}">
+		<button class="btn btn_shadow btn_lg btn_brand-1 effect effect_bounce-top" data-action="modal" data-open="#modal-form">{{text}}</button>
+	</div>
+{% endmacro %}
+
+{% macro icon(class, image, title, content) %}
+	<div class="icon {{class}}">
+		<div class="icon__header">
+			<img src="{{image}}" alt="{{content|striptags}}" class="icon__image">
+		</div>
+		{% if title %}
+			<div class="icon__title">{{title}}</div>
+		{% endif %}
+		<div class="icon__content">{{content}}</div>
+	</div>
+{% endmacro %}

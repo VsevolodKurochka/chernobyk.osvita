@@ -18,6 +18,7 @@
  * Plugins connect
  */
 require get_template_directory() . '/tgm/connect.php';
+add_filter('use_block_editor_for_post', '__return_false', 10);
 
 
 $composer_autoload = __DIR__ . '/vendor/autoload.php';
@@ -75,6 +76,7 @@ class StarterSite extends Timber\Site {
 
         $this->add_options_page();
         $this->generate_menu();
+        add_action( 'wp_footer', array( $this, 'register_scripts' ) );
 
 		parent::__construct();
 	}
@@ -151,6 +153,18 @@ class StarterSite extends Timber\Site {
 
 		add_theme_support( 'menus' );
 	}
+
+    function register_scripts() {
+        wp_enqueue_style( 'css-style', get_stylesheet_uri() );
+
+        wp_enqueue_style( 'css-main', get_template_directory_uri() . '/static/assets/build/css/style.min.css' );
+
+       // wp_enqueue_script( 'js-libs', get_template_directory_uri() . '/static/build/js/libs.min.js', array('jquery'), '20151215', true );
+
+        //wp_enqueue_script( 'js-jquery', get_template_directory_uri() . '/static/build/js/jquery.main.js', array(), '20151215', true );
+
+        //wp_enqueue_script( 'js-vanilla-scripts', get_template_directory_uri() . '/static/build/js/vanilla.main.js', array(), '20151215', true );
+    }
 
     function add_options_page() {
         acf_add_options_page();
