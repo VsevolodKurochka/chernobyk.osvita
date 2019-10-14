@@ -2,4 +2,6 @@ vendor
 wp-content
 composer.lock
 
+#idea files
 .idea
+node_modules/
