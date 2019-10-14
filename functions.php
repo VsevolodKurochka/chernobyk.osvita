@@ -72,6 +72,10 @@ class StarterSite extends Timber\Site {
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
+
+        $this->add_options_page();
+        $this->generate_menu();
+
 		parent::__construct();
 	}
 	/** This is where you can register custom post types. */
@@ -88,8 +92,9 @@ class StarterSite extends Timber\Site {
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
 	 */
 	public function add_to_context( $context ) {
-		$context['menu']  = new Timber\Menu();
+        $context['menu'] = new Timber\Menu('menu-1');
 		$context['site']  = $this;
+        $context['options'] = get_fields('option');
 		return $context;
 	}
 
@@ -146,6 +151,16 @@ class StarterSite extends Timber\Site {
 
 		add_theme_support( 'menus' );
 	}
+
+    function add_options_page() {
+        acf_add_options_page();
+    }
+
+    function generate_menu() {
+        register_nav_menus( array(
+            'menu-1' => esc_html__( 'Меню в шапке', 'osvitamarket' ),
+        ) );
+    }
 
 	/** This is where you can add your own functions to twig.
 	 *
