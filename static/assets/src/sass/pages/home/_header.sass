@@ -1,5 +1,6 @@
 .home-header
   +r()
+  +py(60px)
   +ta(center)
   +overlay()
   +c($color-white)
@@ -8,19 +9,18 @@
     align-items: center
     justify-content: center
     height: 100vh
-    +py(60px)
-  +min(md)
-    +py(160px, 80px)
+    min-height: 600px
 
   &__title
     +r()
     +py(45px)
+    +mb(30px)
     &:before,
     &:after
       content: ''
       +a(null, null, null, 50%)
       transform: translateX(-50%)
-      +size(80px, 20px)
+      +size(80px, 30px)
       +bgi('../img/stars.png')
       +min(sm)
         +size(124px, 46px)

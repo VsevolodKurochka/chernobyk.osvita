@@ -1,0 +1,26 @@
+.home-advantages
+  &:before
+    content: ''
+    +a(null, null, -15%, 50%)
+    transform: translateX(-50%)
+    z-index: -1
+    +bgi('../img/europe-stars.png')
+    +min(sm)
+      bottom: 0
+      +size(700px)
+    +min(md)
+      +size(1000px)
+  &-icon
+    +mb(30px)
+    +max(sm)
+      +ta(center)
+    +min(sm)
+      display: flex
+      align-items: center
+    .icon
+      +max(sm)
+        &__image
+          +size(75px)
+      +min(sm)
+        &__content
+          +ml(-30px)

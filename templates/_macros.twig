@@ -10,18 +10,19 @@
 	<button class="btn btn_lg effect effect_bounce-top {{ class }}" data-action="modal" data-open="#modal-form">{{text}}</button>
 {% endmacro %}
 
-{% macro icon(class, image, title, content) %}
-	<div class="icon {{class}}">
+{% macro icon(options) %}
+	<div class="icon {{options.class}}">
 		<div class="icon__header">
-			<img src="{{image}}" alt="{{content|striptags}}" class="icon__image">
+			<img src="{{options.image}}" alt="{{options.content|striptags}}" class="icon__image">
 		</div>
 		<div class="icon__body">
-			{% if title %}
-				<div class="icon__title">{{title}}</div>
+			{% if options.title %}
+				<div class="icon__title">{{options.title}}</div>
 			{% endif %}
-			{% if content %}
-				<div class="icon__content">{{content}}</div>
+			{% if options.content %}
+				<div class="icon__content">{{options.content}}</div>
 			{% endif %}
 		</div>
 	</div>
 {% endmacro %}
+

@@ -1,5 +1,10 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	{% include 'home/header.twig' %}
+	{% set sections = [
+		'header', 'advantages'
+	] %}
+	{% for section in sections %}
+		{% include "home/#{section}.twig" %}
+	{% endfor %}
 {% endblock %}

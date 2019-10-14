@@ -1,0 +1,17 @@
+<section class="section home-advantages">
+    <div class="container">
+        <div class="row">
+            {% for advantage in post.get_field('advantages') %}
+                <div class="col-6 col-md-4">
+                    {{
+                        siteMacros.icon({
+                            class: 'home-advantages-icon',
+                            image: advantage.image,
+                            content: advantage.text
+                        })
+                    }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
