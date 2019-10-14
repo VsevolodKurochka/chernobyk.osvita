@@ -1,13 +1,12 @@
 <section class="home-header">
+    <img src="{{ post.thumbnail }}" alt="{{ post.title }}" class="home-header__bg">
     <div class="container">
-        <div class="home-header__intro">
-            {{ siteMacros.titleSection({
-                tag: '1',
-                title: 'Доступное <strong>обучение</strong> в странах <strong>Европы</strong><br><span>для украинских детей 14 — 16 лет</span>',
-                class: 'home-header__title',
-                size: 'lg'
-            }) }}
-        </div>
-        {{ siteMacros.buttonModal('Бесплатная консультация', 'home-header__button') }}
+        {{ siteMacros.titleSection({
+            tag: '1',
+            title: 'Доступное <strong>обучение</strong> в странах <strong>Европы</strong><br><span>для украинских детей 14 — 16 лет</span>',
+            class: 'home-header__title',
+            size: 'lg'
+        }) }}
+        {{ siteMacros.buttonModal('Бесплатная консультация', 'btn_brand-2 home-header__button') }}
     </div>
 </section>

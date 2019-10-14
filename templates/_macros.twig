@@ -7,9 +7,7 @@
 {% endmacro %}
 
 {% macro buttonModal(text, class) %}
-	<div class="section__button-outer {{class}}">
-		<button class="btn btn_shadow btn_lg btn_brand-1 effect effect_bounce-top" data-action="modal" data-open="#modal-form">{{text}}</button>
-	</div>
+	<button class="btn btn_lg effect effect_bounce-top {{ class }}" data-action="modal" data-open="#modal-form">{{text}}</button>
 {% endmacro %}
 
 {% macro icon(class, image, title, content) %}

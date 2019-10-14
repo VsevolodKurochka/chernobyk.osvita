@@ -10,18 +10,6 @@ $btn-large-font-size: 18px
 $btn-border-width: 3px
 $btn-border-style: solid
 
-//-
-//- Buttons variant
-//-
-
-// 1 key - background
-// 2 key - text color
-$btn-static: ("white": ($color-white, $color-brand-1), "brand-1": ($color-brand-1, $color-white), "brand-2": ($color-brand-2, $color-white))
-
-// 1 key - border-color
-// 2 key - text color
-$btn-border: ("brand-1": ($color-brand-1, $color-brand-1))
-
 .btn
   +btn()
   +btn-size($btn-padding, $btn-font-size)
@@ -31,14 +19,13 @@ $btn-border: ("brand-1": ($color-brand-1, $color-brand-1))
 
   &_lg
     +btn-size($btn-large-padding, $btn-large-font-size)
+    +min(md)
+      +btn-size(25px 45px, 19px)
+      border-radius: 45px
 
-  &_shadow
-    &-brand-1
-      +bs("0 3px 8px 1px transparentize($color-brand-1, 0.5)")
-
+  &_brand-2
+    background-image: linear-gradient(-90deg, $color-brand-2 0%, lighten($color-brand-2, 10%) 100%)
+    box-shadow: 0 7px 12px 0 rgba(0, 1, 1, 0.26)
+    color: $color-white
     &:hover
-      +bs("none")
-
-  +btn-static-iteration()
-
-  +btn-border-iteration()
+      transform: scale(0.95)
