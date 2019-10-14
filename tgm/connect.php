@@ -72,7 +72,54 @@ function osvitamarket_register_required_plugins() {
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 
-	);
+        array(
+            'name'               => 'Advanced Custom Fields', // The plugin name.
+            'slug'               => 'advanced-custom-fields-pro', // The plugin slug (typically the folder name).
+            'source'             => get_template_directory() . '/tgm/plugins/advanced-custom-fields-pro.zip', // The plugin source.
+            'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+            'version'            => '5.6.4', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+            'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+            'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+            'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+            'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+        ),
+
+        array(
+            'name'               => 'Cyr to Lat enhanced', // The plugin name.
+            'slug'               => 'cyr3lat', // The plugin slug (typically the folder name).
+            'source'             => get_template_directory() . '/tgm/plugins/cyr3lat.3.5.zip', // The plugin source.
+            'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+            'version'            => '3.5', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+            'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+            'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+            'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+            'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+        ),
+
+        array(
+            'name'               => 'Remove Category URL', // The plugin name.
+            'slug'               => 'remove-category-url', // The plugin slug (typically the folder name).
+            'source'             => get_template_directory() . '/tgm/plugins/remove-category-url.1.1.2.zip', // The plugin source.
+            'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+            'version'            => '1.1.2', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+            'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+            'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+            'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+            'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+        ),
+
+        array(
+            'name'               => 'Duplicate Post', // The plugin name.
+            'slug'               => 'duplicate-post', // The plugin slug (typically the folder name).
+            'source'             => get_template_directory() . '/tgm/plugins/duplicate-post.3.2.2.zip', // The plugin source.
+            'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+            'version'            => '3.2.2', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+            'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+            'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+            'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+            'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+        )
+    );
 
 	/*
 	 * Array of configuration settings. Amend each line as needed.
