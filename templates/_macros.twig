@@ -15,9 +15,13 @@
 		<div class="icon__header">
 			<img src="{{image}}" alt="{{content|striptags}}" class="icon__image">
 		</div>
-		{% if title %}
-			<div class="icon__title">{{title}}</div>
-		{% endif %}
-		<div class="icon__content">{{content}}</div>
+		<div class="icon__body">
+			{% if title %}
+				<div class="icon__title">{{title}}</div>
+			{% endif %}
+			{% if content %}
+				<div class="icon__content">{{content}}</div>
+			{% endif %}
+		</div>
 	</div>
 {% endmacro %}
