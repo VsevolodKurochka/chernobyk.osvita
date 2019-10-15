@@ -8,9 +8,13 @@
       +py(90px)
   &__title
     +section-title-offset()
-  &-icon .icon
+  .icon
+    +max(sm)
+      +offset('b', 30px)
     &__header
-      +mb(30px)
+      +mb(15px)
+      +min(sm)
+        +mb(30px)
     &__content
       max-width: 250px
       +mx(auto)

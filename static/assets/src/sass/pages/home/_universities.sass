@@ -2,7 +2,7 @@
   &__title
     +section-title-offset()
   &-item
-    +mb(30px)
+    +offset('b', 30px)
     &__inner
       display: flex
       flex-wrap: wrap
@@ -36,6 +36,8 @@
         flex-direction: row-reverse
         align-items: center
         justify-content: center
+        +max(sm)
+          +pb(15px)
       &__header,
       &__title,
       &__footer

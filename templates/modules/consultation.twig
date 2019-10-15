@@ -1,12 +1,15 @@
 {% macro consultation(options) %}
     {% import '_macros.twig' as siteMacros %}
-    <section class="section module-consultation">
+    <section class="section module-consultation {{ options.class }}">
         <div class="container">
             <div class="row module-consultation__row">
                 <div class="col-12 col-md-8 module-consultation__content">
-                    <img
-                        src="{{ options.theme.link }}/static/assets/build/img/man-woman.png"
-                        alt="{{ options.title|striptags }}">
+                    <div class="module-consultation__image-wrapper">
+                        <img
+                            src="{{ options.theme.link }}/static/assets/build/img/man-woman.png"
+                            alt="{{ options.title|striptags }}"
+                            class="module-consultation__image">
+                    </div>
                     <div class="module-consultation__body">
                         {{ siteMacros.titleSection({
                             'tag': '3',

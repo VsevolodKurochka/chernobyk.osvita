@@ -1,4 +1,13 @@
 .module-consultation
+  +r()
+  &_rocket
+    &:before
+      content: ''
+      +a(50%, null, null, 50%)
+      transform: translate(-50%, -50%)
+      +bgi('../img/rocket.png')
+      +min(md)
+        +size(640px, 490px)
   &__title
     +c($color-brand-2)
     +mb(30px)
@@ -10,6 +19,9 @@
       +d(flex)
       +ai(center)
   &__body
+    +max(sm)
+      +mb(30px)
+      +ta(center)
     +min(sm)
       +ml(30px)
   &__form
@@ -33,3 +45,9 @@
       z-index: -1
     +min(md)
       +px(30px)
+  &__image
+    +max(sm)
+      max-width: 100px
+    &-wrapper
+      +max(sm)
+        +ta(center)

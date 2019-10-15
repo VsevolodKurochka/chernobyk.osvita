@@ -32,7 +32,9 @@
       +box-title()
 
     &__content
-      +fs(16px)
+      +fs(14px)
+      +min(sm)
+        +fs(16px)
 
     &__row
       +min(sm)
@@ -56,6 +58,18 @@
         +box-title()
 
     &_large &
+      &__body
+        +max(sm)
+          +pb(15px)
+      &__image
+        +max(sm)
+          +h(170px)
+          object-fit: cover
+        &-wrapper
+          +max(sm)
+            +px(0)
+            border-bottom: 2px solid #ddd
+            +mb(15px)
       &__inner
         +px(15px)
         +min(sm)
