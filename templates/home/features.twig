@@ -1,0 +1,32 @@
+<section class="section home-features">
+
+    <div class="container home-features__container">
+        <img
+            src="{{ post.get_field('features_bg') }}"
+            alt="{{ post.get_field('features_title')|striptags }}"
+            class="home-features__container__bg">
+        <div class="home-features__content">
+            {{ siteMacros.titleSection({
+                'tag': '3',
+                'size': 'lg',
+                'class': 'home-features__title',
+                'title': post.get_field('features_title')
+            }) }}
+            <div class="row home-features__row">
+                {% for step in post.get_field('features_icons') %}
+                    {{ siteMacros.icon({
+                        'class': 'home-features-icon col-12 col-sm-4',
+                        'image': step.image,
+                        'content': step.content
+                    }) }}
+                {% endfor %}
+            </div>
+            {{ siteMacros.titleSection({
+                'tag': '4',
+                'size': 'sm',
+                'class': 'home-features__subtitle',
+                'title': post.get_field('features_subtitle')
+            }) }}
+        </div>
+    </div>
+</section>
