@@ -29,3 +29,12 @@ $btn-border-style: solid
     color: $color-white
     &:hover
       transform: scale(0.95)
+
+  &_border
+    &-brand
+      &-2
+        border: 2px solid $color-brand-2
+        +c($color-general)
+        &:hover
+          background-image: linear-gradient(-90deg, $color-brand-2 0%, lighten($color-brand-2, 10%) 100%)
+          +c($color-white)

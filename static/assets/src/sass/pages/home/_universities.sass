@@ -1,0 +1,68 @@
+.home-universities
+  &__title
+    +section-title-offset()
+  &-item
+    +mb(30px)
+    &__inner
+      display: flex
+      flex-wrap: wrap
+      border-radius: 6px
+      border: 1px solid #EBEBEB
+      +bgc($color-white)
+      +tr()
+      &:hover
+        box-shadow: 0px 14px 21px 0px rgba(0, 34, 78, 0.18)
+      +max(sm)
+        max-width: 270px
+        +mx(auto)
+    &_small &
+      &__inner
+        flex-direction: column
+        justify-content: center
+        padding: 15px
+        +ta(center)
+        +min(sm)
+          padding: 30px
+      &__header,
+      &__title
+        +mb(15px)
+      &__image
+        +h(60px)
+        +min(sm)
+          +h(100px)
+
+    &_large &
+      &__inner
+        flex-direction: row-reverse
+        align-items: center
+        justify-content: center
+      &__header,
+      &__title,
+      &__footer
+        +min(sm)
+          flex-basis: 33.33333%
+      &__image
+        +w(100%)
+      &__title
+        +max(sm)
+          +ta(center)
+
+    &__header
+      +fs(0)
+
+    &__footer
+      +ta(center)
+
+    &__button
+      +min(sm)
+        +fs(17px)
+        padding: 20px
+
+    &__image
+      &-wrapper
+        +fs(0)
+
+    &__title
+      min-height: 50px
+      +max(sm)
+        +my(10px)
