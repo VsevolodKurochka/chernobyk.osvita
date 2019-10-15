@@ -1,0 +1,49 @@
+<section class="section home-reason">
+    <div class="container">
+        {{ siteMacros.titleSection({
+            'tag': '3',
+            'size': 'md',
+            'class': 'home-reason__title',
+            'title': post.get_field('reason_title')
+        }) }}
+        <div class="row home-reason__row">
+            {% for reason in post.get_field('reasons') %}
+                {%
+                    set class = reason.type == 'Large' ? 'col-12 home-reason-item_large' :
+                    'col-12 col-sm-6 home-reason-item_small'
+                %}
+                <div class="home-reason-item {{ class }}">
+                    <div class="home-reason-item__inner">
+                        {% if reason.type == 'Large' %}
+                            <div class="row home-reason-item__row">
+                                <div class="col-12 col-sm-6 home-reason-item__image-wrapper">
+                                    <img
+                                        src="{{ reason.image }}"
+                                        alt="{{ reason.title|striptags }}"
+                                        class="home-reason-item__image">
+                                </div>
+                                <div class="col-12 col-sm-6 home-reason-item__body">
+                                    <div class="home-reason-item__title">{{ reason.title }}</div>
+                                    <div class="home-reason-item__content">{{ reason.content }}</div>
+                                </div>
+                            </div>
+                        {% else %}
+                            {{ siteMacros.icon({
+                                'class': 'home-reason-icon',
+                                'image': reason.image,
+                                'title': reason.title,
+                                'content': reason.content
+                            }) }}
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {{ siteMacros.titleSection({
+            'tag': '4',
+            'size': 'md',
+            'class': 'home-reason__subtitle',
+            'title': post.get_field('reason_subtitle')
+        }) }}
+    </div>
+</section>

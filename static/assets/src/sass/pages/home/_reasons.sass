@@ -1,0 +1,65 @@
+=box-title()
+  +lh(1.1)
+  +fs(18px)
+  +mb(15px)
+  +min(sm)
+    +fs(20px)
+  +min(md)
+    +fs(26px)
+
+.home-reason
+  &__title
+    +section-title-offset()
+
+  &__subtitle
+    +ta(center)
+
+  &-item
+    +mb(45px)
+    +min(md)
+      +mb(60px)
+    &_large
+      +fs(0)
+    &_large:nth-child(odd) &
+      &__body
+        +min(sm)
+          +ta(right)
+      &__row
+        +min(sm)
+          flex-direction: row-reverse
+
+    &__title
+      +box-title()
+
+    &__content
+      +fs(16px)
+
+    &__row
+      +min(sm)
+        +ai(center)
+
+    &__image
+      +min(sm)
+        +mt(-15px)
+      &-wrapper
+        +ta(center)
+
+    .icon
+      +d(flex)
+      &__header
+        +mr(15px)
+        flex-basis: 45px
+      &__body
+        flex-grow: 1
+        flex-basis: 0
+      &__title
+        +box-title()
+
+    &_large &
+      &__inner
+        +px(15px)
+        +min(sm)
+          +px(30px)
+        background-color: #f1f1f1
+      &__title
+        +c($color-brand-2)
