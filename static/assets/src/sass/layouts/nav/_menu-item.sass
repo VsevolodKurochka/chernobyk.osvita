@@ -1,26 +1,28 @@
-.nav__menu-item
-  +d(block)
-  +tr()
-
-  a
+.nav__menu
+  li
     +d(block)
-    +r()
-    +c(inherit)
-    text-decoration: none
-
-  +max(md)
-    +mb(10px)
+    +tr()
 
     a
-      padding: 10px 15px
+      +d(block)
+      +r()
       +c($color-white)
+      +fs(14px)
+      text-decoration: none
+
+    +max(md)
+      +mb(10px)
+
+      a
+        padding: 10px 15px
+        +c($color-white)
 
 
-  +min(md)
-    +d(inline-block)
-    vertical-align: middle
-    +offset('r', 15px)
+    +min(md)
+      +d(inline-block)
+      vertical-align: middle
+      +offset('r', 15px)
 
-    a
-      +py(7px)
-      +linkEffect3()
+      a
+        +py(2px)
+        +linkEffect3($color-white)
