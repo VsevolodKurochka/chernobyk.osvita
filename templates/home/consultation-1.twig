@@ -1,6 +1,9 @@
 {% import 'modules/consultation.twig' as siteConsultation %}
-{{ siteConsultation.consultation({
-    theme: theme,
-    title: post.get_field('consultation-1-title'),
-    subtitle: post.get_field('consultation-1-subtitle')
-}) }}
+{{
+    siteConsultation.consultation({
+        theme: theme,
+        title: post.get_field('consultation-1-title'),
+        subtitle: post.get_field('consultation-1-subtitle'),
+        form: post.get_field('consultation-1-form')
+    })
+}}

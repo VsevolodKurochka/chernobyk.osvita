@@ -2,25 +2,31 @@
     {% import '_macros.twig' as siteMacros %}
     <section class="section module-consultation">
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-7">
+            <div class="row module-consultation__row">
+                <div class="col-12 col-md-8 module-consultation__content">
                     <img
                         src="{{ options.theme.link }}/static/assets/build/img/man-woman.png"
                         alt="{{ options.title|striptags }}">
-                    {{ siteMacros.titleSection({
-                        'tag': '3',
-                        'size': 'md',
-                        'class': 'module-consultation__title',
-                        'title': options.title
-                    }) }}
-                    {{ siteMacros.titleSection({
-                        'tag': '4',
-                        'size': 'sm',
-                        'class': 'module-consultation__subtitle',
-                        'title': options.subtitle
-                    }) }}
+                    <div class="module-consultation__body">
+                        {{ siteMacros.titleSection({
+                            'tag': '3',
+                            'size': 'md',
+                            'class': 'module-consultation__title',
+                            'title': options.title
+                        }) }}
+                        {{ siteMacros.titleSection({
+                            'tag': '4',
+                            'size': 'sm',
+                            'class': 'module-consultation__subtitle',
+                            'title': options.subtitle
+                        }) }}
+                    </div>
                 </div>
-                <div class="col-12 col-md-5"></div>
+                <div class="col-12 col-md-4">
+                    <div class="module-consultation__form">
+                        {{ function('do_shortcode', options.form) }}
+                    </div>
+                </div>
             </div>
         </div>
     </section>

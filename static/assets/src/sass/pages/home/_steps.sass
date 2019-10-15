@@ -1,0 +1,44 @@
+.home-steps
+  &__row
+    +mx(-7.5px)
+    +mb(30px)
+  &__title
+    +mb(30px)
+    +ta(center)
+    +min(md)
+      +mb(60px)
+  &__subtitle
+    +ta(center)
+  &-card
+    +px(7.5px)
+    +mb(7.5px)
+    &__inner
+      padding: 30px 15px
+      border-radius: 6px
+      +bgc($color-white)
+
+    &__title
+      +ta(center)
+      +mb(10px)
+      +fw(900)
+      +lh(1.1)
+      +fs(22px)
+      +min(md)
+        +fs(24px)
+
+    &__content
+      +fs(16px)
+      +lh(1.2)
+      +min(sm)
+        min-height: 120px
+
+    &:nth-child(odd) &
+      &__inner
+        border: 3px solid rgb(241, 241, 241)
+
+    &:nth-child(even) &
+      &__inner
+        box-shadow: 0px 14px 21px 0px rgba(0, 34, 78, 0.18)
+
+      &__title
+        +c($color-brand-2)
