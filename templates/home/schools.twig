@@ -1,0 +1,24 @@
+<section class="section home-schools">
+    <div class="container home-schools-container">
+        <img
+            src="{{ post.get_field('schools_bg') }}"
+            alt="{{ post.get_field('schools_title')|striptags }}"
+            class="home-schools-container__bg">
+        <div class="home-schools__body">
+            {{ siteMacros.titleSection({
+                'tag': '3',
+                'size': 'lg',
+                'class': 'home-schools__title',
+                'title': post.get_field('schools_title')
+            }) }}
+            <div class="row home-schools__row">
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="home-schools__content">{{ post.get_field('schools_schools') }}</div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="home-schools__content">{{ post.get_field('schools_technicums') }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

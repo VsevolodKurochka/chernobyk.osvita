@@ -1,0 +1,31 @@
+.home-schools
+  &-container
+    +py(60px, 30px)
+    +overlay()
+    +c($color-white)
+    +min(md)
+      +py(90px)
+  &__title
+    +section-title-offset()
+  &__body
+    +r()
+  &__row
+    +min(sm)
+      +jc(space-between)
+    +min(md)
+      +jc(space-around)
+  &__content
+    border-left: 2px solid $color-brand-2
+    +pl(15px)
+    +max(sm)
+      +mb(45px)
+    +min(md)
+      +pl(30px)
+    h4
+      font-weight: 900
+      +mb(15px)
+      +fs(20px)
+      +min(sm)
+        +fs(22px)
+      +min(md)
+        +fs(26px)
