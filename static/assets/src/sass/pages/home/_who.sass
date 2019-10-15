@@ -1,0 +1,62 @@
+=who-list($type)
+  +min(sm)
+    &:nth-child(1),
+    &:nth-child(12)
+      padding-#{$type}: 20%
+    &:nth-child(2),
+    &:nth-child(11)
+      padding-#{$type}: 15%
+    &:nth-child(3),
+    &:nth-child(10)
+      padding-#{$type}: 10%
+
+.home-who
+  &__title
+    +ta(center)
+    +mb(30px)
+
+  &__row
+    +jc(space-between)
+
+  &__list
+    +max(md)
+      +fs(14px)
+    ul
+      list-style: none
+    li
+      +mb(5px)
+      &:nth-child(even)
+        +c($color-brand-2)
+    &_1
+      li
+        +who-list('left')
+    &_2
+      +ta(right)
+      li
+        +who-list('right')
+
+  &__content
+    +ta(center)
+    +fs(0)
+    +min(sm)
+      +mt(-220px)
+    +min(md)
+      +mt(-440px)
+
+    &-image
+      max-width: 250px
+      +min(md)
+        max-width: none
+
+  &__banner
+    +mt(-10px)
+    padding: 15px
+    +bgc($color-white)
+    border-radius: 6px
+    box-shadow: 0px 14px 21px 0px rgba(0, 34, 78, 0.18)
+    +max(sm)
+      br
+        +d(none)
+    +min(md)
+      +w(80%)
+      +mx(auto)

@@ -18,6 +18,12 @@
     border-radius: 6px
     +bgc($color-white)
     box-shadow: 0px 8px 15px 5px rgba(0,1,1,.26)
+    max-width: 250px
+    +mx(auto)
+    +min(sm)
+      max-width: 450px
+    +min(md)
+      max-width: none
     &:before
       content: ''
       +a(5%, null, null, 5%)
