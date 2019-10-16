@@ -153,8 +153,6 @@
 			this.addition = document.getElementById('js-nav-addition-button-1');
 			this.links = '.nav__menu-item-link';
 
-			this.linksScroll();
-
 			if(exists(this.navigation)) {
 				this.navigationScroll();
 			}
@@ -189,17 +187,6 @@
 		additionClick(el) {
 
 			toggleClass(this.addition, 'active');
-
-		}
-
-		linksScroll() {
-
-			new SmoothScroll(this.links, {
-				after: () => {
-					removeClass(this.hamburger, 'active');
-					removeClass(this.menu, `nav__menu_active`);
-				}
-			});
 
 		}
 	}

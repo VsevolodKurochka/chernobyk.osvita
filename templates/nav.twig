@@ -2,7 +2,7 @@
     <div class="nav" id="js-navigation">
         <div class="nav__container container">
             <div class="nav__row row">
-                <div class="nav__logo col-6 col-md-2">
+                <div class="nav__logo col-5 col-md-2">
                     <button class="hamburger hamburger_effect-2" type="button" id="js-nav-hamburger">
                         <span class="hamburger__lines"><span></span><span></span><span></span><span></span></span>
                     </button>
@@ -12,21 +12,15 @@
                 </div>
                 <nav class="nav__menu col-12 col-md-7" id="js-navigation-menu">
                     {% include "menu.twig" with {'items': menu.get_items} %}
+                    {% include "nav-options.twig" with {options: options} %}
                 </nav>
-                <div class="nav__addition col-6 col-md-3" id="js-nav-addition">
+                <div class="nav__addition col-7 col-md-3" id="js-nav-addition">
                     <button
                             class="btn btn_brand-2 nav__addition-btn"
                             data-action="modal"
                             data-open="#modal-form"
                             data-type="Общая форма">Получить консультацию</button>
-                    <div class="nav__addition-options">
-                        <a href="mailto: {{options.phones[0].phone}}" class="nav__addition-link">{{options.phones[0].phone}}</a>
-                        {% include "partial/social.twig" with {
-                            list: options.socials,
-                            size: 'small',
-                            color: 'white'
-                        } %}
-                    </div>
+                    {% include "nav-options.twig" with {options: options} %}
                 </div>
             </div>
         </div>

@@ -2,7 +2,9 @@
   display: flex
   font-size: 0
   &__item
-    +offset('r', 10px)
+    +offset('r', 20px)
+    +min(md)
+      +offset('r', 10px)
 
   &_small &__image
     +w(20px)

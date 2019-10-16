@@ -157,14 +157,8 @@ class StarterSite extends Timber\Site {
 
     function register_scripts() {
         wp_enqueue_style( 'css-style', get_stylesheet_uri() );
-
         wp_enqueue_style( 'css-main', get_template_directory_uri() . '/static/assets/build/css/style.min.css' );
-
-       // wp_enqueue_script( 'js-libs', get_template_directory_uri() . '/static/build/js/libs.min.js', array('jquery'), '20151215', true );
-
-        //wp_enqueue_script( 'js-jquery', get_template_directory_uri() . '/static/build/js/jquery.main.js', array(), '20151215', true );
-
-        //wp_enqueue_script( 'js-vanilla-scripts', get_template_directory_uri() . '/static/build/js/vanilla.main.js', array(), '20151215', true );
+        wp_enqueue_script( 'js-libs', get_template_directory_uri() . '/static/assets/build/js/scripts.min.js', array(), '20151215', true );
     }
 
     function add_options_page() {

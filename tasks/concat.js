@@ -8,7 +8,7 @@ const concatSrc = [
 	`${folders.assetsSrc}/js/libs/jquery.min.js`,
 	//`${folders.assetsSrc}/js/libs/smooth-scroll.min.js`,
 	//`${folders.assetsSrc}/js/libs/jquery.main.babel.min.js`,
-	//`${folders.assetsSrc}/js/libs/vanilla.main.babel.min.js`
+	`${folders.assetsSrc}/js/libs/vanilla.main.babel.min.js`
 ];
 
 gulp.task('concat', () =>

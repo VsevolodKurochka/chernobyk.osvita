@@ -1,0 +1,8 @@
+<div class="nav__options">
+    <a href="tel: {{options.phones[0].phone}}" class="nav__options-link">{{options.phones[0].phone}}</a>
+    {% include "partial/social.twig" with {
+        list: options.socials,
+        size: 'small',
+        color: 'white'
+    } %}
+</div>
