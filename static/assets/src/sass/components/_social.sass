@@ -3,3 +3,11 @@
   font-size: 0
   &__item
     +offset('r', 10px)
+
+  &_small &__image
+    +w(20px)
+
+  &__image
+    +tr()
+    &:hover
+      opacity: 0.8

@@ -1,0 +1,12 @@
+<ul class="social social_{{ size|default('small') }} {{ class }}">
+    {% for item in list %}
+        <li class="social__item">
+            <a href="{{item.link}}" class="social__link" target="_blank">
+                <img
+                    class="social__image"
+                    src="{{theme.link}}/static/assets/build/img/{{ item.type }}-{{ color }}.svg"
+                    alt="{{ item.type }}">
+            </a>
+        </li>
+    {% endfor %}
+</ul>

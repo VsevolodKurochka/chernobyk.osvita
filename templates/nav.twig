@@ -19,17 +19,13 @@
                             data-action="modal"
                             data-open="#modal-form"
                             data-type="Общая форма">Получить консультацию</button>
-                    <div class="nav__menu-options">
+                    <div class="nav__addition-options">
                         <a href="mailto: {{options.phones[0].phone}}" class="nav__addition-link">{{options.phones[0].phone}}</a>
-                        <ul class="social social_nav">
-                            {% for item in options.socials %}
-                                <li class="social__item">
-                                    <a href="{{item.link}}" class="social__link" target="_blank">
-                                        <img class="social__image" src="{{item.image}}" alt="Social link">
-                                    </a>
-                                </li>
-                            {% endfor %}
-                        </ul>
+                        {% include "partial/social.twig" with {
+                            list: options.socials,
+                            size: 'small',
+                            color: 'white'
+                        } %}
                     </div>
                 </div>
             </div>

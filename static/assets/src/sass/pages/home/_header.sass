@@ -11,25 +11,9 @@
     min-height: 600px
 
   &__title
-    +r()
-    +py(45px)
-    +mb(30px)
-    &:before,
-    &:after
-      content: ''
-      +a(null, null, null, 50%)
-      transform: translateX(-50%)
-      +size(80px, 30px)
-      +bgi('../img/stars.png')
-      +min(sm)
-        +size(124px, 46px)
-    &:before
-      top: 0
-    &:after
-      bottom: 0
-      transform: translateX(-50%) scaleY(-1)
     span
       +fs(75%)
+  &__button
+    +mt(30px)
     +min(sm)
-      +mb(100px)
-      +py(60px)
+      +mt(100px)

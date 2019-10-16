@@ -1,12 +1,14 @@
 <section class="education-header">
     <img src="{{ post.thumbnail }}" alt="{{ post.title }}" class="education-header__bg">
     <div class="container">
-        {{ siteMacros.titleSection({
-            tag: '1',
-            title: 'Доступное <strong>обучение</strong> в странах <strong>Европы</strong><br><span>для украинских детей 14 — 16 лет</span>',
-            class: 'education-header__title',
-            size: 'lg'
-        }) }}
+        <div class="stars-vertical">
+            {{ siteMacros.titleSection({
+                tag: '1',
+                title: 'Доступное <strong>обучение</strong> в странах <strong>Европы</strong><br><span>для украинских детей 14 — 16 лет</span>',
+                class: 'education-header__title',
+                size: 'lg'
+            }) }}
+        </div>
         {{ siteMacros.buttonModal('Бесплатная консультация', 'btn_brand-2 education-header__button') }}
     </div>
 </section>
