@@ -1,0 +1,31 @@
+.step
+  +px(7.5px)
+  +mb(7.5px)
+  &__inner
+    padding: 30px 15px
+    border-radius: 6px
+    border: 3px solid rgb(241, 241, 241)
+    +bgc($color-white)
+
+  &__title
+    +mb(10px)
+    +fw(900)
+    +lh(1.1)
+    +fs(20px)
+    +min(md)
+      +fs(22px)
+
+  &__content
+    +fs(16px)
+    +lh(1.2)
+    +min(sm)
+      min-height: 120px
+
+  &:nth-child(2) &,
+  &:nth-child(4) &,
+  &:nth-child(5) &,
+  &:nth-child(7) &
+    &__inner
+      box-shadow: 0 14px 21px 0 rgba(0, 34, 78, 0.18)
+    &__title
+      +c($color-brand-2)
