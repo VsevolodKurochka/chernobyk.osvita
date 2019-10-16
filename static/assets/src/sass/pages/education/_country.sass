@@ -7,6 +7,8 @@
 
   &__container
     z-index: 1
+    +max(md)
+      +ta(center)
 
   &__info
     +mb(45px)
@@ -50,6 +52,7 @@
       list-style: none
       +max(md)
         +row()
+        +ta(center)
       &-item
         +max(md)
           flex-basis: 50%
@@ -93,7 +96,7 @@
           +size(30px)
 
       &-link
-        +d(flex)
+        +d(inline-flex)
         +ai(center)
         +jc(flex-end)
         +size(120px, 50px)
