@@ -1,35 +1,35 @@
-<section class="section home-reason">
+<section class="section education-reason">
     <div class="container">
         {{ siteMacros.titleSection({
             'tag': '3',
             'size': 'md',
-            'class': 'home-reason__title',
+            'class': 'education-reason__title',
             'title': post.get_field('reason_title')
         }) }}
-        <div class="row home-reason__row">
+        <div class="row education-reason__row">
             {% for reason in post.get_field('reasons') %}
                 {%
-                    set class = reason.type == 'Large' ? 'col-12 home-reason-item_large' :
-                    'col-12 col-sm-6 home-reason-item_small'
+                    set class = reason.type == 'Large' ? 'col-12 education-reason-item_large' :
+                    'col-12 col-sm-6 education-reason-item_small'
                 %}
-                <div class="home-reason-item {{ class }}">
-                    <div class="home-reason-item__inner">
+                <div class="education-reason-item {{ class }}">
+                    <div class="education-reason-item__inner">
                         {% if reason.type == 'Large' %}
-                            <div class="row home-reason-item__row">
-                                <div class="col-12 col-sm-6 home-reason-item__image-wrapper">
+                            <div class="row education-reason-item__row">
+                                <div class="col-12 col-sm-6 education-reason-item__image-wrapper">
                                     <img
                                         src="{{ reason.image }}"
                                         alt="{{ reason.title|striptags }}"
-                                        class="home-reason-item__image">
+                                        class="education-reason-item__image">
                                 </div>
-                                <div class="col-12 col-sm-6 home-reason-item__body">
-                                    <div class="home-reason-item__title">{{ reason.title }}</div>
-                                    <div class="home-reason-item__content">{{ reason.content }}</div>
+                                <div class="col-12 col-sm-6 education-reason-item__body">
+                                    <div class="education-reason-item__title">{{ reason.title }}</div>
+                                    <div class="education-reason-item__content">{{ reason.content }}</div>
                                 </div>
                             </div>
                         {% else %}
                             {{ siteMacros.icon({
-                                'class': 'home-reason-icon',
+                                'class': 'education-reason-icon',
                                 'image': reason.image,
                                 'title': reason.title,
                                 'content': reason.content
@@ -42,7 +42,7 @@
         {{ siteMacros.titleSection({
             'tag': '4',
             'size': 'md',
-            'class': 'home-reason__subtitle',
+            'class': 'education-reason__subtitle',
             'title': post.get_field('reason_subtitle')
         }) }}
     </div>

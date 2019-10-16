@@ -1,19 +1,19 @@
-<section class="section home-steps">
+<section class="section education-steps">
     <div class="container">
         {{ siteMacros.titleSection({
             'tag': '3',
             'size': 'md',
-            'class': 'home-steps__title',
+            'class': 'education-steps__title',
             'title': post.get_field('steps_title')
         }) }}
-        <div class="row home-steps__row">
+        <div class="row education-steps__row">
             {% set i = 0 %}
             {% for step in post.get_field('steps') %}
                 {% set i = i + 1 %}
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 home-steps-card">
-                    <div class="home-steps-card__inner">
-                        <p class="home-steps-card__title">Шаг №{{ i }}</p>
-                        <div class="home-steps-card__content">{{ step.text }}</div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 education-steps-card">
+                    <div class="education-steps-card__inner">
+                        <p class="education-steps-card__title">Шаг №{{ i }}</p>
+                        <div class="education-steps-card__content">{{ step.text }}</div>
                     </div>
                 </div>
             {% endfor %}
@@ -21,7 +21,7 @@
         {{ siteMacros.titleSection({
             'tag': '4',
             'size': 'sm',
-            'class': 'home-steps__subtitle',
+            'class': 'education-steps__subtitle',
             'title': post.get_field('steps_subtitle')
         }) }}
     </div>

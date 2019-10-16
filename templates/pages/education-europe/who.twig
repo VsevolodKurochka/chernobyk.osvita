@@ -1,0 +1,28 @@
+<section class="section education-who">
+    <div class="container">
+        {{ siteMacros.titleSection({
+            'tag': '3',
+            'size': 'md',
+            'class': 'education-who__title',
+            'title': post.get_field('who_title')
+        }) }}
+        <div class="row education-who__row">
+            <div class="col-6 col-md-4"><div class="education-who__list education-who__list_1">{{ post.get_field('who_list_1') }}</div></div>
+            <div class="col-6 col-md-4"><div class="education-who__list education-who__list_2">{{ post.get_field('who_list_2') }}</div></div>
+        </div>
+        <div class="education-who__content">
+            <img
+                src="{{ post.get_field('who_image') }}"
+                alt="{{ post.get_field('who_title')|striptags }}"
+                class="education-who__content-image">
+            <div class="education-who__banner">
+                {{ siteMacros.titleSection({
+                    'tag': '4',
+                    'size': 'sm',
+                    'class': 'education-who__subtitle',
+                    'title': post.get_field('who_subtitle')
+                }) }}
+            </div>
+        </div>
+    </div>
+</section>
