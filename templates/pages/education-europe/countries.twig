@@ -1,0 +1,36 @@
+<section class="section education-country">
+    <div class="container education-country__container">
+        <div class="education-country__info">{{ post.get_field('country_info') }}</div>
+        {{ siteMacros.titleSection({
+            'tag': '4',
+            'size': 'sm',
+            'class': 'education-country__subtitle',
+            'title': post.get_field('country_subtitle')
+        }) }}
+        {{ siteMacros.titleSection({
+            'tag': '3',
+            'size': 'md',
+            'class': 'education-country__title',
+            'title': post.get_field('country_title')
+        }) }}
+    </div>
+    <div class="education-country__map">
+        <img
+                src="{{ post.get_field('country_map') }}"
+                alt="{{ post.get_field('country_title')|striptags }}"
+                class="education-country__map-image">
+        <ul class="education-country__map-list">
+            {% for country in post.get_field('country_list') %}
+                <li class="education-country__map-list-item education-country__map-list-item_{{ country.type }}">
+                    <a href="{{ country.link }}" target="_blank" class="education-country__map-list-link">
+                        <span class="education-country__map-list-name">{{ country.name }}</span>
+                        <img
+                            src="{{ country.flag }}"
+                            alt="{{ country.name|striptags }}"
+                            class="education-country__map-list-flag">
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

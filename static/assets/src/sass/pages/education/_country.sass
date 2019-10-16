@@ -1,0 +1,111 @@
+.education-country
+  +min(md)
+    overflow: hidden
+    +d(flex)
+    +ai(center)
+    min-height: 800px
+
+  &__container
+    z-index: 1
+
+  &__info
+    +mb(45px)
+    +min(md)
+      +pl(60px)
+
+  &__subtitle
+    +r()
+    +mb(45px)
+    &:before
+      content: ''
+      +a(0, null, null, 0)
+      +bgi('../img/back-arrow.png')
+      +min(md)
+        left: auto
+        right: 100%
+        +size(95px, 79px)
+    +min(md)
+      +pl(30px)
+
+  &__title
+    +r()
+    +d(inline-block)
+    +max(md)
+      +mb(30px)
+    &:before
+      content: ''
+      +bgi('../img/arrow-country.png')
+      +min(md)
+        +a(50%, null, null, 100%)
+        transform: translateY(-50%)
+        +size(104px, 72px)
+
+  &__map
+    +min(md)
+      +a(0, -30px, null, null)
+    &-image
+      +max(md)
+        +d(none)
+    &-list
+      list-style: none
+      +max(md)
+        +row()
+      &-item
+        +max(md)
+          flex-basis: 50%
+          flex-grow: 0
+          flex-shrink: 0
+          +px(getComp(gutter))
+          +offset('b', 15px)
+        +min(md)
+          +a()
+          z-index: 2
+          &_poland
+            top: 25%
+            left: 50%
+          &_germany
+            top: 40%
+            left: 30%
+          &_czech
+            top: 38%
+            left: 55%
+          &_slovakia
+            top: 53%
+            left: 48%
+          &_italy
+            top: 70%
+            left: 40%
+          &_spain
+            top: 80%
+            left: 5%
+      &-name
+        +mr(10px)
+        +fw(bold)
+        +fs(12px)
+        font-style: italic
+        +min(md)
+          +fs(16px)
+
+      &-flag
+        box-shadow: 0 4px 10px 0px rgba(0,1,1,.26)
+        border-radius: 100%
+        +max(md)
+          +size(30px)
+
+      &-link
+        +d(flex)
+        +ai(center)
+        +jc(flex-end)
+        +size(120px, 50px)
+        +pr(10px)
+        +tr()
+        +bgc($color-white)
+        +c($color-general)
+        box-shadow: 0 14px 21px 0 rgba(0, 34, 78, 0.18)
+        border-radius: 45px
+        text-decoration: none
+        &:hover
+          +bgc($color-brand-2)
+          +c($color-white)
+        +min(md)
+          +size(190px, 80px)
