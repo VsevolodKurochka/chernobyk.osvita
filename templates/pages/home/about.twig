@@ -1,8 +1,30 @@
 <section class="section home-about">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-6"></div>
-            <div class="col-12 col-sm-6"></div>
+            <div class="col-12 col-sm-6">
+                {{ siteMacros.titleSection({
+                    tag: '3',
+                    size: 'lg',
+                    title: post.get_field('about_title'),
+                    class: 'home-about__title'
+                }) }}
+                <div>
+                    {{ post.get_field('about_subtitle') }}
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="border-rectangle border-rectangle_top">
+                    <div class="home-about__figure">
+                        <img
+                            src="{{ post.get_field('about_photo') }}"
+                            alt="{{ post.get_field('about_title')|striptags }}">
+                    </div>
+                    <img
+                        class="home-about__rocket"
+                        src="{{ post.get_field('about_rocket') }}"
+                        alt="{{ post.get_field('about_subtitle')|striptags }}">
+                </div>
+            </div>
         </div>
     </div>
 </section>
