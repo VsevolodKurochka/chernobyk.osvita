@@ -1,10 +1,7 @@
-{% import 'modules/consultation.twig' as siteConsultation %}
-{{
-    siteConsultation.consultation({
-        theme: theme,
-        class: 'module-consultation_rocket',
-        title: post.get_field('consultation-2-title'),
-        subtitle: post.get_field('consultation-2-subtitle'),
-        form: post.get_field('consultation-2-form')
-    })
-}}
+{% include "shared/consultation.twig" with {
+    theme: theme,
+    class: 'module-consultation_rocket',
+    title: post.get_field('consultation-2-title'),
+    subtitle: post.get_field('consultation-2-subtitle'),
+    form: post.get_field('consultation-2-form')
+} %}

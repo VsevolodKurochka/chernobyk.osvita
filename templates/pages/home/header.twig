@@ -1,14 +1,23 @@
-<section class="education-header">
-    <img src="{{ post.thumbnail }}" alt="{{ post.title }}" class="education-header__bg">
+<header class="header home-header">
+    <img src="{{ post.thumbnail }}" alt="{{ post.title }}" class="header__bg">
     <div class="container">
         <div class="stars-vertical">
             {{ siteMacros.titleSection({
                 tag: '1',
-                title: 'Главная',
-                class: 'education-header__title',
-                size: 'lg'
+                size: 'lg',
+                title: post.get_field('header_title'),
+                class: 'home-header__title'
             }) }}
+            {{ siteMacros.titleSection({
+                tag: '2',
+                size: 'md',
+                title: post.get_field('header_subtitle'),
+                class: 'home-header__subtitle'
+            }) }}
+            <div class="home-header__buttons">
+                {{ siteMacros.buttonModal(post.get_field('header_button_text'), 'btn_brand-2') }}
+                <button class="btn btn_lg btn_border-white" data-next-section>Подробнее</button>
+            </div>
         </div>
-        {{ siteMacros.buttonModal('Бесплатная консультация', 'btn_brand-2 education-header__button') }}
     </div>
-</section>
+</header>

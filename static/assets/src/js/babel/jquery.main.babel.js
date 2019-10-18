@@ -10,6 +10,10 @@ $(document).ready(function(){
 		e.preventDefault();
 		scroll($( $(this).attr('href') ), 1500);
 	});
+	$('[data-next-section]').click(function (e) {
+		e.preventDefault();
+		scroll($(this).closest('section, header').next(), 1500);
+	});
 
 	// Collapse
 

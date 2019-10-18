@@ -20,7 +20,7 @@ $btn-border-style: solid
   &_lg
     +btn-size($btn-large-padding, $btn-large-font-size)
     +min(md)
-      +btn-size(25px 45px, 19px)
+      +btn-size(20px 40px, 17px)
       border-radius: 45px
 
   &_brand-2
@@ -31,6 +31,13 @@ $btn-border-style: solid
       transform: scale(0.95)
 
   &_border
+    &-white
+      background-color: transparent
+      border: 2px solid $color-white
+      +c($color-white)
+      &:hover
+        +bgc($color-white)
+        +c($color-general)
     &-brand
       &-2
         border: 2px solid $color-brand-2
