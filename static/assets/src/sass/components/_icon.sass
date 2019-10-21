@@ -1,6 +1,27 @@
+=icon-title()
+  +mb(10px)
+  +fw(900)
+  +fs(20px)
+  +lh(1.2)
+  +min(sm)
+    +fs(22px)
+  +min(lg)
+    +fs(28px)
 .icon
+  &__title
+    +icon-title()
   &__content
     +fs(14px)
-    line-height: 1.2
+    +lh(1.2)
     +min(md)
       +fs(16px)
+  &__image
+    max-height: 120px
+  &_center
+    +ta(center)
+  &_center &
+    &__header,
+    &__title
+      +mb(15px)
+      +min(sm)
+        +mb(25px)

@@ -1,18 +1,27 @@
 <section class="section home-about">
     <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-6">
+        <img
+            src="{{ post.get_field('about_euro') }}"
+            alt="{{ post.get_field('about_title')|striptags }}"
+            class="home-about__stars">
+        <div class="row home-about__row">
+            <div class="col-12 col-sm-7 col-md-5">
                 {{ siteMacros.titleSection({
                     tag: '3',
                     size: 'lg',
                     title: post.get_field('about_title'),
                     class: 'home-about__title'
                 }) }}
-                <div>
+                <div class="home-about__subtitle">
                     {{ post.get_field('about_subtitle') }}
                 </div>
+                {% include "shared/social.twig" with {
+                    list: options.socials,
+                    size: 'large',
+                    color: 'red'
+                } %}
             </div>
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-5 col-md-7">
                 <div class="border-rectangle border-rectangle_top">
                     <div class="home-about__figure">
                         <img
@@ -25,6 +34,20 @@
                         alt="{{ post.get_field('about_subtitle')|striptags }}">
                 </div>
             </div>
+        </div>
+        <div class="row home-about__icons">
+            {% for item in post.get_field('about_list') %}
+                <div class="col-12 col-sm-4">
+                    <div class="box-shadow">
+                        {{ siteMacros.icon({
+                            class: 'icon_center',
+                            title: item.title,
+                            image: item.icon,
+                            content: item.content
+                        }) }}
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </section>

@@ -14,7 +14,7 @@
             <div class="row education-features__row">
                 {% for step in post.get_field('features_icons') %}
                     {{ siteMacros.icon({
-                        'class': 'education-features-icon col-12 col-sm-4',
+                        'class': 'education-features-icon icon_center col-12 col-sm-4',
                         'image': step.image,
                         'content': step.content
                     }) }}

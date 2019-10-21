@@ -1,0 +1,16 @@
+$offset: 20
+
+.border-rectangle
+  +r()
+  &:before
+    content: ''
+    +a(#{$offset}px, null, null, -#{$offset}px)
+    +size(100%)
+    border: 4px solid $color-brand-2
+    border-radius: 6px
+    z-index: -1
+  &_top
+    &:before
+      left: auto
+      right: -#{$offset}px
+      top: -#{$offset}px

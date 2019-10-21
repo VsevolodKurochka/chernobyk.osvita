@@ -78,6 +78,7 @@ class StarterSite extends Timber\Site {
         $this->add_options_page();
         $this->generate_menu();
         add_action( 'wp_footer', array( $this, 'register_scripts' ) );
+        add_filter('upload_mimes', array($this, 'cc_mime_types'), 1, 1);
 
 		parent::__construct();
 	}
@@ -163,6 +164,12 @@ class StarterSite extends Timber\Site {
 
     function add_options_page() {
         acf_add_options_page();
+    }
+
+    function cc_mime_types($mimes) {
+        $mimes['svg'] = 'image/svg+xml';
+        $mimes['pdf'] = 'application/pdf';
+        return $mimes;
     }
 
     function generate_menu() {
