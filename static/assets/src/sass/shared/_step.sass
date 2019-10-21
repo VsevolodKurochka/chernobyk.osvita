@@ -32,3 +32,11 @@
       box-shadow: 0 14px 21px 0 rgba(0, 34, 78, 0.18)
     &__title
       +c($color-brand-2)
+  &_arrow &
+    &__title
+      +r()
+      &:before
+        content: ''
+        +a(-5px, 10px)
+        +size(45px, 28px)
+        +bgi('../img/step-arrow.png')

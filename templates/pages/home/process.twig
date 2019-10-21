@@ -6,16 +6,21 @@
             'class': 'home-process__title',
             'title': post.get_field('process_title')
         }) }}
-        <div class="row">
+        <div class="row home-process__content">
             {% set i = 0 %}
-            {% for step in post.get_field('steps') %}
+            {% for step in post.get_field('process_list') %}
                 {% set i = i + 1 %}
                 {% include "shared/step.twig" with {
-                    class: 'col-12 col-sm-6 col-md-4 col-lg-3',
+                    class: 'col-12 col-sm-6 col-md-4 col-lg-3 step_arrow',
                     title: "Шаг №#{i}",
                     content: step.text
                 } %}
             {% endfor %}
+        </div>
+        <div class="home-process__footer">
+            <a
+                class="btn btn_lg btn_brand-2"
+                href="{{ post.get_field('process_link_link') }}">{{ post.get_field('process_link_text') }}</a>
         </div>
     </div>
 </section>
