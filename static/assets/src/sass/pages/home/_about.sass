@@ -15,5 +15,12 @@
   &__subtitle
     +mb(30px)
   &__rocket
-    +a(50%, null, null, 50%)
-    transform: translate(-50%, -50%)
+    +a(-35%, null, null, 25%)
+    @at-root
+      @keyframes rocket
+        from
+          transform: none
+        to
+          transform: translateY(-80px)
+    animation: rocket 10s linear 0s infinite alternate
+    z-index: 1
