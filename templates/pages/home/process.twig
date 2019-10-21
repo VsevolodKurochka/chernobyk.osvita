@@ -1,0 +1,21 @@
+<section class="section home-process">
+    <div class="container">
+        {{ siteMacros.titleSection({
+            'tag': '3',
+            'size': 'lg',
+            'class': 'home-process__title',
+            'title': post.get_field('process_title')
+        }) }}
+        <div class="row">
+            {% set i = 0 %}
+            {% for step in post.get_field('steps') %}
+                {% set i = i + 1 %}
+                {% include "shared/step.twig" with {
+                    class: 'col-12 col-sm-6 col-md-4 col-lg-3',
+                    title: "Шаг №#{i}",
+                    content: step.text
+                } %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

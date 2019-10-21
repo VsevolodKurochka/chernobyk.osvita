@@ -3,16 +3,18 @@
 
   li
     +r()
+    +offset('b', 15px)
 
     &:after
       content: ""
       +a()
 
-  &_cancel
+  &_check
     li
       +pl(30px)
 
       &:after
-        +t(0)
+        +t(5px)
         +l(0)
-        +size(37px)
+        +size(25px, 23px)
+        +bgi('../img/check-list-red.png')

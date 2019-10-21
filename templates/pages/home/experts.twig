@@ -1,0 +1,35 @@
+<section class="section home-experts">
+    <div class="container">
+        {{ siteMacros.titleSection({
+            'tag': '3',
+            'size': 'lg',
+            'class': 'home-experts__title',
+            'title': post.get_field('experts_title')
+        }) }}
+        <div class="home-experts__content">
+            {% set i = 0 %}
+            {% for item in post.get_field('experts_list') %}
+                {% set i = i + 1 %}
+                <div class="row home-experts-item">
+                    <div class="col-12 col-sm-6 home-experts-item__image-wrapper">
+                        <div class="border-rectangle {{ i is odd ? 'border-rectangle_top' : 'border-rectangle_bottom' }}">
+                            <img
+                                src="{{ item.image }}"
+                                alt="{{ item.content|striptags }}"
+                                class="home-experts-item__image">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-5 content">
+                        {{ item.content }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {{ siteMacros.titleSection({
+            'tag': '4',
+            'size': 'md',
+            'class': 'education-reason__subtitle',
+            'title': post.get_field('reason_subtitle')
+        }) }}
+    </div>
+</section>

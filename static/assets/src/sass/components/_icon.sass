@@ -16,12 +16,15 @@
     +min(md)
       +fs(16px)
   &__image
-    max-height: 120px
+    max-height: 70px
+    +min(sm)
+      max-height: 120px
+
   &_center
     +ta(center)
   &_center &
     &__header,
     &__title
-      +mb(15px)
+      +mb(10px)
       +min(sm)
         +mb(25px)

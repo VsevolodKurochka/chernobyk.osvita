@@ -1,0 +1,16 @@
+.home-experts
+  &__title
+    +section-title-offset()
+  &-item
+    +offset('b', 30px)
+    +min(sm)
+      +ai(center)
+      +jc(space-between)
+      +offset('b', 75px)
+      &:nth-child(odd)
+        flex-direction: row-reverse
+    &__image
+      border-radius: $common-border-radius
+      &-wrapper
+        +max(sm)
+          +mb(15px)

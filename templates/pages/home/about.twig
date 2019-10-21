@@ -5,7 +5,20 @@
             alt="{{ post.get_field('about_title')|striptags }}"
             class="home-about__stars">
         <div class="row home-about__row">
-            <div class="col-12 col-sm-7 col-md-5">
+            <div class="col-12 col-sm-5 col-md-7 home-about__image-wrapper">
+                <div class="border-rectangle border-rectangle_top">
+                    <div class="home-about__figure">
+                        <img
+                            src="{{ post.get_field('about_photo') }}"
+                            alt="{{ post.get_field('about_title')|striptags }}">
+                    </div>
+                    <img
+                        class="home-about__rocket"
+                        src="{{ post.get_field('about_rocket') }}"
+                        alt="{{ post.get_field('about_subtitle')|striptags }}">
+                </div>
+            </div>
+            <div class="col-12 col-sm-7 col-md-5 home-about__content">
                 {{ siteMacros.titleSection({
                     tag: '3',
                     size: 'lg',
@@ -21,23 +34,10 @@
                     color: 'red'
                 } %}
             </div>
-            <div class="col-12 col-sm-5 col-md-7">
-                <div class="border-rectangle border-rectangle_top">
-                    <div class="home-about__figure">
-                        <img
-                            src="{{ post.get_field('about_photo') }}"
-                            alt="{{ post.get_field('about_title')|striptags }}">
-                    </div>
-                    <img
-                        class="home-about__rocket"
-                        src="{{ post.get_field('about_rocket') }}"
-                        alt="{{ post.get_field('about_subtitle')|striptags }}">
-                </div>
-            </div>
         </div>
         <div class="row home-about__icons">
             {% for item in post.get_field('about_list') %}
-                <div class="col-12 col-sm-4">
+                <div class="home-about__icon col-12 col-sm-4">
                     <div class="box-shadow">
                         {{ siteMacros.icon({
                             class: 'icon_center',

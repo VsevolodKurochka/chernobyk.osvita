@@ -6,21 +6,31 @@
     +size(100%)
     object-fit: contain
     z-index: -1
+  &__icon
+    +offset('b', 30px)
   &__row
     +mb(45px)
     +min(sm)
       +ai(center)
+      flex-direction: row-reverse
   &__title
     +fw(bold)
   &__subtitle
     +mb(30px)
   &__rocket
     +a(-35%, null, null, 25%)
+    z-index: 1
+    animation: rocket 15s linear 0s infinite alternate
     @at-root
       @keyframes rocket
         from
           transform: none
         to
           transform: translateY(-80px)
-    animation: rocket 10s linear 0s infinite alternate
-    z-index: 1
+    +max(sm)
+      +h(200px)
+    +min(sm)
+      animation-duration: 10s
+  &__image-wrapper
+    +max(sm)
+      +mb(30px)

@@ -1,9 +1,7 @@
 {% macro titleSection(options) %}
-	{% set heading_level = options.tag | default(2) %}
-	{% set size = options.size | default('md') %}
-	<h{{ heading_level }}
-		class="section__title section__title_{{ size }}
-		{{options.class}}">{{options.title|raw}}</h{{ heading_level }}>
+	<h{{ options.tag }}
+		class="section__title section__title_{{ options.size }}
+		{{options.class}}">{{options.title|raw}}</h{{ options.tag }}>
 {% endmacro %}
 
 {% macro buttonModal(text, class) %}
