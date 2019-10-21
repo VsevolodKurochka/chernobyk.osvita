@@ -24,3 +24,9 @@
 	</div>
 {% endmacro %}
 
+{% macro themeImage(options) %}
+	<img
+		src="{{ options.theme.link }}/static/assets/build/img/{{ options.url }}"
+		alt="{{ options.alt|striptags }}"
+		class="{{ options.class }}">
+{% endmacro %}

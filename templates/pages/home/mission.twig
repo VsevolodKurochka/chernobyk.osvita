@@ -1,0 +1,33 @@
+{% set mission = post.get_field('mission_about') %}
+<section class="section home-mission">
+    <div class="container">
+        <div class="row home-mission__row">
+            <div class="col-12 col-sm-6">
+                <div class="home-mission__circle">
+                    <img src="{{ mission.photo }}" alt="{{ mission.position|striptags }}">
+                    <div class="home-mission__circle-content">
+                        <p class="home-mission__name">{{ mission.name|striptags('<br>') }}</p>
+                        <p class="home-mission__position">{{ mission.position|striptags('<br>') }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <blockquote class="blockquote home-mission__blockquote">
+                    {{ siteMacros.themeImage({
+                        theme: theme,
+                        url: 'rocket.png',
+                        alt: mission.position|striptags,
+                        class: 'home-mission__rocket'
+                    }) }}
+                    {{ siteMacros.titleSection({
+                        'tag': '3',
+                        'size': 'lg',
+                        'class': 'home-mission__title',
+                        'title': post.get_field('mission_title')
+                    }) }}
+                    <div class="content">{{ post.get_field('mission_content') }}</div>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
