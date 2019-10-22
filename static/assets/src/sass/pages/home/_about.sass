@@ -21,16 +21,20 @@
     +a(-35%, null, null, 25%)
     z-index: 1
     animation: rocket 15s linear 0s infinite alternate
+    max-height: 200px
     @at-root
       @keyframes rocket
         from
           transform: none
         to
           transform: translateY(-80px)
-    +max(sm)
-      +h(200px)
     +min(sm)
       animation-duration: 10s
+    +min(md)
+      max-height: none
   &__image-wrapper
     +max(sm)
       +mb(30px)
+  &__figure
+    img
+      border-radius: $common-border-radius
