@@ -1,0 +1,27 @@
+<section class="section home-reviews">
+    <div class="container">
+        <div class="home-reviews__header">
+            {{ siteMacros.titleSection({
+                'tag': '3',
+                'size': 'lg',
+                'class': 'home-reviews__title',
+                'title': post.get_field('reviews_title')
+            }) }}
+            {{ siteMacros.titleSection({
+                'tag': '4',
+                'size': 'md',
+                'class': 'home-reviews__subtitle',
+                'title': post.get_field('reviews_subtitle')
+            }) }}
+        </div>
+        <div class="row home-about__icons">
+            {% for review in reviews %}
+                {% include "shared/review.twig" with {
+                    class: 'col-12 col-sm-6',
+                    url: review.get_field('video'),
+                    title: review.title
+                } %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

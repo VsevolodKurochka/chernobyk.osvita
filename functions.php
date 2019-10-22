@@ -8,15 +8,6 @@
  * @since   Timber 0.1
  */
 
-/**
- * If you are installing Timber as a Composer dependency in your theme, you'll need this block
- * to load your dependencies and initialize Timber. If you are using Timber via the WordPress.org
- * plug-in, you can safely delete this block.
- */
-
-/**
- * Plugins connect
- */
 require get_template_directory() . '/tgm/connect.php';
 add_filter('use_block_editor_for_post', '__return_false', 10);
 add_filter('show_admin_bar', '__return_false');
@@ -28,10 +19,6 @@ if ( file_exists( $composer_autoload ) ) {
 	$timber = new Timber\Timber();
 }
 
-/**
- * This ensures that Timber is loaded and available as a PHP class.
- * If not, it gives an error message to help direct developers on where to activate
- */
 if ( ! class_exists( 'Timber' ) ) {
 
 	add_action(
@@ -49,25 +36,10 @@ if ( ! class_exists( 'Timber' ) ) {
 	);
 	return;
 }
-
-/**
- * Sets the directories (inside your theme) to find .twig files
- */
 Timber::$dirname = array( 'templates', 'views' );
-
-/**
- * By default, Timber does NOT autoescape values. Want to enable Twig's autoescape?
- * No prob! Just set this value to true
- */
 Timber::$autoescape = false;
 
-
-/**
- * We're going to configure our theme inside of a subclass of Timber\Site
- * You can move this to its own file and include here via php's include("MySite.php")
- */
 class StarterSite extends Timber\Site {
-	/** Add timber support. */
 	public function __construct() {
 		add_action( 'after_setup_theme', array( $this, 'theme_supports' ) );
 		add_filter( 'timber/context', array( $this, 'add_to_context' ) );
@@ -82,19 +54,39 @@ class StarterSite extends Timber\Site {
 
 		parent::__construct();
 	}
-	/** This is where you can register custom post types. */
-	public function register_post_types() {
 
+	public function register_post_types() {
+        register_post_type('reviews', array(
+            'label'  => null,
+            'labels' => array(
+                'name'               => 'Отзывы', // основное название для типа записи
+                'singular_name'      => 'Отзывы', // название для одной записи этого типа
+                'add_new'            => 'Добавить отзыв', // для добавления новой записи
+                'add_new_item'       => 'Добавление отзыва', // заголовка у вновь создаваемой записи в админ-панели.
+                'edit_item'          => 'Редактирование отзыва', // для редактирования типа записи
+                'new_item'           => 'Новый отзыв', // текст новой записи
+                'view_item'          => 'Смотреть отзыв', // для просмотра записи этого типа.
+                'search_items'       => 'Искать отзыв', // для поиска по этим типам записи
+                'not_found'          => 'Не найдено отзывов', // если в результате поиска ничего не было найдено
+                'not_found_in_trash' => 'Не найдено в корзине', // если не было найдено в корзине
+                'parent_item_colon'  => '', // для родителей (у древовидных типов)
+                'menu_name'          => 'Отзывы', // название меню
+            ),
+            'description'         => '',
+            'public'              => true,
+            'hierarchical'        => false,
+            'supports'            => array('title'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+            'taxonomies'          => array(),
+            'has_archive'         => true,
+            'rewrite'             => true,
+            'query_var'           => true
+        ) );
 	}
-	/** This is where you can register custom taxonomies. */
+
 	public function register_taxonomies() {
 
 	}
 
-	/** This is where you add some context
-	 *
-	 * @param string $context context['this'] Being the Twig's {{ this }}.
-	 */
 	public function add_to_context( $context ) {
         $context['menu'] = new Timber\Menu('menu-1');
 		$context['site']  = $this;
@@ -103,56 +95,11 @@ class StarterSite extends Timber\Site {
 	}
 
 	public function theme_supports() {
-		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
-
-		/*
-		 * Let WordPress manage the document title.
-		 * By adding theme support, we declare that this theme does not use a
-		 * hard-coded <title> tag in the document head, and expect WordPress to
-		 * provide it for us.
-		 */
 		add_theme_support( 'title-tag' );
-
-		/*
-		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		 */
 		add_theme_support( 'post-thumbnails' );
-
-		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
-		add_theme_support(
-			'html5',
-			array(
-				'comment-form',
-				'comment-list',
-				'gallery',
-				'caption',
-			)
-		);
-
-		/*
-		 * Enable support for Post Formats.
-		 *
-		 * See: https://codex.wordpress.org/Post_Formats
-		 */
-		add_theme_support(
-			'post-formats',
-			array(
-				'aside',
-				'image',
-				'video',
-				'quote',
-				'link',
-				'gallery',
-				'audio',
-			)
-		);
-
+		add_theme_support('html5', array('comment-form', 'comment-list', 'gallery', 'caption'));
+		add_theme_support('post-formats', array('aside', 'image', 'video', 'quote', 'link', 'gallery', 'audio',));
 		add_theme_support( 'menus' );
 	}
 
@@ -177,11 +124,6 @@ class StarterSite extends Timber\Site {
             'menu-1' => esc_html__( 'Меню в шапке', 'osvitamarket' ),
         ) );
     }
-
-	/** This is where you can add your own functions to twig.
-	 *
-	 * @param string $twig get extension.
-	 */
 	public function add_to_twig( $twig ) {
 		$twig->addExtension( new Twig\Extension\StringLoaderExtension() );
 		return $twig;
