@@ -1,21 +1,26 @@
 <footer class="footer">
     <div class="container">
         <div class="row footer__row">
+            <div class="col-12 col-sm-2 footer__column footer__column_logo">
+                <a href="{{site.url}}"><img src="{{options.logo}}" alt="{{site.name}}" class="footer__logo"></a>
+            </div>
             <div class="col-12 col-sm-5 col-md-3 footer__column">
-                <a href="mailto: {{ options.email }}">{{ options.email }}</a>
-                {% include "shared/social.twig" with {
-                    class: 'footer__social',
-                    list: options.socials,
-                    size: 'small',
-                    color: 'white'
-                } %}
-                <ul class="footer__phones">
-                    {% for item in options.phones %}
-                        <li>
-                            <a href="tel: {{item.phone}}">{{item.phone}}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
+                <div class="footer__column-inner">
+                    <a href="mailto: {{ options.email }}">{{ options.email }}</a>
+                    {% include "shared/social.twig" with {
+                        class: 'footer__social',
+                        list: options.socials,
+                        size: 'small',
+                        color: 'white'
+                    } %}
+                    <ul class="footer__phones">
+                        {% for item in options.phones %}
+                            <li>
+                                <a href="tel: {{item.phone}}">{{item.phone}}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
             <div class="col-12 col-sm-5 col-md-3 footer__column">
                 <ul class="footer__address">
@@ -26,9 +31,6 @@
                         </li>
                     {% endfor %}
                 </ul>
-            </div>
-            <div class="col-12 col-sm-2 footer__column footer__column_logo">
-                <a href="{{site.url}}"><img src="{{options.logo}}" alt="{{site.name}}" class="footer__logo"></a>
             </div>
         </div>
     </div>

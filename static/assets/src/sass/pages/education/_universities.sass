@@ -4,8 +4,6 @@
   &-item
     +offset('b', 30px)
     &__inner
-      display: flex
-      flex-wrap: wrap
       border-radius: $common-border-radius
       border: 1px solid #EBEBEB
       +bgc($color-white)
@@ -15,6 +13,9 @@
       +max(sm)
         max-width: 270px
         +mx(auto)
+      +min(sm)
+        display: flex
+        flex-wrap: wrap
     &_small &
       &__inner
         flex-direction: column
@@ -33,11 +34,12 @@
 
     &_large &
       &__inner
-        flex-direction: row-reverse
-        align-items: center
-        justify-content: center
         +max(sm)
           +pb(15px)
+        +min(sm)
+          flex-direction: row-reverse
+          align-items: center
+          justify-content: center
       &__header,
       &__title,
       &__footer
@@ -65,6 +67,7 @@
         +fs(0)
 
     &__title
-      min-height: 50px
       +max(sm)
         +my(10px)
+      +min(sm)
+        min-height: 50px
