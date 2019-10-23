@@ -32,15 +32,15 @@
   &__title
     +r()
     +d(inline-block)
-    +max(md)
-      +mb(30px)
-    &:before
-      content: ''
-      +bgi('../img/arrow-country.png')
-      +min(md)
-        +a(50%, null, null, 100%)
-        transform: translateY(-50%)
-        +size(104px, 72px)
+    +mb(30px)
+    &_arrow
+      &:before
+        +min(md)
+          content: ''
+          +bgi('../img/arrow-country.png')
+          +a(50%, null, null, 100%)
+          transform: translateY(-50%)
+          +size(104px, 72px)
 
   &__map
     +min(md)
@@ -92,15 +92,16 @@
       &-flag
         box-shadow: 0 4px 10px 0px rgba(0,1,1,.26)
         border-radius: 100%
-        +max(md)
-          +size(30px)
+        +size(30px)
+        +min(md)
+          +size(45px)
 
       &-link
         +d(inline-flex)
         +ai(center)
         +jc(flex-end)
-        +size(120px, 50px)
-        +pr(10px)
+        +h(50px)
+        padding: 10px
         +tr()
         +bgc($color-white)
         +c($color-general)
@@ -111,4 +112,5 @@
           +bgc($color-brand-2)
           +c($color-white)
         +min(md)
-          +size(190px, 80px)
+          +h(60px)
+          +pl(20px)

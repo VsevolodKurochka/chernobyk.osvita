@@ -10,27 +10,14 @@
         {{ siteMacros.titleSection({
             'tag': '3',
             'size': 'md',
-            'class': 'education-country__title',
+            'class': 'education-country__title education-country__title_arrow',
             'title': post.get_field('country_title')
         }) }}
     </div>
-    <div class="education-country__map">
-        <img
-                src="{{ post.get_field('country_map') }}"
-                alt="{{ post.get_field('country_title')|striptags }}"
-                class="education-country__map-image">
-        <ul class="education-country__map-list">
-            {% for country in post.get_field('country_list') %}
-                <li class="education-country__map-list-item education-country__map-list-item_{{ country.type }}">
-                    <a href="{{ country.link }}" target="_blank" class="education-country__map-list-link">
-                        <span class="education-country__map-list-name">{{ country.name }}</span>
-                        <img
-                            src="{{ country.flag }}"
-                            alt="{{ country.name|striptags }}"
-                            class="education-country__map-list-flag">
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
+    {% include 'pages/education-europe/modules/country-map.twig' with {
+        map: post.get_field('country_map'),
+        title: post.get_field('country_title'),
+        countryList: post.get_field('country_list'),
+        itemTag: 'a'
+    } %}
 </section>

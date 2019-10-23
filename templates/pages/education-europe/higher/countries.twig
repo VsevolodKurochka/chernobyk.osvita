@@ -1,0 +1,25 @@
+<section class="section education-country">
+    <div class="container education-country__container">
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <div class="education-country__content">
+                    {{ siteMacros.titleSection({
+                        'tag': '3',
+                        'size': 'sm',
+                        'class': 'education-country__title',
+                        'title': post.get_field('country_title')
+                    }) }}
+                    <div class="content">
+                        {{ post.get_field('country_content') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'pages/education-europe/modules/country-map.twig' with {
+        map: post.get_field('country_map'),
+        title: post.get_field('country_title'),
+        countryList: post.get_field('country_list'),
+        itemTag: 'span'
+    } %}
+</section>

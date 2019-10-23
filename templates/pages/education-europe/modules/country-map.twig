@@ -1,0 +1,21 @@
+<div class="education-country__map">
+    <img
+        src="{{ map }}"
+        alt="{{ title|striptags }}"
+        class="education-country__map-image">
+    <ul class="education-country__map-list">
+        {% for country in countryList %}
+            <li class="education-country__map-list-item education-country__map-list-item_{{ country.type }}">
+                <{{ itemTag }}
+                    {% if itemTag == 'a' %} href="{{ country.link }}" target="_blank"  {% endif %}
+                    class="education-country__map-list-link">
+                    <span class="education-country__map-list-name">{{ country.name }}</span>
+                    <img
+                        src="{{ country.flag }}"
+                        alt="{{ country.name|striptags }}"
+                        class="education-country__map-list-flag">
+                </{{ itemTag }}>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
