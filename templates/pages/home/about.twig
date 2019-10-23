@@ -38,7 +38,7 @@
         <div class="row home-about__icons">
             {% for item in post.get_field('about_list') %}
                 <div class="home-about__icon col-12 col-sm-4">
-                    <div class="box-shadow">
+                    <div class="box-shadow {{ loop.index == '2' ? 'box-shadow_static' : '' }}">
                         {{ siteMacros.icon({
                             class: 'icon_center',
                             title: item.title,

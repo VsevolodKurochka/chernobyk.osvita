@@ -1,0 +1,51 @@
+<section class="section education-reason">
+    <div class="container">
+        {{
+            siteMacros.titleSection({
+                'tag': '3',
+                'size': 'md',
+                'class': 'education-reason__title',
+                'title': title
+            })
+        }}
+        <div class="row education-reason__row">
+            {% for reason in reasons %}
+                {%
+                    set class = reason.type == 'Large' ? 'col-12 education-reason-item_large' :
+                    'col-12 col-sm-6 education-reason-item_small'
+                %}
+                <div class="education-reason-item {{ class }}">
+                    <div class="education-reason-item__inner">
+                        {% if reason.type == 'Large' %}
+                            <div class="row education-reason-item__row">
+                                <div class="col-12 col-sm-6 education-reason-item__image-wrapper">
+                                    <img
+                                        src="{{ reason.image }}"
+                                        alt="{{ reason.title|striptags }}"
+                                        class="education-reason-item__image">
+                                </div>
+                                <div class="col-12 col-sm-6 education-reason-item__body">
+                                    <div class="education-reason-item__title">{{ reason.title }}</div>
+                                    <div class="education-reason-item__content">{{ reason.content }}</div>
+                                </div>
+                            </div>
+                        {% else %}
+                            {{ siteMacros.icon({
+                                'class': 'education-reason-icon',
+                                'image': reason.image,
+                                'title': reason.title,
+                                'content': reason.content
+                            }) }}
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {{ siteMacros.titleSection({
+            'tag': '4',
+            'size': 'md',
+            'class': 'education-reason__subtitle',
+            'title': subtitle
+        }) }}
+    </div>
+</section>
