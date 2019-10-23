@@ -1,0 +1,15 @@
+<section class="section education-advantages">
+    <div class="container">
+        <div class="row">
+            {% for advantage in advantages %}
+                {{
+                    siteMacros.icon({
+                        class: 'col-6 col-md-4',
+                        image: advantage.image,
+                        content: advantage.text
+                    })
+                }}
+            {% endfor %}
+        </div>
+    </div>
+</section>

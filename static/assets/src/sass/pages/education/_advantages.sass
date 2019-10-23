@@ -10,17 +10,22 @@
       +size(700px)
     +min(md)
       +size(1000px)
-  &-icon
+  .icon
     +mb(30px)
     +max(sm)
       +ta(center)
     +min(sm)
       display: flex
       align-items: center
-    .icon
+    &__image
+      max-height: none
       +max(sm)
-        &__image
-          +size(75px)
+        +size(75px)
       +min(sm)
-        &__content
-          +ml(-30px)
+        +size(150px)
+    &__content
+      +min(sm)
+        +ml(-30px)
+    &__body
+      flex-grow: 1
+      flex-basis: 0

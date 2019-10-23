@@ -1,0 +1,34 @@
+<header class="header">
+    <img src="{{ background }}" alt="{{ title|striptags }}" class="header__bg">
+    <div class="container">
+        <div class="stars-vertical header__content">
+            {% if title %}
+                {{ siteMacros.titleSection({
+                tag: '1',
+                title: title,
+                class: 'header__title',
+                size: 'lg'
+            }) }}
+            {% endif %}
+            {% if subtitle %}
+                {{ siteMacros.titleSection({
+                    tag: '2',
+                    title: subtitle,
+                    class: 'header__subtitle',
+                    size: 'sm'
+                }) }}
+            {% endif %}
+        </div>
+        {% if buttons %}
+            <div class="header__buttons">
+                {% for button in buttons %}
+                    {% if button.type == 'button' %}
+                        {{ siteMacros.buttonModal(button.text, 'btn_brand-2') }}
+                    {% elseif button.type == 'scroll' %}
+                        <button class="btn btn_lg btn_border-white" data-next-section>{{ button.text }}</button>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</header>

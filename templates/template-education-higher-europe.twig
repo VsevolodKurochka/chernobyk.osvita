@@ -1,0 +1,10 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	{% set sections = [
+		'header', 'advantages'
+	] %}
+	{% for section in sections %}
+		{% include "pages/education-europe/higher/#{section}.twig" %}
+	{% endfor %}
+{% endblock %}
