@@ -16,6 +16,24 @@
       +min(sm)
         display: flex
         flex-wrap: wrap
+    &__header
+      +fs(0)
+
+    &__footer
+      +ta(center)
+
+    &__button
+      +min(sm)
+        +fs(17px)
+        padding: 20px
+
+    &__image
+      &-wrapper
+        +fs(0)
+
+    &__title
+      +max(sm)
+        +my(10px)
     &_small &
       &__inner
         flex-direction: column
@@ -28,9 +46,13 @@
       &__title
         +mb(15px)
       &__image
-        +h(60px)
+        +size(auto, 60px)
+        object-fit: contain
         +min(sm)
           +h(100px)
+      &__title
+        +min(sm)
+          min-height: 100px
 
     &_large &
       &__inner
@@ -50,24 +72,3 @@
       &__title
         +max(sm)
           +ta(center)
-
-    &__header
-      +fs(0)
-
-    &__footer
-      +ta(center)
-
-    &__button
-      +min(sm)
-        +fs(17px)
-        padding: 20px
-
-    &__image
-      &-wrapper
-        +fs(0)
-
-    &__title
-      +max(sm)
-        +my(10px)
-      +min(sm)
-        min-height: 50px

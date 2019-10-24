@@ -2,7 +2,8 @@
 
 {% block content %}
 	{% set sections = [
-		'header', 'advantages', 'fact', 'countries', 'consultation-1', 'steps', 'process', 'reasons', 'why'
+		'header', 'advantages', 'fact', 'countries', 'consultation-1',
+		'steps', 'process', 'reasons', 'why', 'universities', 'consultation-2'
 	] %}
 	{% for section in sections %}
 		{% include "pages/education-europe/higher/#{section}.twig" %}
