@@ -1,19 +1,36 @@
 <section class="section education-why">
     <div class="container education-why-container">
         <img
-                src="{{ post.get_field('why_bg') }}"
-                alt="{{ post.get_field('why_title')|striptags }}"
-                class="education-why-container__bg">
-        {{ siteMacros.titleSection({
-            'tag': '3',
-            'size': 'sm',
-            'class': 'education-why__title',
-            'title': post.get_field('why_title')
-        }) }}
-        <div class="row">
-            {% for why in post.get_field('why_list') %}
-            <div class="col-12 col-sm-6"></div>
-            {% endfor %}
+            src="{{ post.get_field('why_bg') }}"
+            alt="{{ post.get_field('why_title')|striptags }}"
+            class="education-why-container__bg">
+        <div class="education-why__wrapper">
+            {{ siteMacros.titleSection({
+                'tag': '3',
+                'size': 'lg',
+                'class': 'education-why__title',
+                'title': post.get_field('why_title')
+            }) }}
+            <div class="row education-why__row">
+                {% for why in post.get_field('why_list') %}
+                    <div class="col-12 col-sm-6 col-md-5 education-why-item">
+                        <blockquote class="blockquote">
+                            <p class="education-why-item__title">{{ why.title|striptags('<br><strong>') }}</p>
+                            <div class="education-why-item__content">{{ why.content }}</div>
+                        </blockquote>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row education-why__footer">
+                <div class="col-12 col-md-10">
+                    {{ siteMacros.titleSection({
+                        'tag': '3',
+                        'size': 'sm',
+                        'class': 'education-why__subtitle',
+                        'title': post.get_field('why_subtitle')
+                    }) }}
+                </div>
+            </div>
         </div>
     </div>
 </section>

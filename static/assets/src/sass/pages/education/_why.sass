@@ -1,0 +1,35 @@
+.education-why
+  &__wrapper
+    +r()
+    z-index: 1
+  &__row
+    +min(sm)
+      +jc(space-around)
+  &__title
+    +section-title-offset()
+  &-container
+    +c($color-white)
+    +py(45px)
+    +overlay(true)
+    +min(sm)
+      +py(60px)
+  &-item
+    +offset('b', 30px)
+    &__content
+      +fs(14px)
+      +min(sm)
+        +fs(16px)
+        min-height: 100px
+    &__title
+      +lh(1.1)
+      +mb(15px)
+      +fs(20px)
+      +min(sm)
+        +fs(24px)
+      +min(md)
+        +fs(28px)
+  &__subtitle
+    +ta(center)
+  &__footer
+    +min(sm)
+      +jc(center)
