@@ -13,11 +13,12 @@
 
       +max(md)
         +mb(10px)
-
         a
           padding: 10px 15px
           +c($color-white)
-
+        &.current-menu-item a
+          +bgc($color-brand-2)
+          +c($color-white)
 
       +min(md)
         +d(inline-block)

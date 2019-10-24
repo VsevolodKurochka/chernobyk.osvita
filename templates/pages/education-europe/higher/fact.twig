@@ -2,10 +2,11 @@
     <div class="container">
         <div class="row education-fact__row">
             <div class="col-12 col-sm-6 col-md-4">
-                <div class="border-rectangle border-rectangle_bottom">
+                <div class="border-rectangle border-rectangle_bottom education-fact__rectangle">
                     <img
                         src="{{ post.get_field('fact_image') }}"
-                        alt="{{ post.get_field('fact_blockquote')|striptags }}">
+                        alt="{{ post.get_field('fact_blockquote')|striptags }}"
+                        class="education-fact__image">
                 </div>
             </div>
             <div class="col-12 col-sm-6">
