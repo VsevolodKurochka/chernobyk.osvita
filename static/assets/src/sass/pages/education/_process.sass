@@ -1,0 +1,50 @@
+.education-process
+  +c($color-white)
+  &-container
+    +overlay(true)
+    +py(45px, 0)
+    +min(md)
+      +pt(75px)
+  &__wrapper
+    position: relative
+    z-index: 1
+  &__content
+    +pb(30px)
+    +max(sm)
+      > *
+        +offset('b', 30px)
+    +min(sm)
+      +ai(center)
+      +jc(space-around)
+      +pb(45px)
+  &__title
+    +mb(30px)
+  &__body
+    +fs(14px)
+    +min(sm)
+      +fs(18px)
+    +min(md)
+      +fs(22px)
+  &__footer
+    +py(30px)
+    background-color: transparentize($color-gray, 0.2)
+    +c($color-general)
+    +max(sm)
+      +ta(center)
+    +min(sm)
+      +ai(center)
+      +jc(space-around)
+    &-title
+      +max(sm)
+        +mb(30px)
+    &-content
+      +ta(center)
+  &__list
+    list-style: none
+    +d(flex)
+    +jc(center)
+    +max(sm)
+      li
+        +offset('r', 15px)
+    +min(sm)
+      +jc(space-between)

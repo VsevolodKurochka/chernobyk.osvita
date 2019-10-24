@@ -41,11 +41,13 @@
                 </div>
             {% endfor %}
         </div>
-        {{ siteMacros.titleSection({
-            'tag': '4',
-            'size': 'md',
-            'class': 'education-reason__subtitle',
-            'title': subtitle
-        }) }}
+        {% if subtitle %}
+            {{ siteMacros.titleSection({
+                'tag': '4',
+                'size': 'md',
+                'class': 'education-reason__subtitle',
+                'title': subtitle
+            }) }}
+        {% endif %}
     </div>
 </section>

@@ -1,0 +1,40 @@
+<section class="section education-process">
+    <div class="container education-process-container">
+        <img
+            src="{{ post.get_field('process_bg') }}"
+            alt="{{ post.get_field('process_title')|striptags }}"
+            class="education-process-container__bg">
+        <div class="education-process__wrapper">
+            <div class="row education-process__content">
+                <div class="col-12 col-sm-6 col-md-5">
+                    {{ siteMacros.titleSection({
+                        'tag': '3',
+                        'size': 'sm',
+                        'class': 'education-process__title',
+                        'title': post.get_field('process_title')
+                    }) }}
+                    <p class="education-process__body">{{ post.get_field('process_subtitle')|striptags('<br><strong>') }}</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-5 content">{{ post.get_field('process_advantages') }}</div>
+            </div>
+            <div class="row education-process__footer">
+                <div class="col-12 col-sm-6 col-md-5 col-lg-4 content education-process__body education-process__footer-title">
+                    {{ post.get_field('process_choise') }}
+                </div>
+                <div class="col-12 col-sm-6 col-md-5 education-process__footer-content">
+                    <ul class="education-process__list">
+                        {% for item in post.get_field('process_list') %}
+                            <li class="education-process__list-item">
+                                <img
+                                    src="{{ item.image }}"
+                                    alt="{{ post.get_field('process_title')|striptags }}"
+                                    class="education-process__list-image">
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <p class="education-process__body">{{ post.get_field('process_list_subtitle')|striptags('<br><strong>') }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

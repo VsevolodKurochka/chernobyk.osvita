@@ -1,4 +1,4 @@
-=overlay()
+=overlay($addBorderRadius: false)
   position: relative
   z-index: 1
   &:before
@@ -9,6 +9,8 @@
     width: 100%
     height: 100%
     background-color: transparentize($color-brand-1, 0.3)
+    @if $addBorderRadius == true
+      border-radius: $common-border-radius
 
   &__bg
     position: absolute
@@ -18,3 +20,5 @@
     height: 100%
     object-fit: cover
     z-index: -1
+    @if $addBorderRadius == true
+      border-radius: $common-border-radius
