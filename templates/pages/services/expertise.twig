@@ -1,7 +1,7 @@
 <section class="section services-expertise">
     <div class="container">
         <div class="row services-expertise__row">
-            <div class="col-12 col-sm-6 col-md-5">
+            <div class="col-12 col-sm-6 col-md-5 services-expertise__image-wrapper">
                 <img
                     src="{{post.get_field('expertise_image')}}"
                     alt="{{options.content|striptags}}"
@@ -12,14 +12,14 @@
                     {{ siteMacros.titleSection({
                         'tag': '3',
                         'size': 'md',
-                        'class': 'education-expertise__title',
+                        'class': 'services-expertise__title',
                         'title': post.get_field('expertise_title')
                     }) }}
-                    <div class="content">{{ post.get_field('expertise_content') }}</div>
+                    <div class="content services-expertise__content">{{ post.get_field('expertise_content') }}</div>
                     {{ siteMacros.titleSection({
                         'tag': '3',
                         'size': 'sm',
-                        'class': 'education-expertise__subtitle',
+                        'class': 'services-expertise__subtitle',
                         'title': post.get_field('expertise_subtitle')
                     }) }}
                 </blockquote>

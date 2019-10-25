@@ -8,9 +8,9 @@
         }) }}
         <div class="row services-about__row">
             {% for item in post.get_field('about_list') %}
-                <div class="col-12 col-sm-6 col-md-4">
+                <div class="item-offset services-about__item col-12 col-sm-6 col-md-4">
                     {% if loop.index is odd %}
-                        <div class="box-shadow">
+                        <div class="box-shadow box-shadow_static">
                             {{ siteMacros.icon({
                                 class: 'icon_center',
                                 image: item.image,
@@ -26,11 +26,15 @@
                 </div>
             {% endfor %}
         </div>
-        {{ siteMacros.titleSection({
-            'tag': '3',
-            'size': 'md',
-            'class': 'education-about__subtitle',
-            'title': post.get_field('about_subtitle')
-        }) }}
+        <div class="row services-about__footer">
+            <div class="col-12 col-sm-10">
+                {{ siteMacros.titleSection({
+                    'tag': '3',
+                    'size': 'sm',
+                    'class': 'education-about__subtitle',
+                    'title': post.get_field('about_subtitle')
+                }) }}
+            </div>
+        </div>
     </div>
 </section>
