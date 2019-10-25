@@ -1,0 +1,10 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	{% set sections = [
+		'header'
+	] %}
+	{% for section in sections %}
+		{% include "pages/services/#{section}.twig" %}
+	{% endfor %}
+{% endblock %}
