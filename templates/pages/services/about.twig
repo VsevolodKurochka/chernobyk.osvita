@@ -1,0 +1,36 @@
+<section class="section services-about">
+    <div class="container">
+        {{ siteMacros.titleSection({
+            'tag': '3',
+            'size': 'md',
+            'class': 'center-mode education-about__title',
+            'title': post.get_field('about_title')
+        }) }}
+        <div class="row services-about__row">
+            {% for item in post.get_field('about_list') %}
+                <div class="col-12 col-sm-6 col-md-4">
+                    {% if loop.index is odd %}
+                        <div class="box-shadow">
+                            {{ siteMacros.icon({
+                                class: 'icon_center',
+                                image: item.image,
+                                content: item.content
+                            }) }}
+                        </div>
+                    {% else %}
+                        {% include 'shared/card-image.twig' with {
+                            image: item.image,
+                            content: item.content
+                        } %}
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        {{ siteMacros.titleSection({
+            'tag': '3',
+            'size': 'md',
+            'class': 'education-about__subtitle',
+            'title': post.get_field('about_subtitle')
+        }) }}
+    </div>
+</section>

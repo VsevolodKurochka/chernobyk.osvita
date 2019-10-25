@@ -1,0 +1,18 @@
+<section class="section services-advantages">
+    <div class="container">
+        <div class="row home-about__icons">
+            {% for advantage in post.get_field('advantages_list') %}
+                <div class="home-about__icon col-12 col-sm-3">
+                    <div class="box-shadow box-shadow_static">
+                        {{ siteMacros.icon({
+                            class: 'icon_center',
+                            title: advantage.title,
+                            image: advantage.image,
+                            content: advantage.content
+                        }) }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

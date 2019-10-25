@@ -1,0 +1,16 @@
+<div class="card-image">
+    <div class="card-image__inner">
+        <div class="card-image__header">
+            <img
+                class="card-image__image"
+                src="{{ image }}"
+                alt="{{ title|striptags|default(content|striptags) }}">
+        </div>
+        <div class="card-image__body">
+            {% if title %}
+                <p class="card-image__title">{{ title|striptags('<br><strong>') }}</p>
+            {% endif %}
+            <div class="card-image__content">{{ content }}</div>
+        </div>
+    </div>
+</div>

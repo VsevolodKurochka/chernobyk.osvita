@@ -1,0 +1,29 @@
+<section class="section services-expertise">
+    <div class="container">
+        <div class="row services-expertise__row">
+            <div class="col-12 col-sm-6 col-md-5">
+                <img
+                    src="{{post.get_field('expertise_image')}}"
+                    alt="{{options.content|striptags}}"
+                    class="services-expertise__image">
+            </div>
+            <div class="col-12 col-sm-6 col-md-5">
+                <blockquote class="blockquote">
+                    {{ siteMacros.titleSection({
+                        'tag': '3',
+                        'size': 'md',
+                        'class': 'education-expertise__title',
+                        'title': post.get_field('expertise_title')
+                    }) }}
+                    <div class="content">{{ post.get_field('expertise_content') }}</div>
+                    {{ siteMacros.titleSection({
+                        'tag': '3',
+                        'size': 'sm',
+                        'class': 'education-expertise__subtitle',
+                        'title': post.get_field('expertise_subtitle')
+                    }) }}
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>

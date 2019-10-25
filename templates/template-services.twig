@@ -2,7 +2,10 @@
 
 {% block content %}
 	{% set sections = [
-		'header'
+		'header',
+		'advantages',
+		'expertise',
+		'about'
 	] %}
 	{% for section in sections %}
 		{% include "pages/services/#{section}.twig" %}
