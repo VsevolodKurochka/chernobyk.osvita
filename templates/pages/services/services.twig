@@ -1,0 +1,26 @@
+<section class="section services-content">
+    <div class="container">
+        {{ siteMacros.titleSection({
+            'tag': '3',
+            'size': 'md',
+            'class': 'center-mode services-content__title',
+            'title': post.get_field('services_title')
+        }) }}
+        <div class="row services-content__row">
+            {% for item in post.get_field('services_list') %}
+                <div class="item-offset services-content-item col-12 col-sm-6 col-md-4">
+                    <div class="box-shadow box-shadow_static">
+                        <div class="services-content-item__header">
+                            <img src="{{item.icon}}" alt="{{item.title|striptags}}" class="services-content-item__image">
+                            <p class="services-content-item__title">{{ item.title|striptags('<br><strong>') }}</p>
+                        </div>
+                        <div class="services-content-item__body content">{{ item.content }}</div>
+                        <div class="services-content-item__footer">
+                            <a href="#" class="btn btn_lg btn_brand-2 services-content-item__button">Узнать подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
