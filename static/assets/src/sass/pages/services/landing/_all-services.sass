@@ -10,7 +10,14 @@
       +size(600px)
     +min(md)
       +size(1000px)
+  &__content
+    +mb(30px)
+    +min(md)
+      +mb(60px)
+  &__subtitle
+    +ta(center)
   &-item
+    +offset('b', 30px)
     +min(sm)
       +ai(center)
       &:nth-child(even)
@@ -23,6 +30,13 @@
         min-height: 60px
       &-column
         +offset('b', 30px)
+    &__column
+      &-image
+        +max(sm)
+          +ta(center)
+          +mb(15px)
     &__image
       border-radius: $common-border-radius
       +common-box-shadow()
+      +max(sm)
+        max-width: 250px

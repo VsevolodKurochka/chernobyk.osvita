@@ -15,12 +15,14 @@
                         'class': 'module-consultation__title',
                         'title': title
                     }) }}
+                    {% if subtitle %}
                     {{ siteMacros.titleSection({
                         'tag': '4',
                         'size': 'sm',
                         'class': 'module-consultation__subtitle',
                         'title': subtitle
                     }) }}
+                    {% endif %}
                 </div>
             </div>
             <div class="col-12 col-md-4">

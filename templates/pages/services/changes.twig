@@ -1,0 +1,23 @@
+<section class="section services-changes">
+    <div class="container">
+        <div class="row services-changes__row">
+            <div class="col-12 col-sm-6 col-md-5 services-changes__image-wrapper">
+                <img
+                        class="services-changes__image"
+                        src="{{ post.get_field('changes_image') }}"
+                        alt="{{ post.get_field('changes_title')|striptags }}">
+            </div>
+            <div class="col-12 col-sm-6 col-md-5">
+                <div class="blockquote">
+                    {{ siteMacros.titleSection({
+                        'tag': '3',
+                        'size': 'md',
+                        'class': 'services-changes__title',
+                        'title': post.get_field('changes_title')
+                    }) }}
+                    <div class="content services-changes__content">{{ post.get_field('changes_content') }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
