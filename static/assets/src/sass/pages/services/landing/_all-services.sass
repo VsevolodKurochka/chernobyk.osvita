@@ -1,0 +1,28 @@
+.services-all-services
+  +r()
+  &:before
+    content: ''
+    +a(50%, null, null, -20%)
+    +bgi('../img/europe-stars.png')
+    +size(250px)
+    transform: translateY(-50%)
+    +min(sm)
+      +size(600px)
+    +min(md)
+      +size(1000px)
+  &-item
+    +min(sm)
+      +ai(center)
+      &:nth-child(even)
+        flex-direction: row-reverse
+    &__content
+      +fs(14px)
+      +min(sm)
+        +d(flex)
+        +ai(center)
+        min-height: 60px
+      &-column
+        +offset('b', 30px)
+    &__image
+      border-radius: $common-border-radius
+      +common-box-shadow()

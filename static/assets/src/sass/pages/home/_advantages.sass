@@ -9,33 +9,10 @@
       border: 1px solid $color-gray
       border-radius: $common-border-radius
       +bgc($color-white)
+  .card-image
     &:nth-child(2)
       +min(sm)
         top: 45px
-    &:nth-child(2) &__inner
+    &:nth-child(2) .card-image__inner
       +min(sm)
         +common-box-shadow()
-    &__header
-      +r()
-      +h(200px)
-      overflow: hidden
-      +min(sm)
-        +h(300px)
-    &__image
-      +a(0, null, null, 0)
-      +size(100%)
-      object-fit: cover
-    &__body
-      padding: 30px 15px
-    &__title
-      +fs(24px)
-      +mb(15px)
-      +lh(1.1)
-      +min(md)
-        +fs(28px)
-    &__content
-      +fs(15px)
-      +min(sm)
-        min-height: 180px
-      +min(md)
-        +pr(45px)

@@ -1,0 +1,31 @@
+<section class="section services-all-services">
+    <div class="container">
+        {{ siteMacros.titleSection({
+            'tag': '3',
+            'size': 'md',
+            'class': 'center-mode services-all-services__title',
+            'title': post.get_field('all_services_title')
+        }) }}
+        <div class="services-all-services__content">
+            {% for item in post.get_field('all_services_list') %}
+                <div class="row services-all-services-item">
+                    <div class="col-12 col-sm-4 services-all-services-item__column-image">
+                        <img
+                            src="{{item.image}}"
+                            alt="All services - {{ loop.index }}"
+                            class="services-all-services-item__image">
+                    </div>
+                    <div class="col-12 col-sm-8">
+                        <div class="row">
+                            {% for blockquote in item.list %}
+                                <div class="col-12 col-md-6 col-lg-6 services-all-services-item__content-column">
+                                    <div class="blockquote services-all-services-item__content">{{ blockquote.content }}</div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

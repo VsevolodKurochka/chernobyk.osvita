@@ -9,21 +9,13 @@
             }) }}
         </div>
         <div class="row">
-            {% for advantage in post.get_field('advantages_list') %}
-                <div class="col-12 col-sm-4 home-advantages-item">
-                    <div class="home-advantages-item__inner">
-                        <div class="home-advantages-item__header">
-                            <img
-                                class="home-advantages-item__image"
-                                src="{{ advantage.image }}"
-                                alt="{{ advantage.title|striptags }}">
-                        </div>
-                        <div class="home-advantages-item__body">
-                            <p class="home-advantages-item__title">{{ advantage.title|striptags('<br><strong>') }}</p>
-                            <div class="home-advantages-item__content">{{ advantage.content }}</div>
-                        </div>
-                    </div>
-                </div>
+            {% for item in post.get_field('advantages_list') %}
+                {% include 'shared/card-image.twig' with {
+                    class: 'col-12 col-sm-4 card-image_large item-offset',
+                    image: item.image,
+                    title: item.title,
+                    content: item.content
+                } %}
             {% endfor %}
         </div>
     </div>
