@@ -1,0 +1,24 @@
+<section class="section services-reviews">
+    <div class="container">
+        <div class="services-reviews__content">
+            <div class="row services-reviews__row">
+                <div class="col-12 col-sm-5 services-reviews__image-wrapper">
+                    <img
+                        src="{{post.get_field('reviews_photo')}}"
+                        alt="{{ post.get_field('reviews_title')|striptags }}"
+                        class="services-reviews__image">
+                </div>
+                <div class="col-12 col-sm-6 col-md-5">
+                    {{ siteMacros.titleSection({
+                        'tag': '3',
+                        'size': 'sm',
+                        'class': 'services-reviews__title',
+                        'title': post.get_field('reviews_title')
+                    }) }}
+                    {% set button = post.get_field('reviews_button') %}
+                    <a href="{{ button.link.url }}" target="_blank" class="btn btn_brand-2 btn_lg">{{ button.text }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

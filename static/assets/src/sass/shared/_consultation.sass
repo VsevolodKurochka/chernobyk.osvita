@@ -9,7 +9,7 @@
       +size(250px, 190px)
       opacity: 0.6
       +min(xs)
-        +size(400px, 340px)
+        +size(445px, 340px)
       +min(md)
         +size(640px, 490px)
   &__title
@@ -61,8 +61,11 @@
     +min(md)
       +px(30px)
   &__image
-    +max(sm)
-      max-width: 100px
+    +w(100px)
+    +min(sm)
+      +w(200px)
+    +min(md)
+      +w(auto)
     &-wrapper
       +max(sm)
         +ta(center)

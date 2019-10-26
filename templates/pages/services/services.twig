@@ -8,7 +8,7 @@
         }) }}
         <div class="row services-content__row">
             {% for item in post.get_field('services_list') %}
-                <div class="item-offset services-content-item col-12 col-sm-6 col-md-4">
+                <div class="item-offset services-content-item col-12 col-sm-4">
                     <div class="box-shadow box-shadow_static">
                         <div class="services-content-item__header">
                             <img src="{{item.icon}}" alt="{{item.title|striptags}}" class="services-content-item__image">

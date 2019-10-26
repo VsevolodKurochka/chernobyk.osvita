@@ -1,0 +1,36 @@
+.services-reviews
+  $self: &
+
+  &__content
+    +bgc($color-white)
+    +common-box-shadow()
+    border-radius: $common-border-radius
+    padding: 30px
+    +max(sm)
+      +ta(center)
+    +min(sm)
+      overflow: hidden
+      padding: 45px 0 45px 45px
+  &__row
+    +min(sm)
+      +ai(center)
+      flex-direction: row-reverse
+      justify-content: space-between
+  &__title
+    +mb(15px)
+    +min(md)
+      +mb(30px)
+      +fs(28px)
+  &__image
+    +max(sm)
+      +w(250px)
+    +min(sm)
+      +r()
+      left: 45px
+      +tr()
+      #{$self}:hover &
+        left: 15px
+    &-wrapper
+      +max(sm)
+        +mt(-45px)
+        +mb(15px)
