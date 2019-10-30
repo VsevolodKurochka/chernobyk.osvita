@@ -1,0 +1,20 @@
+<section class="section czech-questions">
+    <div class="container czech-questions__content">
+        {% for item in questions %}
+            <div class="row czech-questions-item">
+                <div class="col-12 col-sm-6 col-md-5 czech-questions-item__image-wrapper">
+                    <div class="border-rectangle">
+                        <img
+                            src="{{item.image}}"
+                            alt="{{item.title|striptags}}"
+                            class="czech-questions-item__image">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="czech-questions-item__title">{{ item.title|striptags('<br><strong>') }}</p>
+                    <div class="content czech-questions-item__content">{{ item.content }}</div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>

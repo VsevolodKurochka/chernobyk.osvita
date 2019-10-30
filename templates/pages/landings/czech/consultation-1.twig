@@ -1,0 +1,7 @@
+{% set czech_form = post.get_field('questions_group') %}
+{% include "shared/consultation.twig" with {
+    theme: theme,
+    class: 'module-consultation_rocket',
+    title: czech_form.title,
+    form: czech_form.form
+} %}

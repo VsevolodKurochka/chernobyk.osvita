@@ -1,7 +1,7 @@
 {% macro titleSection(options) %}
 	<h{{ options.tag }}
 		class="section__title section__title_{{ options.size }} {{options.class}}">{{
-		options.title|striptags('<br><strong><span>')
+		options.title|striptags('<br><strong><span>')|raw
 		}}</h{{ options.tag }}>
 {% endmacro %}
 
