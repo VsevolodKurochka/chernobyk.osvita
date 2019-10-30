@@ -1,0 +1,55 @@
+.czech-types
+  &__row
+    +mb(30px)
+    +min(md)
+      +mb(45px)
+  &-item
+    +max(sm)
+      +offset('b', 30px)
+    &__header
+      +mb(15px)
+    &__header,
+    &__body
+      padding: 15px
+      +bgc($color-white)
+      +common-box-shadow()
+      border-radius: $common-border-radius
+      +min(md)
+        +py(25px)
+    &__body
+      +min(sm)
+        +fs(16px)
+        min-height: 300px
+    &__title
+      +c($color-brand-2)
+      +lh(1.1)
+      +mb(10px)
+      +min(sm)
+        +fs(18px)
+        min-height: 40px
+      +min(md)
+        +fs(20px)
+        min-height: 50px
+    &__subtitle
+      +fs(16px)
+      +min(sm)
+        +pr(15px)
+  &__footer
+    +r()
+    padding: 30px 15px
+    border: 2px solid $color-gray
+    border-radius: $common-border-radius
+    overflow: hidden
+    +min(md)
+      +pl(150px)
+      &:before
+        content: ''
+        +a(50%, null, null, -10%)
+        transform: translateY(-50%)
+        +size(175px, 160px)
+        +bgi('../img/europe-stars-red.png')
+      &:after
+        content: ''
+        +a(-80px, 0)
+        +size(350px, 280px)
+        +bgi('../img/europe-small-map.png')
