@@ -1,0 +1,29 @@
+<header class="header czech-header">
+    <img src="{{ post.thumbnail }}" alt="{{ post.get_field('header_title')|striptags }}" class="header__bg">
+    <div class="container header__container">
+        <div class="row czech-header__row stars-vertical czech-header__stars">
+            <div class="col-12 col-sm-8 czech-header__content">
+                {{ siteMacros.titleSection({
+                    tag: '1',
+                    title: post.get_field('header_title'),
+                    class: 'czech-header__title',
+                    size: 'lg'
+                }) }}
+                {{ siteMacros.titleSection({
+                    tag: '2',
+                    title: post.get_field('header_subtitle'),
+                    class: 'czech-header__subtitle',
+                    size: 'md'
+                }) }}
+                <div class="czech-header__content content">{{ post.get_field('header_content') }}</div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="module-consultation__form">
+                    <p class="module-consultation__form-title">
+                        {{ post.get_field('header_form_title')|striptags('<br><strong>') }}</p>
+                    {{ function('do_shortcode', post.get_field('header_form_code')) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

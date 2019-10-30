@@ -1,7 +1,8 @@
 {% macro titleSection(options) %}
 	<h{{ options.tag }}
-		class="section__title section__title_{{ options.size }}
-		{{options.class}}">{{options.title|raw}}</h{{ options.tag }}>
+		class="section__title section__title_{{ options.size }} {{options.class}}">{{
+		options.title|striptags('<br><strong><span>')
+		}}</h{{ options.tag }}>
 {% endmacro %}
 
 {% macro buttonModal(text, class) %}
