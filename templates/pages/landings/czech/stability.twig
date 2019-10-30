@@ -1,0 +1,33 @@
+<section class="section czech-stability">
+    <div class="container">
+        <div class="czech-stability__header center-mode">
+            {{ siteMacros.titleSection({
+                tag: '3',
+                title: post.get_field('stability_title'),
+                class: 'czech-stability__title',
+                size: 'lg'
+            }) }}
+            {{ siteMacros.titleSection({
+                tag: '4',
+                title: post.get_field('stability_subtitle'),
+                class: 'czech-stability__subtitle',
+                size: 'sm'
+            }) }}
+        </div>
+        <div class="czech-stability__content">
+            <img
+                src="{{post.get_field('stability_image')}}"
+                alt="{{options.content|striptags}}"
+                class="czech-stability__image">
+            {% for item in post.get_field('stability_list') %}
+                <div class="czech-stability__item czech-stability__item_{{ loop.index }}">
+                    {{ siteMacros.icon({
+                        'image': item.image,
+                        'title': item.title,
+                        'content': item.content
+                    }) }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

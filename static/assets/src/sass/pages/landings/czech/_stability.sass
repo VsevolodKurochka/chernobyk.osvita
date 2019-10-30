@@ -1,0 +1,36 @@
+.czech-stability
+  &__title
+    +mb(10px)
+  &__item
+    padding: 15px
+    border-radius: $common-border-radius
+    +bgc($color-white)
+    +common-box-shadow()
+    +ta(left)
+    z-index: 1
+    +max(sm)
+      +offset('b', 15px)
+    +min(sm)
+      max-width: 280px
+      +py(25px)
+      +a()
+      &_1
+        top: 15%
+        left: 0
+      &_2
+        top: 25%
+        right: 0
+      &_3
+        top: 50%
+        left: 10%
+  &__content
+    +r()
+    +ta(center)
+  .icon
+    +d(flex)
+    +ai(center)
+    &__header
+      +mr(15px)
+      +w(75px)
+      +min(sm)
+        +w(100px)
