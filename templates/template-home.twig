@@ -2,7 +2,14 @@
 
 {% block content %}
 	{% set sections = [
-		'header', 'about', 'experts', 'process', 'mission', 'reviews', 'advantages', 'consultation'
+		'header',
+		'about',
+		'experts',
+		'process',
+		'mission',
+		'reviews',
+		'advantages',
+		'consultation'
 	] %}
 	{% for section in sections %}
 		{% include "pages/home/#{section}.twig" %}

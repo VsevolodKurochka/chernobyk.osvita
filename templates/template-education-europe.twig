@@ -2,8 +2,17 @@
 
 {% block content %}
 	{% set sections = [
-		'header', 'advantages', 'consultation-1', 'countries', 'steps', 'who', 'features', 'reasons', 'schools',
-		'universities', 'consultation-2'
+		'header',
+		'advantages',
+		'consultation-1',
+		'countries',
+		'steps',
+		'who',
+		'features',
+		'reasons',
+		'schools',
+		'universities',
+		'consultation-2'
 	] %}
 	{% for section in sections %}
 		{% include "pages/education-europe/secondary/#{section}.twig" %}

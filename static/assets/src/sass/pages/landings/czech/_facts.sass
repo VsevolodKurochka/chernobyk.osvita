@@ -1,0 +1,23 @@
+.czech-facts
+  &:before
+    content: ''
+    +a(null, null, -15%, 50%)
+    transform: translateX(-50%)
+    z-index: -1
+    +bgi('../img/europe-stars.png')
+    +min(sm)
+      bottom: 0
+      +size(700px)
+    +min(md)
+      +size(1000px)
+  &-item
+    +offset('b', 45px)
+    +min(sm)
+      +offset('b', 60px)
+      +ai(center)
+      +jc(space-between)
+      &:nth-child(odd)
+        flex-direction: row-reverse
+    &__image
+      +common-box-shadow()
+      border-radius: $common-border-radius

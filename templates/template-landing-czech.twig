@@ -2,7 +2,9 @@
 
 {% block content %}
 	{% set sections = [
-		'header'
+		'header',
+		'facts',
+		'about'
 	] %}
 	{% for section in sections %}
 		{% include "pages/landings/czech/#{section}.twig" %}

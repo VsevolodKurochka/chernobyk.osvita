@@ -1,0 +1,19 @@
+.czech-about
+  &__title
+    +min(md)
+      +w(80%)
+      +mx(auto)
+  &__item:nth-child(even) .icon
+    &__title
+      +c($color-brand-2)
+  &__item .icon
+    +ta(center)
+    &__header
+      +min(sm)
+        min-height: 120px
+    &__title
+      +min(sm)
+        min-height: 80px
+    &__content
+      +min(sm)
+        min-height: 70px
