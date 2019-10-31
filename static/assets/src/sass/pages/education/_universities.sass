@@ -2,7 +2,9 @@
   &__title
     +section-title-offset()
   &-item
-    +offset('b', 30px)
+    +offset('b', 15px)
+    +min(sm)
+      +offset('b', 30px)
     &__inner
       border-radius: $common-border-radius
       border: 1px solid #EBEBEB
@@ -40,7 +42,7 @@
         justify-content: center
         padding: 15px
         +ta(center)
-        +min(sm)
+        +min(md)
           padding: 30px
       &__header,
       &__title
@@ -49,10 +51,14 @@
         +size(auto, 60px)
         object-fit: contain
         +min(sm)
-          +h(100px)
+          max-height: 100px
       &__title
         +min(sm)
+          +fs(12px)
+          min-height: 40px
+        +min(md)
           min-height: 100px
+          +fs(16px)
 
     &_large &
       &__inner

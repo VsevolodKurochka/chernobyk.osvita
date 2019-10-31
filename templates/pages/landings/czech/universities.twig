@@ -1,0 +1,4 @@
+{% include 'pages/education-europe/modules/universities.twig' with {
+    title: post.get_field('universities_title'),
+    universities: post.get_field('universities_list')
+} %}

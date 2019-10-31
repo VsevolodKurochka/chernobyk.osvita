@@ -4,8 +4,12 @@
     +min(md)
       +mb(45px)
   &-item
-    +max(sm)
+    +max(md)
       +offset('b', 30px)
+    &__inner
+      +max(sm)
+        max-width: 270px
+        +mx(auto)
     &__header
       +mb(15px)
     &__header,
@@ -24,15 +28,15 @@
       +c($color-brand-2)
       +lh(1.1)
       +mb(10px)
+      +fs(18px)
       +min(sm)
-        +fs(18px)
         min-height: 40px
       +min(md)
         +fs(20px)
         min-height: 50px
     &__subtitle
-      +fs(16px)
       +min(sm)
+        +fs(16px)
         +pr(15px)
   &__footer
     +r()

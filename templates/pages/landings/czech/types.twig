@@ -11,11 +11,13 @@
         <div class="row czech-types__row">
             {% for item in post.get_field('types_schools') %}
                 <div class="col-12 col-sm-6 col-md-3 czech-types-item">
-                    <div class="czech-types-item__header">
-                        <p class="czech-types-item__title">{{ item.title|striptags('<br><strong>') }}</p>
-                        <p class="czech-types-item__subtitle">{{ item.subtitle|striptags('<br><strong>') }}</p>
+                    <div class="czech-types-item__inner">
+                        <div class="czech-types-item__header">
+                            <p class="czech-types-item__title">{{ item.title|striptags('<br><strong>') }}</p>
+                            <p class="czech-types-item__subtitle">{{ item.subtitle|striptags('<br><strong>') }}</p>
+                        </div>
+                        <div class="czech-types-item__body content">{{ item.content }}</div>
                     </div>
-                    <div class="czech-types-item__body content">{{ item.content }}</div>
                 </div>
             {% endfor %}
         </div>
