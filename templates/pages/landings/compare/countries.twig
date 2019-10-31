@@ -1,11 +1,11 @@
-{% set choiseCountriesHeader = post.get_field('countries_header') %}
-{% set choiseCountriesClass = 'compare-countries' %}
-<section class="section {{ choiseCountriesClass }}">
+{% set header = post.get_field('countries_header') %}
+{% set sectionClass = 'compare-countries' %}
+<section class="section {{ sectionClass }}">
     <div class="container">
         {% include "shared/section-header.twig" with {
-            title: choiseCountriesHeader.title,
-            subtitle: choiseCountriesHeader.subtitle,
-            class: choiseCountriesClass,
+            title: header.title,
+            subtitle: header.subtitle,
+            class: sectionClass,
             centerMode: true
         } %}
         <div class="row">

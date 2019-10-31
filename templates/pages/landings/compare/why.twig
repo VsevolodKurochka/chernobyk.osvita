@@ -1,0 +1,22 @@
+{% set header = post.get_field('why_header') %}
+{% set sectionClass = 'compare-why' %}
+<section class="section {{ sectionClass }}">
+    <div class="container">
+        {% include "shared/section-header.twig" with {
+            title: header.title,
+            subtitle: header.subtitle,
+            class: sectionClass,
+            centerMode: true
+        } %}
+        <div class="row">
+            {% for item in post.get_field('why_list') %}
+                {% include 'shared/card-image.twig' with {
+                    class: 'col-12 col-sm-4 item-offset card-image_center card-image_small',
+                    image: item.image,
+                    title: item.title,
+                    content: item.content
+                } %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

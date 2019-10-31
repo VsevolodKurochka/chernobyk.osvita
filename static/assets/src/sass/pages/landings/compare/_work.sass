@@ -1,0 +1,22 @@
+.compare-work
+  &__row
+    +min(sm)
+      +ai(center)
+      flex-direction: row-reverse
+      justify-content: space-around
+  &__title,
+  &__content
+    +mb(15px)
+
+  &__content
+    +min(sm)
+      +fs(16px)
+
+  &__image
+    +max(sm)
+      +ml(-15px)
+      max-width: 250px
+    &-wrapper
+      +ta(center)
+      +max(sm)
+        +mb(15px)

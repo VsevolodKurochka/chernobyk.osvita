@@ -1,0 +1,22 @@
+{% set header = post.get_field('about_header') %}
+{% set sectionClass = 'compare-about' %}
+<section class="section {{ sectionClass }}">
+    <div class="container">
+        {% include "shared/section-header.twig" with {
+            title: header.title,
+            subtitle: header.subtitle,
+            class: sectionClass,
+            centerMode: true
+        } %}
+        <div class="row">
+            {% for item in post.get_field('about_list') %}
+                {{ siteMacros.icon({
+                    class: 'col-12 col-sm-4 icon_large icon_center',
+                    title: item.title,
+                    image: item.image,
+                    content: item.content
+                }) }}
+            {% endfor %}
+        </div>
+    </div>
+</section>

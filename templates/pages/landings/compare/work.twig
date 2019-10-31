@@ -1,0 +1,15 @@
+<section class="section compare-work">
+    <div class="container">
+        <div class="row compare-work__row">
+            <div class="col-12 col-sm-6 col-md-4 compare-work__image-wrapper">
+                <img
+                    src="{{post.get_field('work_image')}}"
+                    alt="{{options.content|striptags}}"
+                    class="compare-work__image">
+            </div>
+            <div class="col-12 col-sm-6 col-md-5">
+                <blockquote class="content blockquote">{{ post.get_field('work_content') }}</blockquote>
+            </div>
+        </div>
+    </div>
+</section>

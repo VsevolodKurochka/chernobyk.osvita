@@ -1,0 +1,9 @@
+{% set consultation_2_group = post.get_field('consultation-group') %}
+
+{% include "shared/consultation.twig" with {
+    theme: theme,
+    class: 'module-consultation_rocket',
+    title: consultation_2_group.title,
+    subtitle: consultation_2_group.subtitle,
+    form: consultation_2_group.form
+} %}

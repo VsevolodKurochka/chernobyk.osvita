@@ -3,7 +3,11 @@
 {% block content %}
 	{% set sections = [
 		'header',
-		'compare-countries'
+		'countries',
+		'why',
+		'about',
+		'work',
+		'consultation'
 	] %}
 	{% for section in sections %}
 		{% include "pages/landings/compare/#{section}.twig" %}
