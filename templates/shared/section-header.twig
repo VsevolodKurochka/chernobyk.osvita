@@ -1,0 +1,18 @@
+<div class="section__header {{ class }} {{ centerMode ? 'center-mode' : '' }}">
+    {% if title %}
+        {{ siteMacros.titleSection({
+            "tag": "3",
+            "size": "lg",
+            "class": "section__header-title #{class}__title",
+            "title": title
+        }) }}
+    {% endif %}
+    {% if subtitle %}
+        {{ siteMacros.titleSection({
+            "tag": "4",
+            "size": "sm",
+            "class": "section__header-subtitle #{class}__subtitle",
+            "title": subtitle
+        }) }}
+    {% endif %}
+</div>

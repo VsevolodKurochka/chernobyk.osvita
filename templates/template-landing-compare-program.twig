@@ -1,0 +1,11 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	{% set sections = [
+		'header',
+		'compare-countries'
+	] %}
+	{% for section in sections %}
+		{% include "pages/landings/compare/#{section}.twig" %}
+	{% endfor %}
+{% endblock %}

@@ -1,0 +1,29 @@
+{% set choiseCountriesHeader = post.get_field('countries_header') %}
+{% set choiseCountriesClass = 'compare-countries' %}
+<section class="section {{ choiseCountriesClass }}">
+    <div class="container">
+        {% include "shared/section-header.twig" with {
+            title: choiseCountriesHeader.title,
+            subtitle: choiseCountriesHeader.subtitle,
+            class: choiseCountriesClass,
+            centerMode: true
+        } %}
+        <div class="row">
+            {% for item in post.get_field('countries_list') %}
+                <div class="col-12 col-sm-4 compare-countries-item">
+                    <div class="compare-countries-item__inner">
+                        <div class="compare-countries-item__flag">
+                            <img src="{{ item.image }}" alt="{{ item.title|striptags }}">
+                        </div>
+                        <div class="compare-countries-item__body">
+                            <p class="compare-countries-item__title">{{ item.title|striptags('<br><strong>') }}</p>
+                            <a
+                                class="btn btn_lg btn_brand-2"
+                                href="{{ item.link }}">Выбрать</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

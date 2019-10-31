@@ -1,0 +1,36 @@
+.compare-countries
+  &-item
+    +max(sm)
+      +offset('b', 30px)
+    &__inner
+      +bgc($color-white)
+      +common-box-shadow()
+      padding: 30px 15px
+      +max(sm)
+        max-width: 270px
+        +mx(auto)
+      +min(md)
+        +px(30px)
+    &__flag
+      +mt(-45px)
+      +min(sm)
+        +mt(-60px)
+      img
+        border-radius: 100%
+        +bgc($color-white)
+        padding: 4px
+        +size(50px)
+        +min(md)
+          +size(70px)
+
+    &__body
+      +ta(center)
+    &__title
+      +fw(900)
+      +mb(30px)
+      +fs(20px)
+      +lh(1)
+      +min(md)
+        +fs(25px)
+      +min(lg)
+        +fs(30px)
