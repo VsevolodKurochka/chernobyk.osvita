@@ -39,6 +39,12 @@
       +r()
       &:before
         content: ''
-        +a(-5px, 10px)
-        +size(45px, 28px)
+        +a(-15px, 0)
+        +size(30px, 20px)
         +bgi('../img/step-arrow.png')
+        +max(sm)
+          transform: rotate(90deg)
+        +min(sm)
+          top: -5px
+          right: 10px
+          +size(45px, 28px)
