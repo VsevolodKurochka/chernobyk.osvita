@@ -1,0 +1,58 @@
+<div class="col-10 col-sm-4">
+    <div class="compare-popularity__item">
+        <div class="compare-popularity__item-header">
+            {{ siteMacros.themeImage({
+                theme: theme,
+                url: flag,
+                class: 'compare-popularity__title-image',
+                alt: title|striptags
+            }) }}
+            <p class="compare-popularity__item-title">{{ title }}</p>
+        </div>
+        {% include 'pages/landings/compare/popularity/popularity-item-list.twig' with {
+            list: infoBlock.general.list,
+            modification: infoBlock.general.modification,
+            itemList: itemList
+        } %}
+    </div>
+    <div class="compare-popularity__item-divider"></div>
+    <div class="compare-popularity__item">
+        {% include 'pages/landings/compare/popularity/popularity-item-list.twig' with {
+            list: infoBlock.language.list,
+            modification: infoBlock.language.modification,
+            itemList: itemList
+        } %}
+    </div>
+    <div class="compare-popularity__item-divider"></div>
+    <div class="compare-popularity__item">
+        {% include 'pages/landings/compare/popularity/popularity-item-list.twig' with {
+            list: infoBlock.process.list,
+            modification: infoBlock.process.modification,
+            itemList: itemList
+        } %}
+    </div>
+    <div class="compare-popularity__item-divider"></div>
+    <div class="compare-popularity__item">
+        {% include 'pages/landings/compare/popularity/popularity-item-list.twig' with {
+            list: infoBlock.cost.list,
+            modification: infoBlock.cost.modification,
+            itemList: itemList
+        } %}
+    </div>
+    <div class="compare-popularity__item-divider"></div>
+    <div class="compare-popularity__item">
+        {% include 'pages/landings/compare/popularity/popularity-item-list.twig' with {
+            list: infoBlock.bonuses.list,
+            modification: infoBlock.bonuses.modification,
+            itemList: itemList
+        } %}
+    </div>
+    <div class="compare-popularity__item-divider"></div>
+    <div class="compare-popularity__item">
+        {% include 'pages/landings/compare/popularity/popularity-item-list.twig' with {
+            list: infoBlock.services.list,
+            modification: infoBlock.services.modification,
+            itemList: itemList
+        } %}
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="{{ class }}">
+    {% for item in list %}
+        <div
+            class="compare-popularity__item-point
+            compare-popularity__item-point_{{ modification }}-{{ loop.index }}">{{ item.title }}</div>
+    {% endfor %}
+</div>

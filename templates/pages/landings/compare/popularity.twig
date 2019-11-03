@@ -1,0 +1,136 @@
+{% set header = post.get_field('popularity_header') %}
+{% set sectionClass = 'compare-popularity' %}
+{% set tableListGeneral = post.get_field('popularity_general').list %}
+{% set tableListLanguage = post.get_field('popularity_language').list %}
+{% set tableListProcess = post.get_field('popularity_process').list %}
+{% set tableListCost = post.get_field('popularity_cost').list %}
+{% set tableListBonuses = post.get_field('popularity_bonuses').list %}
+{% set tableListServices = post.get_field('popularity_services').list %}
+
+{%
+    set infoBlock = {
+        general: {
+            list: tableListGeneral,
+            modification: 'general'
+        },
+        language: {
+            list: tableListLanguage,
+            modification: 'language'
+        },
+        process: {
+            list: tableListProcess,
+            modification: 'process'
+        },
+        cost: {
+            list: tableListCost,
+            modification: 'cost'
+        },
+        bonuses: {
+            list: tableListBonuses,
+            modification: 'bonuses'
+        },
+        services: {
+            list: tableListServices,
+            modification: 'services'
+        }
+    }
+%}
+<section class="section {{ sectionClass }}">
+    <div class="container">
+        {% include "shared/section-header.twig" with {
+            title: header.title,
+            subtitle: header.subtitle,
+            class: sectionClass,
+            centerMode: true
+        } %}
+        <div class="row compare-popularity__row">
+            <div class="col-4 col-sm-3 compare-popularity__description">
+                {% include 'pages/landings/compare/popularity/popularity-description.twig' with {
+                    list: tableListGeneral,
+                    modification: 'general',
+                    class: 'compare-popularity__description_general'
+                } %}
+
+                {% include 'pages/landings/compare/popularity/popularity-subsection.twig' with {
+                    theme: theme,
+                    image: 'translation-icon.png',
+                    title: 'Требования к языку'
+                } %}
+                {% include 'pages/landings/compare/popularity/popularity-description.twig' with {
+                    list: tableListLanguage,
+                    modification: 'language',
+                    class: 'compare-popularity__description_language'
+                } %}
+
+                {% include 'pages/landings/compare/popularity/popularity-subsection.twig' with {
+                    theme: theme,
+                    image: 'diagram-icon.png',
+                    title: 'Процесс поступления'
+                } %}
+                {% include 'pages/landings/compare/popularity/popularity-description.twig' with {
+                    list: tableListProcess,
+                    modification: 'process',
+                    class: 'compare-popularity__description_process'
+                } %}
+
+                {% include 'pages/landings/compare/popularity/popularity-subsection.twig' with {
+                    theme: theme,
+                    image: 'company-icon.png',
+                    title: 'Проживание, переезд и другие расходы'
+                } %}
+                {% include 'pages/landings/compare/popularity/popularity-description.twig' with {
+                    list: tableListCost,
+                    modification: 'cost',
+                    class: 'compare-popularity__description_cost'
+                } %}
+
+                {% include 'pages/landings/compare/popularity/popularity-subsection.twig' with {
+                    theme: theme,
+                    image: 'rating-icon.png',
+                    title: 'Бонусы при поступлении в ВУЗ'
+                } %}
+                {% include 'pages/landings/compare/popularity/popularity-description.twig' with {
+                    list: tableListBonuses,
+                    modification: 'bonuses',
+                    class: 'compare-popularity__description_bonuses'
+                } %}
+
+                {% include 'pages/landings/compare/popularity/popularity-subsection.twig' with {
+                    theme: theme,
+                    image: 'piggy-bank-icon.png',
+                    title: 'Услуги Osvita Market'
+                } %}
+                {% include 'pages/landings/compare/popularity/popularity-description.twig' with {
+                    list: tableListServices,
+                    modification: 'services',
+                    class: 'compare-popularity__description_services'
+                } %}
+            </div>
+            <div class="col-8 col-sm-9">
+                <div class="row compare-popularity__content">
+                    {% include 'pages/landings/compare/popularity/popularity-item.twig' with {
+                        theme: theme,
+                        flag: 'czech-icon.png',
+                        title: 'Чехия',
+                        infoBlock: infoBlock,
+                        itemList: 'czech'
+                    } %}
+                    {% include 'pages/landings/compare/popularity/popularity-item.twig' with {
+                        theme: theme,
+                        flag: 'poland-icon.png',
+                        title: 'Польша',
+                        infoBlock: infoBlock,
+                        itemList: 'poland'
+                    } %}
+                    {% include 'pages/landings/compare/popularity/popularity-item.twig' with {
+                        theme: theme,
+                        flag: 'slovakia-icon.png',
+                        title: 'Словакия',
+                        infoBlock: infoBlock,
+                        itemList: 'slovakia'
+                    } %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

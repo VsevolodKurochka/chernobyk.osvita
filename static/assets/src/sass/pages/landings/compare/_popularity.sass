@@ -1,0 +1,115 @@
+$popularity-padding: 15px
+$popularity-padding-small: 5px
+
+.compare-popularity
+  &__row
+    +fs(11px)
+    +min(sm)
+      +fs(14px)
+    +min(md)
+      +fs(16px)
+  &__description
+    +pt(50px)
+    +max(sm)
+      +px(0)
+    +min(sm)
+      +pt(75px)
+    &_language
+      +min(sm)
+        +pt(15px)
+  &__content
+    +max(sm)
+      flex-wrap: nowrap
+      overflow-x: auto
+  &__subsection
+    +d(flex)
+    +ai(center)
+    +fw(900)
+    min-height: 100px
+    +min(md)
+      min-height: 120px
+    &-image
+      +mr(15px)
+      +size(30px)
+      object-fit: contain
+      +min(md)
+        +size(60px)
+  &__item
+    border-radius: $common-border-radius
+    +common-box-shadow()
+    +bgc($color-white)
+    &-header
+      min-height: 50px
+      +pl($popularity-padding-small)
+      +min(sm)
+        +pl($popularity-padding)
+      +max(sm)
+        +d(flex)
+        +ai(center)
+      +min(sm)
+        min-height: 75px
+      img
+        +size(30px)
+        border-radius: 100%
+        border: 4px solid $color-white
+        +mr(10px)
+        +min(sm)
+          +size(60px)
+          +mt(-25px)
+    &-divider
+      +d(flex)
+      min-height: 107px
+      +min(sm)
+        min-height: 120px
+    &-body
+      +pb($popularity-padding-small)
+      +min(sm)
+        +pb($popularity-padding)
+    &-title
+      +ta(center)
+      +fw(900)
+      +fs(18px)
+      +min(sm)
+        +mt(-25px)
+      +min(md)
+        +fs(20px)
+    &-point
+      min-height: 60px
+      +pt(8px)
+      +px($popularity-padding-small)
+      +min(sm)
+        +px($popularity-padding)
+      &:not(:last-child)
+        border-bottom: 2px solid #dddddd
+      ul
+        list-style: none
+        +pl($popularity-padding-small)
+        +min(sm)
+          +pl($popularity-padding)
+        li
+          +r()
+          +pl($popularity-padding)
+          &:before
+            content: ''
+            +a(4px, null, null, 0)
+            +size(8px)
+            +bgc(#e3000f)
+            border-radius: 100%
+            +min(sm)
+              top: 8px
+      &_general
+        &-1
+          min-height: 90px
+        &-2
+          min-height: 120px
+        &-5
+          min-height: 100px
+        &-7
+          min-height: 50px
+        +min(sm)
+          &-1
+            min-height: 120px
+          &-2
+            min-height: 150px
+          &-7
+            min-height: 80px
