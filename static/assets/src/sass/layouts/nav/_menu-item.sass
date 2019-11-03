@@ -1,8 +1,10 @@
 .nav__menu
-  > ul
+  ul
+    list-style: none
     li
       +d(block)
       +tr()
+      +r()
 
       a
         +d(block)
@@ -16,7 +18,7 @@
         a
           padding: 10px 15px
           +c($color-white)
-        &.current-menu-item a
+        &.current-menu-item > a
           +bgc($color-brand-2)
           +c($color-white)
 
@@ -27,8 +29,40 @@
 
         a
           +py(2px)
+
+        &:not(.menu-item-has-children) a
           +linkEffect3($color-white)
 
         &.current-menu-item a
           &:before
             width: 100%
+
+  li.menu-item-has-children
+    li
+      margin-right: 0
+      width: 100%
+    > ul
+      +max(md)
+        +mt(10px)
+        +pl(25px)
+      +min(md)
+        +a(100%, null, null, 0)
+        +w(250px)
+        +common-box-shadow()
+        +tr()
+        opacity: 0
+        visibility: hidden
+        z-index: -1
+        a
+          padding: 10px
+          +bgc($color-white)
+          +c($color-brand-1)
+          +tr()
+          &:hover
+            +bgc($color-brand-1)
+            +c($color-white)
+    +min(md)
+      &:hover > ul
+        opacity: 1
+        visibility: visible
+        z-index: 1
