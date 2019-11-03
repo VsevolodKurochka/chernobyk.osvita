@@ -14,18 +14,18 @@ $popularity-padding-small: 5px
       +px(0)
     +min(sm)
       +pt(75px)
-    &_language
-      +min(sm)
-        +pt(15px)
   &__content
     +max(sm)
       flex-wrap: nowrap
       overflow-x: auto
+      -webkit-overflow-scrolling: touch
   &__subsection
     +d(flex)
     +ai(center)
     +fw(900)
     min-height: 100px
+    +max(sm)
+      +pl(5px)
     +min(md)
       min-height: 120px
     &-image
@@ -58,13 +58,9 @@ $popularity-padding-small: 5px
           +mt(-25px)
     &-divider
       +d(flex)
-      min-height: 107px
+      min-height: 100px
       +min(sm)
         min-height: 120px
-    &-body
-      +pb($popularity-padding-small)
-      +min(sm)
-        +pb($popularity-padding)
     &-title
       +ta(center)
       +fw(900)
@@ -104,8 +100,10 @@ $popularity-padding-small: 5px
           min-height: 120px
         &-5
           min-height: 100px
+        &-6
+          min-height: 90px
         &-7
-          min-height: 50px
+          min-height: 70px
         +min(sm)
           &-1
             min-height: 120px
@@ -113,3 +111,38 @@ $popularity-padding-small: 5px
             min-height: 150px
           &-7
             min-height: 80px
+      &_language
+        &-1
+          min-height: 70px
+        &-3
+          min-height: 90px
+      &_process
+        &-1
+          min-height: 90px
+        &-2
+          min-height: 70px
+        &-3
+          min-height: 90px
+        +min(sm)
+          &-1
+            min-height: 120px
+          &-2
+            min-height: 70px
+      &_cost
+        &-1
+          min-height: 90px
+        &-4
+          min-height: 100px
+      &_bonuses
+        &-1
+          min-height: 200px
+        &-2
+          min-height: 90px
+  &__item-body &__item-point_services
+    &-1
+      +d(flex)
+      +ai(center)
+      +jc(center)
+      +pt(0)
+      +min(sm)
+        +fs(20px)
