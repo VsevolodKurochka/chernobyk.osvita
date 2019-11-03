@@ -1,0 +1,27 @@
+<section class="section contacts-map">
+    <div class="container">
+        <div class="row contacts-map__row">
+            <div class="col-12 col-sm-8">
+                <iframe class="contacts-map__iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=30.362846357747916%2C50.347870363307074%2C30.684196455404166%2C50.49377379686629&amp;layer=mapnik&amp;marker=50.42087826141857%2C30.523521406576037"></iframe>
+            </div>
+            <div class="col-12 col-sm-4 contacts-map__content">
+                {% include 'shared/options/address.twig' with {
+                    address: options.address
+                } %}
+                {% include 'shared/options/phones.twig' with {
+                    phones: options.phones
+                } %}
+                <div>
+                    {% include 'shared/options/email.twig' with {
+                        email: options.email
+                    } %}
+                </div>
+                {% include 'shared/options/social.twig' with {
+                    list: options.socials,
+                    size: 'large',
+                    color: 'red'
+                } %}
+            </div>
+        </div>
+    </div>
+</section>

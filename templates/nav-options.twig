@@ -1,6 +1,6 @@
 <div class="nav__options">
     <a href="tel: {{options.phones[0].phone}}" class="nav__options-link">{{options.phones[0].phone}}</a>
-    {% include "shared/social.twig" with {
+    {% include "shared/options/social.twig" with {
         list: options.socials,
         size: 'small',
         color: 'white'

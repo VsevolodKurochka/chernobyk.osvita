@@ -1,0 +1,11 @@
+<ul class="module-address {{ class }}">
+    {% for item in address %}
+        <li class="module-address__item">
+            <img
+                src="{{ item.flag }}"
+                alt="{{ item.address|striptags }}"
+                class="module-address__flag">
+            <div class="module-address__content">{{ item.address }}</div>
+        </li>
+    {% endfor %}
+</ul>

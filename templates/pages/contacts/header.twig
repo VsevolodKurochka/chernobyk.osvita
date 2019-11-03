@@ -1,0 +1,5 @@
+{% include 'shared/header.twig' with {
+    class: 'header_small',
+    background: post.thumbnail,
+    title: post.get_field('header_title')
+} %}

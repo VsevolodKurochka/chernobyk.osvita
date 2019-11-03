@@ -1,0 +1,7 @@
+{% include "shared/consultation.twig" with {
+    theme: theme,
+    class: 'module-consultation_rocket module-consultation_small',
+    title: post.get_field('consultation_title'),
+    subtitle: post.get_field('consultation_subtitle'),
+    form: post.get_field('consultation_form')
+} %}

@@ -1,0 +1,9 @@
+<ul class="module-phones {{ class }}">
+    {% for item in phones %}
+        <li class="module-phones__item">
+            <a
+                class="common-link"
+                href="tel: {{ item.phone }}">{{ item.phone }}</a>
+        </li>
+    {% endfor %}
+</ul>

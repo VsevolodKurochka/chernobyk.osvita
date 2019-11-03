@@ -6,31 +6,24 @@
             </div>
             <div class="col-12 col-sm-5 col-md-3 footer__column">
                 <div class="footer__column-inner">
-                    <a href="mailto: {{ options.email }}">{{ options.email }}</a>
-                    {% include "shared/social.twig" with {
+                    {% include 'shared/options/email.twig' with {
+                        email: options.email
+                    } %}
+                    {% include "shared/options/social.twig" with {
                         class: 'footer__social',
                         list: options.socials,
                         size: 'small',
                         color: 'white'
                     } %}
-                    <ul class="footer__phones">
-                        {% for item in options.phones %}
-                            <li>
-                                <a href="tel: {{item.phone}}">{{item.phone}}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
+                    {% include 'shared/options/phones.twig' with {
+                        phones: options.phones
+                    } %}
                 </div>
             </div>
             <div class="col-12 col-sm-5 col-md-3 footer__column">
-                <ul class="footer__address">
-                    {% for item in options.address %}
-                        <li class="footer__address-item">
-                            <img src="{{ item.flag }}" alt="{{ item.address|striptags }}" class="footer__address-item-flag">
-                            <div class="footer__address-item-content">{{ item.address }}</div>
-                        </li>
-                    {% endfor %}
-                </ul>
+                {% include 'shared/options/address.twig' with {
+                    address: options.address
+                } %}
             </div>
         </div>
     </div>

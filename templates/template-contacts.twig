@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	{% set sections = [
+		'header',
+		'map',
+		'consultation'
+	] %}
+	{% for section in sections %}
+		{% include "pages/contacts/#{section}.twig" %}
+	{% endfor %}
+{% endblock %}

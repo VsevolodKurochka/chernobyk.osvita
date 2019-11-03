@@ -9,8 +9,14 @@
     justify-content: center
     height: 100vh
     min-height: 700px
-  &__title
-    +mb(30px)
+  &_small
+    height: auto
+    min-height: auto
+    +py(60px)
+    +min(md)
+      +py(160px)
+  &__title + &__subtitle
+    +mt(30px)
   &__content
     +mb(30px)
   &__container

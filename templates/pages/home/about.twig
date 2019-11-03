@@ -28,7 +28,7 @@
                 <div class="home-about__subtitle">
                     {{ post.get_field('about_subtitle') }}
                 </div>
-                {% include "shared/social.twig" with {
+                {% include "shared/options/social.twig" with {
                     list: options.socials,
                     size: 'large',
                     color: 'red'
