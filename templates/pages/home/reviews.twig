@@ -15,13 +15,13 @@
             }) }}
         </div>
         <div class="row">
-            {% for review in reviews %}
+            {#{% for review in reviews %}
                 {% include "shared/review.twig" with {
                     class: 'col-12 col-sm-6',
                     url: review.get_field('video'),
                     title: review.title
                 } %}
-            {% endfor %}
+            {% endfor %}#}
         </div>
     </div>
 </section>
