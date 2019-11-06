@@ -16,9 +16,11 @@
             {% endfor %}
         </div>
         <div class="home-process__footer">
+            {% set processButton = post.get_field('process_button') %}
             <a
                 class="btn btn_lg btn_brand-2"
-                href="{{ post.get_field('process_link_link') }}">{{ post.get_field('process_link_text') }}</a>
+                target="{{ processButton.link.target }}"
+                href="{{ processButton.link.url }}">{{ processButton.text }}</a>
         </div>
     </div>
 </section>

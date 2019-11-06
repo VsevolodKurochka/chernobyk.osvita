@@ -110,9 +110,10 @@
         +common-box-shadow()
         border-radius: 45px
         text-decoration: none
-        &:hover
-          +bgc($color-brand-2)
-          +c($color-white)
         +min(md)
           +h(60px)
           +pl(20px)
+        &_hover
+          &:hover
+            +bgc($color-brand-2)
+            +c($color-white)

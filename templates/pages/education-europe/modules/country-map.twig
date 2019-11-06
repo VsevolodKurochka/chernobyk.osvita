@@ -8,7 +8,7 @@
             <li class="education-country__map-list-item education-country__map-list-item_{{ country.type }}">
                 <{{ itemTag }}
                     {% if itemTag == 'a' %} href="{{ country.link }}" target="_blank"  {% endif %}
-                    class="education-country__map-list-link">
+                    class="education-country__map-list-link {% if itemTag == 'a' %} education-country__map-list-link_hover {% endif %}">
                     <span class="education-country__map-list-name">{{ country.name }}</span>
                     <img
                         src="{{ country.flag }}"
