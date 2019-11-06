@@ -5,16 +5,26 @@
         class="education-country__map-image">
     <ul class="education-country__map-list">
         {% for country in countryList %}
+            {% if country.active == false %}
+                {% set tag = 'span' %}
+            {% elseif itemTag == 'a' %}
+                {% set tag = 'a' %}
+            {% endif %}
+            {% set conditionForLink = itemTag == 'a' and country.active == true %}
             <li class="education-country__map-list-item education-country__map-list-item_{{ country.type }}">
-                <{{ itemTag }}
-                    {% if itemTag == 'a' %} href="{{ country.link }}" target="_blank"  {% endif %}
-                    class="education-country__map-list-link {% if itemTag == 'a' %} education-country__map-list-link_hover {% endif %}">
+                <{{ tag }}
+                    {% if conditionForLink %}
+                        href="{{ country.link.url }}"
+                        target="{{ country.link.target }}"
+                    {% endif %}
+                    class="education-country__map-list-link
+            {% if conditionForLink %} education-country__map-list-link_hover {% endif %}">
                     <span class="education-country__map-list-name">{{ country.name }}</span>
                     <img
                         src="{{ country.flag }}"
                         alt="{{ country.name|striptags }}"
                         class="education-country__map-list-flag">
-                </{{ itemTag }}>
+                </{{ tag }}>
             </li>
         {% endfor %}
     </ul>

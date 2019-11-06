@@ -1,5 +1,5 @@
 .modal
-  +d(flex)
+  +d(none)
   +ai(center)
   +jc(center)
   +f(0, 0, 0, 0)
@@ -23,6 +23,7 @@
     @extend %showing
 
     &_in
+      +d(flex)
       overflow-y: visible
       z-index: 1000
       @extend %showing_in

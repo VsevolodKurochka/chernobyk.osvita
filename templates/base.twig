@@ -17,12 +17,22 @@
 	{% include 'footer.twig' %}
 </main>
 {{ function('wp_footer') }}
-<script>
+{#<script>
 	$(window).on('load', function() {
 		setTimeout(function(){
 			$('.preloader').fadeOut(500);
 		}, 500);
 	});
+</script>#}
+<script type="text/javascript">
+	var fca_code = '5a797db1fcf2af18e4adc670995f81bc';
+	(function() {
+		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.charset = 'utf-8';
+		po.src = '//ua.cdn.fastcallagent.com/fca.min.js?_='+Date.now();
+		var s = document.getElementsByTagName('script')[0];
+		if (s) { s.parentNode.insertBefore(po, s); }
+		else { s = document.getElementsByTagName('head')[0]; s.appendChild(po); }
+	})();
 </script>
 </body>
 </html>
