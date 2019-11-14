@@ -8,8 +8,7 @@ gulp.task(
 	gulp.series(
 		serve,
 		gulp.parallel(
-			'babel', 'babel:watch',
-			'concat', 'concat:watch',
+			'scripts', 'scripts:watch',
 			'sass', 'sass:watch',
 			'image', 'image:watch',
 			'fonts', 'fonts:watch'
