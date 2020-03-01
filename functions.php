@@ -145,3 +145,32 @@ class StarterSite extends Timber\Site {
 }
 
 new StarterSite();
+
+add_action( 'wp_footer', 'mycustom_wp_footer' );
+  
+function mycustom_wp_footer() {
+?>
+<script type="text/javascript">
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    $('#modal-form').removeClass('modal_showing_in');
+    $('#modal-thx').addClass('modal_showing_in');
+}, false );
+</script>
+<?php
+}
+
+function cf7_extra_fields_func( $atts ) {
+    $html = '';
+    $html .= '<input type="hidden" name="page-title" value="'.get_the_title().'">';
+    $html .= '<input type="hidden" name="page-url" value="'.get_the_permalink().'">';
+    return $html;
+}
+
+add_shortcode( 'cf7_extra_fields', 'cf7_extra_fields_func' );
+
+
+
+
+
+
+
