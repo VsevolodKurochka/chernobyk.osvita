@@ -9,20 +9,10 @@
  */
 
 require get_template_directory() . '/tgm/connect.php';
-add_filter('use_block_editor_for_post', '__return_false', 10);
-add_filter('show_admin_bar', '__return_false');
-
-function remove_jquery_migrate( $scripts ) {
-    if ( ! is_admin() && isset( $scripts->registered['jquery'] ) ) {
-        $script = $scripts->registered['jquery'];
-
-        if ( $script->deps ) { // Check whether the script has any dependencies
-            $script->deps = array_diff( $script->deps, array( 'jquery-migrate' ) );
-        }
-    }
-}
-
-add_action( 'wp_default_scripts', 'remove_jquery_migrate' );
+require get_template_directory() . '/functions/filters.php';
+require get_template_directory() . '/functions/footer.php';
+require get_template_directory() . '/functions/cf7.php';
+require get_template_directory() . '/functions/seo.php';
 
 $composer_autoload = __DIR__ . '/vendor/autoload.php';
 if ( file_exists( $composer_autoload ) ) {
@@ -31,7 +21,6 @@ if ( file_exists( $composer_autoload ) ) {
 }
 
 if ( ! class_exists( 'Timber' ) ) {
-
 	add_action(
 		'admin_notices',
 		function() {
@@ -145,32 +134,4 @@ class StarterSite extends Timber\Site {
 }
 
 new StarterSite();
-
-add_action( 'wp_footer', 'mycustom_wp_footer' );
-  
-function mycustom_wp_footer() {
-?>
-<script type="text/javascript">
-document.addEventListener( 'wpcf7mailsent', function( event ) {
-    $('#modal-form').removeClass('modal_showing_in');
-    $('#modal-thx').addClass('modal_showing_in');
-}, false );
-</script>
-<?php
-}
-
-function cf7_extra_fields_func( $atts ) {
-    $html = '';
-    $html .= '<input type="hidden" name="page-title" value="'.get_the_title().'">';
-    $html .= '<input type="hidden" name="page-url" value="'.get_the_permalink().'">';
-    return $html;
-}
-
-add_shortcode( 'cf7_extra_fields', 'cf7_extra_fields_func' );
-
-
-
-
-
-
 
