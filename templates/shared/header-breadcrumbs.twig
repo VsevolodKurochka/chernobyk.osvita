@@ -1,0 +1,5 @@
+{% if not function('is_front_page') %}
+    <div class="header__breadcrumbs">
+        {{ function('yoast_breadcrumb') }}
+    </div>
+{% endif %}

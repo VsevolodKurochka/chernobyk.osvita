@@ -9,6 +9,7 @@
     justify-content: center
     height: 100vh
     min-height: 700px
+    +py(90px)
   &_small
     height: auto
     min-height: auto
@@ -29,3 +30,25 @@
       .btn
         +w(100%)
         +offset('b', 10px)
+  &__breadcrumbs
+    +ta(left)
+    +c($color-white)
+    +fs(11px)
+    +fw(900)
+    +mb(45px)
+    +max(sm)
+      +lh(2)
+    +min(sm)
+      +fs(14px)
+    +min(md)
+      +mb(90px)
+    a
+      +tr()
+      text-decoration: none
+      +c(inherit)
+      &:hover
+        +c($color-brand-2)
+
+    .breadcrumb_last
+      +max(sm)
+        +d(block)

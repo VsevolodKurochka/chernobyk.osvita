@@ -1,6 +1,7 @@
 <header class="header {{ class }}">
     <img src="{{ background }}" alt="{{ title|striptags }}" class="header__bg">
     <div class="container">
+        {% include 'shared/header-breadcrumbs.twig' %}
         <div class="stars-vertical header__content">
             {% if title %}
                 {{ siteMacros.titleSection({

@@ -1,6 +1,7 @@
 <header class="header czech-header">
     <img src="{{ post.thumbnail }}" alt="{{ post.get_field('header_title')|striptags }}" class="header__bg">
     <div class="container header__container">
+        {% include 'shared/header-breadcrumbs.twig' %}
         <div class="row czech-header__row stars-vertical czech-header__stars">
             <div class="col-12 col-sm-8 czech-header__content">
                 {{ siteMacros.titleSection({
