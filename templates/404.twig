@@ -1,5 +1,12 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	Sorry, we couldn't find what you're looking for.
+	<section class="page-404">
+		<div class="container">
+			<h1 class="page-404__title">404. Страница не найдена</h1>
+			<a
+				class="btn btn_lg btn_brand-2"
+				href="{{site.url}}">На главную</a>
+		</div>
+	</section>
 {% endblock %}

@@ -22,8 +22,7 @@ function isPartUppercase($string) {
 }
 function parseUppercase($wp) {
     $query = $wp->query_vars;
-
-    if( $query && $query['pagename'] && isPartUppercase($query['pagename']) ) {
+    if( $query && isset($query['pagename']) && isPartUppercase($query['pagename']) ) {
         $link = site_url(). '/' . strtolower($query['pagename']);
         wp_redirect( $link , 301 );
         exit();

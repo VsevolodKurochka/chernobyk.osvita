@@ -1,34 +1,4 @@
-<section class="section education-universities">
-    <div class="container">
-        {{ siteMacros.titleSection({
-            'tag': '3',
-            'size': 'md',
-            'class': 'education-universities__title',
-            'title': post.get_field('universities_title')
-        }) }}
-        <div class="row education-universities__row">
-            {% for university in post.get_field('reasons_копировать') %}
-                {%
-                    set class = university.type == 'Large' ? 'col-12 education-universities-item_large' :
-                    'col-12 col-sm-4 education-universities-item_small'
-                %}
-                <div class="education-universities-item {{ class }}">
-                    <div class="education-universities-item__inner">
-                        <div class="education-universities-item__header">
-                            <img
-                                src="{{ university.image }}"
-                                alt="{{ university.title|striptags }}"
-                                class="education-universities-item__image">
-                        </div>
-                        <div class="education-universities-item__title">{{ university.title }}</div>
-                        <div class="education-universities-item__footer">
-                            <a
-                                href="{{ university.link }}"
-                                class="btn btn_border-brand-2 education-universities-item__link">Посетить сайт</a>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
+{% include 'pages/education-europe/modules/universities.twig' with {
+    title: post.get_field('universities_title'),
+    universities: post.get_field('reasons_копировать')
+} %}
