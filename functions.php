@@ -109,6 +109,14 @@ class StarterSite extends Timber\Site {
         wp_enqueue_script( 'js-jquery', get_template_directory_uri() . '/static/assets/build/js/jquery.min.js', array(), '20151215', true );
         wp_enqueue_script( 'js-jquery-main', get_template_directory_uri() . '/static/assets/build/js/jquery.main.js', array(), '20151215', true );
         wp_enqueue_script( 'js-vanilla', get_template_directory_uri() . '/static/assets/build/js/vanilla.js', array(), '20151215', true );
+
+        if (is_page_template('template-landing-poland.php')) {
+            wp_enqueue_style( 'css-landing-slovakia', get_template_directory_uri() . '/static/assets/landings/poland/css/style.css');
+        }
+
+        if (is_page_template('template-landing-slovakia.php')) {
+            wp_enqueue_style( 'css-landing-slovakia', get_template_directory_uri() . '/static/assets/landings/slovakia/css/style.css');
+        }
     }
 
     function add_options_page() {

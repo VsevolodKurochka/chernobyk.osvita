@@ -1,0 +1,1164 @@
+{% set landingFolder = "#{site.theme.link}/static/assets/landings/slovakia" %}
+{% set landingImage = "#{landingFolder}/img" %}
+
+<script src="{{ landingFolder}}/js/lib/libs.min.js"></script>
+<script src="{{ landingFolder}}/js/lib/jquery.min.js"></script>
+<script src="{{ landingFolder}}/js/vanilla.main.js"></script>
+<script src="{{ landingFolder}}/js/jquery.main.js"></script>
+
+<header class="header">
+    <div class="quadro quadro_style-1 header__quadro" data-emergence="hidden">
+        <span class="quadro__part quadro__part_1"></span>
+        <span class="quadro__part quadro__part_2"></span>
+        <span class="quadro__part quadro__part_3"></span>
+        <span class="quadro__part quadro__part_4"></span>
+        <span class="quadro__part quadro__part_5"></span>
+        <span class="quadro__part quadro__part_6"></span>
+        <span class="quadro__part quadro__part_7"></span>
+        <span class="quadro__part quadro__part_8"></span>
+        <span class="quadro__part quadro__part_9"></span>
+    </div>
+    <div class="container" id="header-container">
+        {% include 'shared/header-breadcrumbs.twig' %}
+        <h1 class="header__title title-lg wow fadeInUp" id="header-title">Среднее образование в
+            <span class="header__title-flag">Словакии</span>
+        </h1>
+        <h2 class="header__subtitle title-sm color-brand-1">для детей от 13 до 18 лет
+        </h2>
+        <p class="header__description wow fadeInUp" data-wow-delay="0.25s">
+            <span class="color-brand-1">*Документы на следующий учебный год принимаются до апреля текущего года</span><br><br>
+            Организуем <span class="color-brand-1">поступление Вашего ребенка </span>в престижный словацкий техникум или колледж с бесплатным обучением. После которых он сможет:
+        </p>
+        <div class="header__icons row">
+            <div class="icon icon_center col-12 col-sm-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="icon__inner">
+                    <div class="icon__header">
+                        <img class="icon__img" src="{{ landingImage }}/icon-header-1.svg" alt="" role="presentation" />
+                    </div>
+                    <div class="icon__body">
+                        <p>Поступить <span class="icon__border-highlight">в любой ВУЗ Словакии</span> на любую специальность бесплатно</p>
+                    </div>
+                </div>
+            </div>
+            <div class="icon icon_center col-12 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="icon__inner">
+                    <div class="icon__header">
+                        <img class="icon__img" src="{{ landingImage }}/icon-header-2.svg" alt="" role="presentation" />
+                    </div>
+                    <div class="icon__body">
+                        <p>Получить </p>
+                        <span class="icon__border-highlight">вид на жительство </span> в Словакии, а значит сможет легально жить и работать в ЕС
+                    </div>
+                </div>
+            </div>
+            <div class="icon icon_center col-12 col-sm-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="icon__inner">
+                    <div class="icon__header">
+                        <img class="icon__img" src="{{ landingImage }}/icon-header-3.png" alt="" role="presentation" />
+                    </div>
+                    <div class="icon__body">
+                        <p>Открыть собственный </p>
+                        <span class="icon__border-highlight">законный бизнес </span> в Европе
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__button-wrapper wow fadeInUp" data-wow-delay="0.3s">
+            <button class="btn btn_size-lg btn_brand-1 effect effect_bounce-top" data-action="modal" data-open="#modal-form">Узнать больше
+            </button>
+        </div>
+    </div>
+</header>
+<div class="site-content" id="content">
+    <section class="question section">
+        <div class="question__container container">
+            <h3 class="question__title title-md title-section">Мы знаем, какие
+                <span class="color-brand-2">вопросы </span> крутятся у Вас в голове сейчас… Поэтому, сразу отвечаем:
+            </h3>
+            <div class="row">
+                <div class="question__column col-12 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/icon-question-1.svg" alt="" role="presentation" />
+                                <p class="icon__title">№1
+                                </p>
+                            </div>
+                            <div class="icon__body">
+                                <p>Да, обучение в любом государственном колледже или техникуме Словакии - бесплатно. При условии, что ребенок
+                                    хотя бы на минимально-среднем уровне говорит по-словацки</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="question__column col-12 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/icon-question-2.svg" alt="" role="presentation" />
+                                <p class="icon__title">№2
+                                </p>
+                            </div>
+                            <div class="icon__body">
+                                <p>После школы, можно поступить в любой государственный ВУЗ - и образование там тоже бесплатное. Даже медицинское.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question__footer wow fadeInUp" data-wow-delay="0.2s">
+                <p>Конечно, нюансов хватает. Как выбрать хороший техникум или колледж, какие документы подготовить, как пройти собеседование,
+                    как быстро выучить язык…</p>
+            </div>
+        </div>
+    </section>
+    <section class="consultation consultation_1 bg">
+        <div class="quadro quadro_style-1 quadro_bottom-left" data-emergence="hidden">
+            <span class="quadro__part quadro__part_1"></span>
+            <span class="quadro__part quadro__part_2"></span>
+            <span class="quadro__part quadro__part_3"></span>
+            <span class="quadro__part quadro__part_4"></span>
+            <span class="quadro__part quadro__part_5"></span>
+            <span class="quadro__part quadro__part_6"></span>
+            <span class="quadro__part quadro__part_7"></span>
+            <span class="quadro__part quadro__part_8"></span>
+            <span class="quadro__part quadro__part_9"></span>
+        </div>
+        <div class="quadro quadro_style-2 quadro_top-right" data-emergence="hidden">
+            <span class="quadro__part quadro__part_1"></span>
+            <span class="quadro__part quadro__part_2"></span>
+            <span class="quadro__part quadro__part_3"></span>
+            <span class="quadro__part quadro__part_4"></span>
+            <span class="quadro__part quadro__part_5"></span>
+            <span class="quadro__part quadro__part_6"></span>
+            <span class="quadro__part quadro__part_7"></span>
+            <span class="quadro__part quadro__part_8"></span>
+            <span class="quadro__part quadro__part_9"></span>
+        </div>
+        <div class="consultation__container container">
+            <div class="consultation__row row">
+                <div class="col-12 col-sm-7 wow fadeInUp">
+                    <h3 class="consultation__title title-md">Мы знаем, какие
+                        <span class="color-brand-2">вопросы </span> крутятся у Вас в голове сейчас… Поэтому, сразу отвечаем:
+                    </h3>
+                </div>
+                <div class="col-12 col-sm-5 col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="consultation__form-cover">
+                        <form class="form form_block" action="handler.php" method="POST">
+                            <div class="form__header">
+                                <p class="form__title">Оставьте заявку и мы перезвоним
+                                </p>
+                            </div>
+                            <div class="form__content">
+                                <div class="form__row">
+                                    <input class="form__control" name="vname" type="text" placeholder="Ваше имя" />
+                                </div>
+                                <div class="form__row">
+                                    <input class="form__control" name="vemail" type="email" placeholder="Ваш email" />
+                                </div>
+                                <div class="form__row">
+                                    <input class="form__control" name="vphone" type="tel" placeholder="Ваш телефон" />
+                                </div>
+                                <div class="form__row">
+                                    <input name="thx" type="hidden" value="http://osvitamarket.com/Slovakia/thx/" />
+                                    <input name="redirect_type" type="hidden" value="json" />
+                                    <input name="gr_campaign" type="hidden" value="nwdfi" />
+                                    <input name="tronic_form" type="hidden" value="W2b3kAeZs5soqyNMd" />
+                                    <button class="form__submit btn btn_brand-1 btn_shadow-brand-1 btn_size-fluid effect effect_bounce-top" type="submit">Проконсультироваться
+                                        <br>бесплатно
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="free-consultation section">
+        <div class="circle">
+            <div class="circle__part circle__part_1">
+            </div>
+            <div class="circle__part circle__part_2">
+            </div>
+        </div>
+        <div class="free-consultation__container container">
+            <div class="row">
+                <div class="free-consultation__column col-12 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/free-consultation-part-1.svg" alt="" role="presentation" />
+                                <p class="icon__title">Расскажем
+                                </p>
+                            </div>
+                            <div class="icon__body">
+                                <p>Как поступить, что для этого нужно, какие есть специальности и сколько будет стоить</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="free-consultation__column col-12 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/free-consultation-part-2.svg" alt="" role="presentation" />
+                                <p class="icon__title">Поможем
+                                </p>
+                            </div>
+                            <div class="icon__body">
+                                <p>Открыть визу Вам и ребенку, организуем собеседования с представителями колледжа, поможем пройти отбор
+                                    и поступить</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="free-consultation__title title-md wow fadeInUp" data-wow-delay="0.2s">Бесплатно
+                <span class="color-brand-1">проконсультируем </span>по всем нюансам поступления в словацкий колледж
+            </h3>
+            <div class="row">
+                <div class="free-consultation__column col-12 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/free-consultation-part-3.svg" alt="" role="presentation" />
+                                <p class="icon__title">Сопроводим
+                                </p>
+                            </div>
+                            <div class="icon__body">
+                                <p>Вашу семью в Словакию, поселим ребенка в хорошее общежитие при колледже, поможем адаптироваться в новой
+                                    среде</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="free-consultation__column col-12 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/free-consultation-part-4.svg" alt="" role="presentation" />
+                                <p class="icon__title">Решим
+                                </p>
+                            </div>
+                            <div class="icon__body">
+                                <p>Любые вопросы в процессе обучения (наш представитель постоянно находится при колледже), обеспечим безопасность
+                                    ребенка</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="country bg">
+        <div class="quadro quadro_style-1 quadro_bottom-left" data-emergence="hidden">
+            <span class="quadro__part quadro__part_1"></span>
+            <span class="quadro__part quadro__part_2"></span>
+            <span class="quadro__part quadro__part_3"></span>
+            <span class="quadro__part quadro__part_4"></span>
+            <span class="quadro__part quadro__part_5"></span>
+            <span class="quadro__part quadro__part_6"></span>
+            <span class="quadro__part quadro__part_7"></span>
+            <span class="quadro__part quadro__part_8"></span>
+            <span class="quadro__part quadro__part_9"></span>
+        </div>
+        <div class="quadro quadro_style-2 quadro_top-right" data-emergence="hidden">
+            <span class="quadro__part quadro__part_1"></span>
+            <span class="quadro__part quadro__part_2"></span>
+            <span class="quadro__part quadro__part_3"></span>
+            <span class="quadro__part quadro__part_4"></span>
+            <span class="quadro__part quadro__part_5"></span>
+            <span class="quadro__part quadro__part_6"></span>
+            <span class="quadro__part quadro__part_7"></span>
+            <span class="quadro__part quadro__part_8"></span>
+            <span class="quadro__part quadro__part_9"></span>
+        </div>
+        <div class="country__container container">
+            <h3 class="country__title title-md title-section wow fadeInUp">
+                <span class="color-brand-1">Словакия… </span> Что приходит в голову, когда Вы слышите про эту страну?
+            </h3>
+            <div class="country__icons row">
+                <div class="col-12 col-sm-4 wow fadeInUp" data-wow-delay="0.05s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/icon-country-1.svg" alt="" role="presentation" />
+                            </div>
+                            <div class="icon__body">
+                                <p>Небольшая страна недалеко от нас...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4 wow fadeInUp" data-wow-delay="0.15s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/icon-country-2.svg" alt="" role="presentation" />
+                            </div>
+                            <div class="icon__body">
+                                <p>Вроде бы они в Евросоюзе…</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/icon-country-3.svg" alt="" role="presentation" />
+                            </div>
+                            <div class="icon__body">
+                                <p>Живут наверное получше нас, но вряд ли намного...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="country__description wow fadeInUp">Это всё занятно, но маловажно. Самое главное, что Вам нужно знать о Словакии:
+            </p>
+            <div class="country__footer">
+                <h3 class="country__footer-title title-md wow fadeInUp">Это самый доступный для обычной украинской семьи вариант обеспечить
+                    <span class="color-brand-1">состоятельное европейское </span>будущее своего ребенка
+                </h3>
+                <div class="country__footer-button wow fadeInUp" data-wow-delay="0.2s">
+                    <button class="btn btn_size-lg btn_brand-1 effect effect_bounce-top" data-action="modal" data-open="#modal-form">Проконсультироваться бесплатно
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="why" id="section-why">
+        <div class="container">
+            <h3 class="why__title title-md">Почему Словакия?
+            </h3>
+            <div class="why__content">
+                <div class="answer row wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="answer__column answer__column_image col-12 col-sm-6">
+                        <img class="answer__image" src="{{ landingImage }}/why-1.jpg" alt="" role="presentation" />
+                    </div>
+                    <div class="answer__column answer__column_text col-12 col-sm-6">
+                        <div class="answer__header">
+                            <p class="answer__header-title">Бесплатное обучение
+                            </p>
+                        </div>
+                        <div class="answer__content">
+                            <p>Причем не только в колледжах и техникумах, но и в ВУЗах.</p>
+                            <p>В Словакии доступны самые востребованные в Европе специальности - Инженерия, Энергетика, Медицина, Фармацевтика,
+                                Ветеринария.</p>
+                            <p>Очень много гос. школ и ВУЗов рассчитаны на высокооплачиваемые профессии в сферах услуг, предпринимательской
+                                деятельности и туризма.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="answer row wow fadeInRight" data-wow-delay="0.1s">
+                    <div class="answer__column answer__column_image col-12 col-sm-6">
+                        <img class="answer__image" src="{{ landingImage }}/why-2.jpg" alt="" role="presentation" />
+                    </div>
+                    <div class="answer__column answer__column_text col-12 col-sm-6">
+                        <div class="answer__header">
+                            <p class="answer__header-title">Упор на практику
+                            </p>
+                        </div>
+                        <div class="answer__content">
+                            <p>Обучение в словацких средних учебных заведениях проходит по принципу: </p>
+                            <p class="bold">Неделя теории, а потом неделя практики, с максимальным погружением в рабочий процесс. </p>
+                            <p>После колледжа/техникума ребенок сразу готов к работе в реальных компаниях или к открытию собственного
+                                бизнеса.</p>
+                            <p>В Словакии не “пичкают” детей теорией, устаревшей еще 15 лет назад, так что в итоге они не могут найти
+                                работу после техникума или даже ВУЗа. Как это происходит сами знаете где...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="answer row wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="answer__column answer__column_image col-12 col-sm-6">
+                        <img class="answer__image" src="{{ landingImage }}/why-3.jpg" alt="" role="presentation" />
+                    </div>
+                    <div class="answer__column answer__column_text col-12 col-sm-6">
+                        <div class="answer__header">
+                            <p class="answer__header-title">Вид на жительство
+                            </p>
+                        </div>
+                        <div class="answer__content">
+                            <p>Все словацкие студенты получают вид на жительство. А это прямая возможность легально жить и работать в
+                                странах ЕС. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="answer row wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="answer__column answer__column_image col-12 col-sm-6">
+                        <img class="answer__image" src="{{ landingImage }}/why-4.jpg" alt="" role="presentation" />
+                    </div>
+                    <div class="answer__column answer__column_text col-12 col-sm-6">
+                        <div class="answer__header">
+                            <p class="answer__header-title">Курортные условия
+                            </p>
+                        </div>
+                        <div class="answer__content">
+                            <p>Все колледжи и техникумы, с которыми мы сотрудничаем, находятся в самых живописных уголках Словакии.</p>
+                            <p>Ребенок дышит чистым воздухом, имеет доступ к минеральной воде и горнолыжному курорту.</p>
+                            <p>К тому же, когда Вы приезжаете его проведать, заодно можете отдохнуть в шикарных условиях.</p>
+                            <p>Шикарные виды, потрясающей красоты пейзажи и всё это - в пешей доступности. Можно гулять, летом кататься
+                                на велосипедах, а зимой на лыжах. </p>
+                            <p>Ребенок гарантированно поправит проблемы со здоровьем (если есть) и будет дышать полной грудью!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="answer row wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="answer__column answer__column_image col-12 col-sm-6">
+                        <img class="answer__image" src="{{ landingImage }}/why-5.jpg" alt="" role="presentation" />
+                    </div>
+                    <div class="answer__column answer__column_text col-12 col-sm-6">
+                        <div class="answer__header">
+                            <p class="answer__header-title">Развитая страна
+                            </p>
+                        </div>
+                        <div class="answer__content">
+                            <p>Так как после учебы (особенно, если Вы решите поступать в техникум) ребенок почти гарантированно получит
+                                работу в стране, важно понимать, что Словакия:</p>
+                            <p>Находится на 35-м месте в мире по уровню благосостояния населения. Это выше, чем Польша и ЕЩЕ СТРАНА (Украина
+                                на ХХ-м)</p>
+                            <p>В Словакии очень лояльно относятся к украинцам, без проблем берут их на работу и хорошо платят</p>
+                            <p>В стране очень востребованы как рабочие специальности, так и творческие и из сферы IT</p>
+                            <p>Словакия поддерживает предпринимателей и дает хорошие условия тем, кто хочет развивать свой бизнес в стране</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="consultation consultation_2 bg">
+        <div class="quadro quadro_style-1 quadro_bottom-left" data-emergence="hidden">
+            <span class="quadro__part quadro__part_1"></span>
+            <span class="quadro__part quadro__part_2"></span>
+            <span class="quadro__part quadro__part_3"></span>
+            <span class="quadro__part quadro__part_4"></span>
+            <span class="quadro__part quadro__part_5"></span>
+            <span class="quadro__part quadro__part_6"></span>
+            <span class="quadro__part quadro__part_7"></span>
+            <span class="quadro__part quadro__part_8"></span>
+            <span class="quadro__part quadro__part_9"></span>
+        </div>
+        <div class="quadro quadro_style-2 quadro_top-right" data-emergence="hidden">
+            <span class="quadro__part quadro__part_1"></span>
+            <span class="quadro__part quadro__part_2"></span>
+            <span class="quadro__part quadro__part_3"></span>
+            <span class="quadro__part quadro__part_4"></span>
+            <span class="quadro__part quadro__part_5"></span>
+            <span class="quadro__part quadro__part_6"></span>
+            <span class="quadro__part quadro__part_7"></span>
+            <span class="quadro__part quadro__part_8"></span>
+            <span class="quadro__part quadro__part_9"></span>
+        </div>
+        <div class="consultation__container container">
+            <div class="consultation__row row">
+                <div class="col-12 col-sm-7 wow fadeInUp">
+                    <h3 class="consultation__title title-md">Оставьте
+                        <span class="color-brand-1">заявку </span>и мы поможем подобрать идеальную специальность и школу для Вашего подростка
+                    </h3>
+                </div>
+                <div class="col-12 col-sm-5 col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="consultation__form-cover">
+                        <form class="form form_block" action="handler.php" method="POST">
+                            <div class="form__header">
+                                <p class="form__title">Оставьте заявку и мы перезвоним
+                                </p>
+                            </div>
+                            <div class="form__content">
+                                <div class="form__row">
+                                    <input class="form__control" name="vname" type="text" placeholder="Ваше имя" />
+                                </div>
+                                <div class="form__row">
+                                    <input class="form__control" name="vemail" type="email" placeholder="Ваш email" />
+                                </div>
+                                <div class="form__row">
+                                    <input class="form__control" name="vphone" type="tel" placeholder="Ваш телефон" />
+                                </div>
+                                <div class="form__row">
+                                    <input name="thx" type="hidden" value="http://osvitamarket.com/Slovakia/thx/" />
+                                    <input name="redirect_type" type="hidden" value="json" />
+                                    <input name="gr_campaign" type="hidden" value="nwdfi" />
+                                    <input name="tronic_form" type="hidden" value="W2b3kAeZs5soqyNMd" />
+                                    <button class="form__submit btn btn_brand-1 btn_shadow-brand-1 btn_size-fluid effect effect_bounce-top" type="submit">Проконсультироваться
+                                        <br>бесплатно
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="free-consultation section">
+        <div class="circle">
+            <div class="circle__part circle__part_1">
+            </div>
+            <div class="circle__part circle__part_2">
+            </div>
+        </div>
+        <div class="free-consultation__container container">
+            <div class="row">
+                <div class="free-consultation__column col-12 col-sm-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/free-consultation-part-5.svg" alt="" role="presentation" />
+                            </div>
+                            <div class="icon__body">
+                                <p>В школах детей мотивируют заниматься спортом: верховая езда, велосипед, рафтинг, лыжи, теннис, баскетбол.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="free-consultation__column col-12 col-sm-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/free-consultation-part-6.svg" alt="" role="presentation" />
+                            </div>
+                            <div class="icon__body">
+                                <p>У Словакии развита программа обмена. После 2-го курса дети ездят во Францию, Италию, Новую Зеландию</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="free-consultation__column col-12 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/free-consultation-part-7.svg" alt="" role="presentation" />
+                            </div>
+                            <div class="icon__body">
+                                <p>Начиная со 2-го курса есть возможность дополнительно подрабатывать на местных предприятиях</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="free-consultation__title title-md wow fadeInUp" data-wow-delay="0.2s">Но даже это
+                <span class="color-brand-1">еще не всё</span>
+            </h3>
+            <div class="row">
+                <div class="free-consultation__column col-12 col-sm-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/free-consultation-part-8.svg" alt="" role="presentation" />
+                            </div>
+                            <div class="icon__body">
+                                <p>Возможность родителю проходить обучение</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="free-consultation__column col-12 col-sm-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/free-consultation-part-9.svg" alt="" role="presentation" />
+                            </div>
+                            <div class="icon__body">
+                                <p>В школах, кроме словацкого, дети изучают еще 2 языка: английский и немецкий</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="free-consultation__column col-12 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/free-consultation-part-10.svg" alt="" role="presentation" />
+                            </div>
+                            <div class="icon__body">
+                                <p>После учебы ребенок получает сертификат, который признают в любой стране ЕС</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="steps">
+        <div class="container">
+            <h3 class="steps__title title-md title-section">Мы помогаем на всех
+                <span class="color-brand-1">этапах </span>поступления
+            </h3>
+            <div class="steps__content row">
+                <div class="icon icon_center icon_step col-12 col-sm-6 col-md-3 wow fadeInUp" data-wow-delay="0.05s">
+                    <div class="icon__inner">
+                        <div class="icon__header">
+                            <img class="icon__img" src="{{ landingImage }}/icon-step-1.svg" alt="" role="presentation" />
+                            <p class="icon__title">Этап 1
+                            </p>
+                        </div>
+                        <div class="icon__body">
+                            <p>Консультируем Вас по телефону, а потом проводим интервью с ребенком, чтобы оценить насколько он готов и
+                                хочет учиться заграницей</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon icon_center icon_step col-12 col-sm-6 col-md-3 wow fadeInUp" data-wow-delay="0.15s">
+                    <div class="icon__inner">
+                        <div class="icon__header">
+                            <img class="icon__img" src="{{ landingImage }}/icon-step-2.svg" alt="" role="presentation" />
+                            <p class="icon__title">Этап 2
+                            </p>
+                        </div>
+                        <div class="icon__body">
+                            <p>Отправляем официальный договор. Вы ознакамливаетесь, подписываете и вносите предоплату. Начинаем готовить
+                                документы для поступления</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon icon_center icon_step col-12 col-sm-6 col-md-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="icon__inner">
+                        <div class="icon__header">
+                            <img class="icon__img" src="{{ landingImage }}/icon-step-3.svg" alt="" role="presentation" />
+                            <p class="icon__title">Этап 3
+                            </p>
+                        </div>
+                        <div class="icon__body">
+                            <p>Вместе выбираем специальность, школу и организовываем интервью с директором учебного заведения. Ребенка
+                                официально принимают на учебу</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon icon_center icon_step col-12 col-sm-6 col-md-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="icon__inner">
+                        <div class="icon__header">
+                            <img class="icon__img" src="{{ landingImage }}/icon-step-4.svg" alt="" role="presentation" />
+                            <p class="icon__title">Этап 4
+                            </p>
+                        </div>
+                        <div class="icon__body">
+                            <p>Сопровождаем Вашу семью в Словакию. Помогаем поселить ребенка в общежитие при школе, знакомим со всеми
+                                и продолжаем поддерживать в процессе обучения</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="steps__footer">
+                <h3 class="steps__footer-title title-md wow fadeInUp">Самое удобное - Вам никуда не нужно ехать. Все интервью мы проводим
+                    <span class="color-brand-1">по Skype </span>, а документы отправляем по почте
+                </h3>
+                <button class="btn btn_size-lg btn_brand-1 effect effect_bounce-top wow fadeInUp" data-action="modal" data-open="#modal-form"
+                        data-wow-delay="0.2s">Проконсультироваться по поступлению
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="garant bg" id="section-garant">
+        <div class="quadro quadro_style-1 quadro_bottom-left" data-emergence="hidden">
+            <span class="quadro__part quadro__part_1"></span>
+            <span class="quadro__part quadro__part_2"></span>
+            <span class="quadro__part quadro__part_3"></span>
+            <span class="quadro__part quadro__part_4"></span>
+            <span class="quadro__part quadro__part_5"></span>
+            <span class="quadro__part quadro__part_6"></span>
+            <span class="quadro__part quadro__part_7"></span>
+            <span class="quadro__part quadro__part_8"></span>
+            <span class="quadro__part quadro__part_9"></span>
+        </div>
+        <div class="quadro quadro_style-2 quadro_top-right" data-emergence="hidden">
+            <span class="quadro__part quadro__part_1"></span>
+            <span class="quadro__part quadro__part_2"></span>
+            <span class="quadro__part quadro__part_3"></span>
+            <span class="quadro__part quadro__part_4"></span>
+            <span class="quadro__part quadro__part_5"></span>
+            <span class="quadro__part quadro__part_6"></span>
+            <span class="quadro__part quadro__part_7"></span>
+            <span class="quadro__part quadro__part_8"></span>
+            <span class="quadro__part quadro__part_9"></span>
+        </div>
+        <div class="container">
+            <div class="garant__content">
+                <div class="answer row wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="answer__column answer__column_image col-12 col-sm-6">
+                        <img class="answer__icon" src="{{ landingImage }}/icon-garant-1.svg" alt="" role="presentation" />
+                    </div>
+                    <div class="answer__column answer__column_text col-12 col-sm-6">
+                        <div class="answer__header">
+                            <p class="answer__header-title">Гарантии?
+                            </p>
+                        </div>
+                        <div class="answer__content">
+                            <p>У нас всё просто и прозрачно.</p>
+                            <p>Мы гарантируем, что с нашей помощью Ваш ребенок поступит на бесплатное обучение в выбранную словацкую школу.
+                                Независимо от его уровня успеваемости.</p>
+                            <p>Если по каким-то причинам поступить не получилось* - возвращаем деньги.</p>
+                            <p>* За 7 лет нашей работы, случаев когда ребенок не поступал было Х-ХХ. Это на более ХХХ поступивших детей</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="answer row wow fadeInRight" data-wow-delay="0.1s">
+                    <div class="answer__column answer__column_image col-12 col-sm-6">
+                        <img class="answer__icon" src="{{ landingImage }}/icon-garant-2.svg" alt="" role="presentation" />
+                    </div>
+                    <div class="answer__column answer__column_text col-12 col-sm-6">
+                        <div class="answer__header">
+                            <p class="answer__header-title">Как быть с языком?
+                            </p>
+                        </div>
+                        <div class="answer__content">
+                            <p>Как Вы уже поняли, для бесплатного обучения в словацкой школе или техникуме, нужно знать словацкий.</p>
+                            <p>Мы подберем для Вас самый удобный по времени и бюджету вариант, так чтобы ребенок выучил язык максимально
+                                быстро, без зубрежки и мучений.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="garant__footer">
+                <button class="btn btn_size-lg btn_brand-1 effect effect_bounce-top" data-action="modal" data-open="#modal-form">Проконсультироваться бесплатно
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="free-consultation section">
+        <div class="circle circle_brand-2">
+            <div class="circle__part circle__part_1">
+            </div>
+            <div class="circle__part circle__part_2">
+            </div>
+        </div>
+        <div class="free-consultation__container container">
+            <div class="row">
+                <div class="free-consultation__column col-12 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/free-consultation-part-11.svg" alt="" role="presentation" />
+                                <p class="icon__title">500+
+                                </p>
+                            </div>
+                            <div class="icon__body">
+                                <p>Украинских детей успешно поступили в европейские школы с нашей помощью</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="free-consultation__column col-12 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/free-consultation-part-12.svg" alt="" role="presentation" />
+                                <p class="icon__title">Каждый 3-й
+                                </p>
+                            </div>
+                            <div class="icon__body">
+                                <p>Поступил в ВУЗ или устроился на работу в Европе после окончания школы/техникума</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="free-consultation__title title-md wow fadeInUp" data-wow-delay="0.2s">Подтверждаем свои слова реальными
+                <span class="color-brand-1">результатами </span>детей
+            </h3>
+            <div class="row">
+                <div class="free-consultation__column col-12 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/free-consultation-part-13.svg" alt="" role="presentation" />
+                                <p class="icon__title">70%
+                                </p>
+                            </div>
+                            <div class="icon__body">
+                                <p>Учеников переезжают жить и работать в страны Западной Европы</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="free-consultation__column col-12 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="icon icon_center">
+                        <div class="icon__inner">
+                            <div class="icon__header">
+                                <img class="icon__img" src="{{ landingImage }}/free-consultation-part-14.svg" alt="" role="presentation" />
+                                <p class="icon__title">7 лет
+                                </p>
+                            </div>
+                            <div class="icon__body">
+                                <p>Наша компания отправляет украинских детей учиться за границу. За это время было лишь 2% отказов</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="himself" id="section-himself">
+        <div class="container">
+            <div class="himself__content">
+                <div class="answer row wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="answer__column answer__column_image col-12 col-sm-6">
+                        <img class="answer__image" src="{{ landingImage }}/icon-himself-1.png" alt="" role="presentation" />
+                    </div>
+                    <div class="answer__column answer__column_text col-12 col-sm-6">
+                        <div class="answer__header">
+                            <p class="answer__header-title">На сайте школы может быть устаревший список документов
+                            </p>
+                        </div>
+                        <div class="answer__content">
+                            <p>Представьте - Вы всё собрали, приехали в школу, а там говорят: </p>
+                            <p>“Справка – не такая, оценки должны быть за другие периоды, а этот документ нужно было переводить у уполномоченного
+                                переводчика”...</p>
+                            <p>Потратили время, деньги, кучу нервов и, скорее всего, отложили поступление на 1 год.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="answer row wow fadeInRight" data-wow-delay="0.1s">
+                    <div class="answer__column answer__column_image col-12 col-sm-6">
+                        <img class="answer__image" src="{{ landingImage }}/icon-himself-2.png" alt="" role="presentation" />
+                    </div>
+                    <div class="answer__column answer__column_text col-12 col-sm-6">
+                        <div class="answer__header">
+                            <p class="answer__header-title">Поступили - не значит поселились
+                            </p>
+                        </div>
+                        <div class="answer__content">
+                            <p>Часто бывает еще и другое.</p>
+                            <p>Вы отправили документы, сдали тесты. Получили письмо что зачислены, всё хорошо. </p>
+                            <p>Приехали в школу и вдруг оказывается… что для Вас нет места в общежитии!</p>
+                            <p>Начинаются слезы, мольбы… а потом наступает разочарование.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="himself__footer">
+                <button class="btn btn_size-lg btn_brand-1 effect effect_bounce-top" data-action="modal" data-open="#modal-form">Проконсультироваться бесплатно
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="consultation consultation_2 bg">
+        <div class="quadro quadro_style-1 quadro_bottom-left" data-emergence="hidden">
+            <span class="quadro__part quadro__part_1"></span>
+            <span class="quadro__part quadro__part_2"></span>
+            <span class="quadro__part quadro__part_3"></span>
+            <span class="quadro__part quadro__part_4"></span>
+            <span class="quadro__part quadro__part_5"></span>
+            <span class="quadro__part quadro__part_6"></span>
+            <span class="quadro__part quadro__part_7"></span>
+            <span class="quadro__part quadro__part_8"></span>
+            <span class="quadro__part quadro__part_9"></span>
+        </div>
+        <div class="quadro quadro_style-2 quadro_top-right" data-emergence="hidden">
+            <span class="quadro__part quadro__part_1"></span>
+            <span class="quadro__part quadro__part_2"></span>
+            <span class="quadro__part quadro__part_3"></span>
+            <span class="quadro__part quadro__part_4"></span>
+            <span class="quadro__part quadro__part_5"></span>
+            <span class="quadro__part quadro__part_6"></span>
+            <span class="quadro__part quadro__part_7"></span>
+            <span class="quadro__part quadro__part_8"></span>
+            <span class="quadro__part quadro__part_9"></span>
+        </div>
+        <div class="consultation__container container">
+            <div class="consultation__row row">
+                <div class="col-12 col-sm-7">
+                    <h3 class="consultation__title title-md wow fadeInUp">Это только 2 из сотен
+                        <br>возможных ситуаций.
+                    </h3>
+                    <h3 class="consultation__title title-md">
+                        <span class="color-brand-1">Доверьте </span>поступление
+                        <br>за границу
+                        <span class="color-brand-1">профессионалам</span>
+                    </h3>
+                </div>
+                <div class="col-12 col-sm-5 col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="consultation__form-cover">
+                        <form class="form form_block" action="handler.php" method="POST">
+                            <div class="form__header">
+                                <p class="form__title">Оставьте заявку и мы перезвоним
+                                </p>
+                            </div>
+                            <div class="form__content">
+                                <div class="form__row">
+                                    <input class="form__control" name="vname" type="text" placeholder="Ваше имя" />
+                                </div>
+                                <div class="form__row">
+                                    <input class="form__control" name="vemail" type="email" placeholder="Ваш email" />
+                                </div>
+                                <div class="form__row">
+                                    <input class="form__control" name="vphone" type="tel" placeholder="Ваш телефон" />
+                                </div>
+                                <div class="form__row">
+                                    <input name="thx" type="hidden" value="http://osvitamarket.com/Slovakia/thx/" />
+                                    <input name="redirect_type" type="hidden" value="json" />
+                                    <input name="gr_campaign" type="hidden" value="nwdfi" />
+                                    <input name="tronic_form" type="hidden" value="W2b3kAeZs5soqyNMd" />
+                                    <button class="form__submit btn btn_brand-1 btn_shadow-brand-1 btn_size-fluid effect effect_bounce-top" type="submit">Проконсультироваться
+                                        <br>бесплатно
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="review section" id="section-review">
+        <div class="container">
+            <h3 class="title-md title-section">
+                <span class="color-brand-2">Отзывы </span>тех, кто уже поступил
+                <br>в европейские школы с нашей помощью
+            </h3>
+            <div class="review__content row">
+                <div class="review-item col-12 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="review-item__content">
+                        <p>Мы отправили своего ребенка учиться в Польшу после 9-го класса. Компания “Освита Маркет” очень помогла нам
+                            в коммуникации с преподавательским составом, в размещении ребенка. Через представителей компании мы всегда
+                            оперативно узнавали о проблемах в учебе, если таковые возникали.</p>
+                        <p>Было приятно, что поляки хорошо относятся к нашим детям, во всем помогают. Очень редко бывает, что дети попадают
+                            в разные неприятные ситуации, так как за ними постоянно присматривают учителя, воспитатели и психологи.
+                            Дети привыкают к самостоятельной жизни!</p>
+                    </div>
+                    <div class="review-item__footer">
+                        <div class="review-item__image">
+                            <img src="{{ landingImage }}/review-1.png">
+                        </div>
+                        <div class="review-item__info">
+                            <p>Светлана и Геннадий Новиковы</p>
+                            <p>Крым</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-item col-12 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="review-item__content">
+                        <p>О компании “Освита Маркет” услышали от знакомых и сразу решили проконсультироваться насчет поступления. Польский
+                            учили всего пару месяцев и по приезду уровень языка был средний. </p>
+                        <p>Но это не помешало сыну быстро адаптироваться, подтянуть польский и показывать хорошую успеваемость. Своим
+                            выбором довольны, так как нас грамотно проконсультировали и реально помогли с поступлением</p>
+                    </div>
+                    <div class="review-item__footer">
+                        <div class="review-item__image">
+                            <img src="{{ landingImage }}/review-2.png">
+                        </div>
+                        <div class="review-item__info">
+                            <p>Вера Пархоменко</p>
+                            <p>Винница</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-item col-12 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="review-item__content">
+                        <p>Ехать учиться за рубеж мы решили после 9-го класса. Неожиданным было то, что ребенок отлично адаптировался
+                            к условиям проживания, нашел себя в коллективе, плюс занятия спортом также помогают скрасить проживание
+                            вдали от родителей. А самое главное начал учиться лучше чем в Украине. </p>
+                        <p>Компания Освита Маркет очень помогла не только в организационных моментах, но и морально поддерживали нас
+                            и ребенка. Потому что до отъезда в Польшу неоднократно посещали всяческие сомнения. Помимо всего сотрудники
+                            компании четко и доступно давали ответы на все вопросы</p>
+                    </div>
+                    <div class="review-item__footer">
+                        <div class="review-item__image">
+                            <img src="{{ landingImage }}/review-3.png">
+                        </div>
+                        <div class="review-item__info">
+                            <p>Людмила Жук</p>
+                            <p>Борисполь</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-item col-12 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="review-item__content">
+                        <p>Мы обращались в разные компании, так как моя дочь училась в Украине на ветеринара и мы подыскивали техникум
+                            с похожей специальностью в Польше. И только “Освита Маркет” предложила учебное заведение, которое полностью
+                            нам подходило.</p>
+                        <p>Моя Алиса очень довольна и обучением, и питанием, и режимом. Много тренировок и отдыха в техникуме, у нее
+                            много подруг и друзей, хотя она в учебном заведении одна только из Украины. На сегодня проблем в общении
+                            с поляками не возникает ни с языком, ни с традициями</p>
+                    </div>
+                    <div class="review-item__footer">
+                        <div class="review-item__image">
+                            <img src="{{ landingImage }}/review-4.png">
+                        </div>
+                        <div class="review-item__info">
+                            <p>Виолетта Рудновская</p>
+                            <p>Миргород</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-item col-12 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="review-item__content">
+                        <p>Мы отправили дочь в Польшу после 9-го класса и очень переживали, что ребенок в столь ЮНОМ возрасте остался
+                            без опеки родителей, да еще и в другой стране…</p>
+                        <p>Однако, нас очень удивило прекрасное отношение дирекции школы и опекунов школы как к детям, так и к нам -
+                            родителям.</p>
+                        <p>Безусловно, “Освита Маркет” очень помогла нам на всех этапах поступления и даже больше. Мы уже посоветовали
+                            Вашу компанию нашим друзьям, и некоторые даже уже заключили контракт с Вами.</p>
+                    </div>
+                    <div class="review-item__footer">
+                        <div class="review-item__image">
+                            <img src="{{ landingImage }}/review-5.png">
+                        </div>
+                        <div class="review-item__info">
+                            <p>Наталья Божок</p>
+                            <p>Киев</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-item col-12 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="review-item__content">
+                        <p>Ми відправили сина на навчання до Польщі після 9-го класу. Особливих побоювань в мене не було, але одразу
+                            після вступу мене приємно вразила висока якість харчування у ліцеї. </p>
+                        <p>Найбільше, що сподобалося сину - це самостійне життя. Нові враження, нові друзі, усвідомлення відповідальності
+                            за свої дії та відчуття того, що твоє життя у твоїх руках.</p>
+                        <p>Компанія “Osvita Market” надала вичерпну актуальну інформацію про ліцеї Польщі та напрямки навчання. Співробітники
+                            компанії завжди були он-лайн з будь-яких питань.</p>
+                    </div>
+                    <div class="review-item__footer">
+                        <div class="review-item__image">
+                            <img src="{{ landingImage }}/review-6.png">
+                        </div>
+                        <div class="review-item__info">
+                            <p>Снежанна Малиновская</p>
+                            <p>Запорожье</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-item col-12 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="review-item__content">
+                        <p>Перед відправкою, ми побоювалися, що дитина занадто "домашня" та не зможе адаптуватися до абсолютно нового
+                            підходу до навчання, нового класу та вчителів, в умовах іноземного середовища та за необхідності самостійно
+                            задовільняти свої побутові потреби.</p>
+                        <p>Нам допомогло дружнє ставлення вчителів і взаємодопомога дітей. Також дуже допомогли професіонали з “Osvita
+                            Market”, які завжди готові підстрахувати в екстренних випадках.</p>
+                    </div>
+                    <div class="review-item__footer">
+                        <div class="review-item__image">
+                            <img src="{{ landingImage }}/review-7.png">
+                        </div>
+                        <div class="review-item__info">
+                            <p>Ирина Батина</p>
+                            <p>Киев</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-item col-12 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="review-item__content">
+                        <p>Больше всего ему и нам родителям нравиться отношение учителей к детям, а со временем и отношение детей к
+                            учителям. Дети общаются с учителями очень непринужденно, свободно и легко. Они могут вступать в дискуссию
+                            с учителем если с чем то не согласны и решать это конструктивным методом. Учителя всегда готовы помочь
+                            ребенку в том случае если он этого просит и проявляет инициативу сам и никогда не откажут сославшись на
+                            плотный график, хотя на самом деле график у них очень плотный.</p>
+                        <p>Мы очень рады встрече с компанией “Osvita Market” и за их ценные советы относительно обучения в Польше. На
+                            сегодняшний день мы не разу не пожалели что отправили сына на учебу за границу..</p>
+                    </div>
+                    <div class="review-item__footer">
+                        <div class="review-item__image">
+                            <img src="{{ landingImage }}/review-8.png">
+                        </div>
+                        <div class="review-item__info">
+                            <p>Дмитрий Сигнеев</p>
+                            <p>Киев</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="review__footer wow fadeInUp" data-wow-delay="0.3s">
+                <button class="btn btn_size-lg btn_brand-1 effect effect_bounce-top" data-action="modal" data-open="#modal-form">Записаться на консультацию
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="quadro quadro_style-1 quadro_top-right" data-emergence="hidden">
+            <span class="quadro__part quadro__part_1"></span>
+            <span class="quadro__part quadro__part_2"></span>
+            <span class="quadro__part quadro__part_3"></span>
+            <span class="quadro__part quadro__part_4"></span>
+            <span class="quadro__part quadro__part_5"></span>
+            <span class="quadro__part quadro__part_6"></span>
+            <span class="quadro__part quadro__part_7"></span>
+            <span class="quadro__part quadro__part_8"></span>
+            <span class="quadro__part quadro__part_9"></span>
+        </div>
+        <div class="contact__info wow fadeInUp" data-wow-delay="0.2s">
+            <p class="contact__info-title">Звоните,
+                <br>приходите в гости
+            </p>
+            <div class="contact__info-subtitle">
+                {% include 'shared/options/address.twig' with {
+                    address: options.address
+                } %}
+            </div>
+            <div class="contact__info-part contact__info-part_phone">
+                {% include 'shared/options/phones.twig' with {
+                    class: 'contact__info-links',
+                    phones: options.phones
+                } %}
+            </div>
+            <div class="contact__info-part contact__info-part_email">
+                {% include 'shared/options/email.twig' with {
+                    email: options.email
+                } %}
+            </div>
+        </div>
+        <div class="contact__map" id="map">
+        </div>
+    </section>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4vqrgTZ81rE5juLYbXT6Tg7y6T8Ii0Nc&amp;callback=initMap&amp;language=ru"></script>
+    <script>
+        var landImage = "{{ landingImage }}/map-marker.png";
+
+        function initMap() {
+            var uluru = {lat: 50.421125, lng: 30.523122};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: uluru,
+                disableDefaultUI: true,
+                scrollwheel: false
+            });
+
+            var title = 'г. Киев, ул. Предславинская, 37, оф. 413, 4 этаж';
+
+            var contentString = '<div class="contact__info-window">' + title + '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+                title: title,
+                icon: landImage
+            });
+
+            infowindow.open(map, marker);
+        }
+    </script>
+</div>
+<div class="modal" id="modal-thx">
+    <div class="modal__box modal__box_transparent appear__box">
+        <div class="modal__header">
+            <button class="modal__close appear__close" data-close="modal">&times;</button>
+        </div>
+        <div class="modal__body">
+            <img src="{{ landingImage }}/thx.png">
+        </div>
+    </div>
+</div>
+<div class="modal" id="modal-appear">
+    <div class="modal__box modal__box_transparent appear__box">
+        <div class="modal__header">
+            <button class="modal__close appear__close" data-close="modal">&times;</button>
+        </div>
+        <div class="modal__body">
+            <div class="appear">
+                <div class="appear__inner">
+                    <p class="appear__title">Как бесплатно получить<br>среднее образование в Словакии и<br> поступить в ВУЗы Европы</p>
+                    <p class="appear__subtitle"><span class="color-brand-3">Бесплатный</span> онлайн-курс</p>
+                    <a
+                        href="https://lp.osvitamarket.com/slovakia/?utm_source=popup&utm_medium=popup&utm_campaign=lps_Slovakia"
+                        target="_blank"
+                        class="btn btn_size-medium btn_radius btn_brand-3 effect effect_bounce-top js-appear__button">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

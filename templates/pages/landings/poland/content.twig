@@ -1,7 +1,7 @@
 {% set landingFolder = "#{site.theme.link}/static/assets/landings/poland" %}
 {% set landingImage = "#{landingFolder}/img" %}
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.9/css/intlTelInput.css" rel="stylesheet">
-<link href="{{ landingFolder }}/css/style.css" rel="stylesheet">
 
 <div class="site" id="page">
     <header class="v-site-header">
@@ -11,6 +11,7 @@
             number: '1'
         } %}
         <div class="v-container">
+            {% include 'shared/header-breadcrumbs.twig' %}
             <div class="v-site-header__row v-row">
                 <div class="v-col-12 v-col-sm-7">
                     <h1 class="v-site-header__title v-title-lg">Среднее<br>образование в <span class="v-site-header__title-flag">Польше</span>

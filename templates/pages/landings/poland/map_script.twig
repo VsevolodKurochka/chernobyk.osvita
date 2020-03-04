@@ -1,6 +1,7 @@
 <script>
 	// This example displays a marker at the center of Australia.
 	// When the user clicks the marker, an info window opens.
+    var landImage = "{{ landingImage }}/map-marker.png";
 
 	function initMap() {
 			var uluru = {lat: 50.421125, lng: 30.523122};
@@ -23,7 +24,7 @@
 	position: uluru,
 	map: map,
 	title: title,
-	icon: 'img/map-marker.png'
+	icon: landImage
 	});
 
 	infowindow.open(map, marker);
