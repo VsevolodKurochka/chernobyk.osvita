@@ -29,11 +29,10 @@
 
         a
           +py(2px)
-
-        &:not(.menu-item-has-children) a
           +linkEffect3($color-white)
 
-        &.current-menu-item a
+        &.current-menu-item a,
+        &.current-menu-parent > a
           &:before
             width: 100%
 
@@ -59,9 +58,11 @@
           +bgc($color-white)
           +c($color-brand-1)
           +tr()
-          &:hover
-            +bgc($color-brand-1)
-            +c($color-white)
+
+        li.current-menu-item a,
+        a:hover
+          +bgc($color-brand-1)
+          +c($color-white)
     +min(md)
       &:hover > ul
         opacity: 1

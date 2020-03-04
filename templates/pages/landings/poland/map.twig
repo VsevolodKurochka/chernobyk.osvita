@@ -1,0 +1,29 @@
+<section class="v-contact">
+	<div class="v-quadro v-quadro_style-1 v-contact__quadro v-contact__quadro_2" data-emergence="hidden"><span class="v-quadro__part v-quadro__part_1"></span><span class="v-quadro__part v-quadro__part_2"></span><span class="v-quadro__part v-quadro__part_3"></span><span class="v-quadro__part v-quadro__part_4"></span><span class="v-quadro__part v-quadro__part_5"></span><span class="v-quadro__part v-quadro__part_6"></span><span class="v-quadro__part v-quadro__part_7"></span><span class="v-quadro__part v-quadro__part_8"></span><span class="v-quadro__part v-quadro__part_9"></span>
+	</div>
+	<div class="v-contact__map" id="map">
+	</div>
+	<div class="v-contact__info">
+		<p class="v-contact__info-title">
+			<span class="v-color-brand-2">
+				Звоните</span>, <br>приходите в гости
+		</p>
+		<div class="v-contact__info-subtitle">
+			{% include 'shared/options/address.twig' with {
+				address: options.address
+			} %}
+		</div>
+		<div class="v-contact__info-part v-contact__info-part_phone">
+			{% include 'shared/options/phones.twig' with {
+				class: 'v-contact__info-links',
+				phones: options.phones
+			} %}
+		</div>
+		<div class="v-contact__info-part v-contact__info-part_email v-contact__info-links">
+			{% include 'shared/options/email.twig' with {
+				email: options.email
+			} %}
+		</div>
+	</div>
+</section>
+{% include 'pages/landings/poland/map_script.twig' %}
