@@ -1,17 +1,16 @@
 <?php
 
 add_action( 'template_redirect', 'custom_template_redirect', 0 );
-function custom_template_redirect()
-{
-    if( is_page() )
-    {
+function custom_template_redirect() {
+    if( is_page() ) {
         global $post, $page;
         $num_pages = substr_count( $post->post_content, '<!--nextpage-->' ) + 1;
         if( $page > $num_pages ){
             global $wp_query;
             $wp_query->set_404();
             status_header( 404 );
-            get_template_part( 404 ); exit();
+            get_template_part( 404 );
+            exit();
         }
     }
 }
@@ -24,6 +23,12 @@ function parseUppercase($wp) {
     $query = $wp->query_vars;
     if( $query && isset($query['pagename']) && isPartUppercase($query['pagename']) ) {
         $link = site_url(). '/' . strtolower($query['pagename']);
+        wp_redirect( $link , 301 );
+        exit();
+    }
+
+    if( $query && isset($query['name']) && isPartUppercase($query['name']) ) {
+        $link = site_url(). '/' . strtolower($query['name']);
         wp_redirect( $link , 301 );
         exit();
     }
