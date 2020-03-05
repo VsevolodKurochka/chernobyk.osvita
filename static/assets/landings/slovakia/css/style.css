@@ -1466,7 +1466,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
   margin-top: 30px;
 }
 
-.country {
+.country-section {
   background-image: url('../img/bg-country.jpg');
   background-size: cover;
 }
@@ -2249,9 +2249,8 @@ input[type="checkbox"]:checked + .control__indicator:before {
   justify-content: center;
   background: url("../img/popup.png") 0 0 no-repeat;
   background-size: cover;
-  width: 290px;
-  height: 290px;
-  padding: 15px;
+  width: 250px;
+  height: 300px;
   text-align: center;
   font-family: 'FormularBold';
   color: #fff;
@@ -2264,10 +2263,6 @@ input[type="checkbox"]:checked + .control__indicator:before {
 .appear__title,
 .appear__subtitle {
   margin-bottom: 15px;
-}
-
-.appear__box {
-  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -2288,4 +2283,25 @@ input[type="checkbox"]:checked + .control__indicator:before {
   .appear__subtitle {
     margin-bottom: 25px;
   }
+}
+
+.intl-tel-input {
+  display: block;
+}
+
+.intl-tel-input.separate-dial-code .selected-flag,
+.intl-tel-input.allow-dropdown .flag-container:hover .selected-flag {
+  background-color: transparent;
+}
+
+.selected-dial-code {
+  font-size: 12px;
+}
+
+.wpcf7 div.wpcf7-response-output {
+  color: #5f5f5f;
+}
+
+.wpcf7 [type="tel"] {
+  text-align: left;
 }

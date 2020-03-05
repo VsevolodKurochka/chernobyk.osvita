@@ -4202,3 +4202,20 @@ End:  ANIMATIONS
 .intl-tel-input {
   display: block;
 }
+
+.intl-tel-input.separate-dial-code .selected-flag,
+.intl-tel-input.allow-dropdown .flag-container:hover .selected-flag {
+  background-color: transparent;
+}
+
+.selected-dial-code {
+  font-size: 12px;
+}
+
+.wpcf7 div.wpcf7-response-output {
+  color: #5f5f5f;
+}
+
+.wpcf7 [type="tel"] {
+  text-align: left;
+}

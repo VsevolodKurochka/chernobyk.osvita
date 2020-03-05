@@ -644,7 +644,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.9/js/intlTelInput.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/gh/RobinHerbots/jquery.inputmask@3.3.11/dist/min/jquery.inputmask.bundle.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.9/js/utils.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
 
@@ -693,7 +693,7 @@
 
     <script>
         $( window ).on('load', function() {
-            telInput = $('input[name="vphone"]');
+            telInput = $('input[type="tel"]');
             initPhoneInput(telInput);
             $(":input").inputmask();
         });
@@ -723,69 +723,5 @@
             element.attr( "data-inputmask", "'mask': '" + element.attr('placeholder').replace(/[0-9]/g, "9") + "'" );
             $(":input").inputmask();
         }
-
-        jQuery.validator.addMethod("validate_email", function(value, element) {
-
-            if (/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(value)) {
-                return true;
-            } else {
-                return false;
-            }
-        }, "Введите верный Email адрес");
-
-        $( "form" ).submit(function( e ) {
-            e.preventDefault();
-            var form = $(this);
-            console.log(form);
-
-            form.validate({
-                rules: {
-                    vemail: {
-                        validate_email: true
-                    },
-                },
-                messages: {
-                    email: {
-                        required: "Необходимо заполнить поле Email адреса",
-                        email: "Введите верный Email адрес вида name@domain.com"
-                    }
-                }
-            });
-            if (form.valid()) {
-                var formData = form.serializeArray();
-                form.find("[type=submit]").prop('disabled', true);
-                form.find("[type=submit]").text('Заявка отправляется...');
-
-                formData.forEach(function (item) {
-                    if (item.name === 'vphone') {
-                        item.value = form.find("input[name=vphone]").intlTelInput("getNumber");
-                    }
-                });
-                axios({
-                    method: 'post',
-                    url: form.attr('action'),
-                    mode: 'no-cors',
-                    credentials: 'same-origin',
-                    data: $.param(formData),
-                    withCredentials: true
-                })
-                    .then(function (response) {
-                        console.log(response);
-                        setTimeout(function() {
-                            // window.location = response.data.redirect;
-                            $('#modal-thx').addClass('modal_showing_in');
-                        }, 1000);
-                    })
-                    .catch(function (error) {
-                        console.log(error);
-                    });
-
-            }
-            else {
-                form.find('input[name="vemail"]').val('')
-            }
-        });
-
     </script>
-
 </div>
