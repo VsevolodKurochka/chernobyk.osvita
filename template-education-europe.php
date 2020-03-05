@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Обучение Европа
+* Template Name: Среднее образование
 */
 
 $context = Timber::get_context();

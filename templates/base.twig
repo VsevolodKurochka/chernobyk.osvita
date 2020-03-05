@@ -2,6 +2,11 @@
 {% include 'html-header.twig' %}
 </head>
 <body class="{{body_class}}" data-template="base.twig">
+{% block scripts %}
+	{% if post.get_field('place_body_scripts') %}
+		{{ post.get_field('place_body_scripts') }}
+	{% endif %}
+{% endblock %}
 <div class="preloader" style="position: fixed;top: 0;left: 0;right: 0;bottom: 0;display: none;align-items: center;justify-content: center;background-color: #e21e49;z-index: 999999;">
 	<div class="lds-roller">
 		<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
