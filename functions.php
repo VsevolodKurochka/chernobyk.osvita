@@ -77,7 +77,7 @@ class StarterSite extends Timber\Site {
             'hierarchical'        => false,
             'supports'            => array('title'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
             'taxonomies'          => array(),
-            'has_archive'         => true,
+            'has_archive'         => false,
             'rewrite'             => true,
             'query_var'           => true
         ) );
