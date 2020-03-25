@@ -1,0 +1,18 @@
+.blog-post
+  .alignright
+    float: right
+  .alignleft
+    float: left
+
+  .alignnone
+    +d(block)
+    +size(100%, auto)
+    &-wrapper
+      +mx(- map-get($padding-offsets, default))
+      +my(30px)
+      +min(sm)
+        +mx(- map-get($padding-offsets, sm))
+
+      +min(md)
+        +mx(- map-get($padding-offsets, md))
+        +mb(60px)

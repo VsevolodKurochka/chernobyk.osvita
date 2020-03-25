@@ -1,0 +1,13 @@
+.blog-post
+  +bgc($color-white)
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.05)
+  padding: map-get($padding-offsets, default)
+  +cf()
+  +fs(16px)
+
+  +min(sm)
+    padding: map-get($padding-offsets, sm)
+
+  +min(md)
+    padding: map-get($padding-offsets, md)
+    +fs(18px)

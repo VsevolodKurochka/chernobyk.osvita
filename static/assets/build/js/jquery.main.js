@@ -14,4 +14,8 @@ $(document).ready(function(){
 		e.preventDefault();
 		scroll($(this).closest('section, header').next(), 1500);
 	});
+
+	$('.blog-post img.alignnone').each(function () {
+		$(this).wrap('<div class="alignnone-wrapper"></div>')
+	});
 });
