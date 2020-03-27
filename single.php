@@ -12,6 +12,7 @@
 $context         = Timber::context();
 $timber_post     = Timber::query_post();
 $context['post'] = $timber_post;
+$context['sidebar'] = Timber::get_sidebar('sidebar.php');
 
 Timber::render(
     array(

@@ -52,6 +52,9 @@ class StarterSite extends Timber\Site {
         add_action( 'wp_footer', array( $this, 'register_scripts' ) );
         add_filter('upload_mimes', array($this, 'cc_mime_types'), 1, 1);
 
+
+        add_action( 'widgets_init', array($this, 'register_my_widgets') );
+
 		parent::__construct();
 	}
 
@@ -138,6 +141,19 @@ class StarterSite extends Timber\Site {
 		$twig->addExtension( new Twig\Extension\StringLoaderExtension() );
 		return $twig;
 	}
+
+    function register_my_widgets(){
+        register_sidebar( array(
+            'name'          => sprintf(__('Sidebar blog')),
+            'id'            => "sidebar-blog",
+            'description'   => '',
+            'class'         => '',
+            'before_widget' => '<ul id="%1$s" class="widget %2$s">',
+            'after_widget'  => "</ul>",
+            'before_title'  => '<h3 class="widget__title">',
+            'after_title'   => "</h3>\n",
+        ) );
+    }
 
 }
 
