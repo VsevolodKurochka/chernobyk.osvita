@@ -1,0 +1,39 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	{% include 'shared/header.twig' with {
+		class: '',
+		title: post.get_field('header_title'),
+		subtitle: post.get_field('header_subtitle'),
+		background: post.thumbnail.src|resize(1600, 700)
+	} %}
+	<section class="blog-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-sm-9 col-md-8">
+					<div class="row">
+						{% for post in posts %}
+							{% set type = 'small' %}
+							{% set class = 'col-12 col-sm-6' %}
+
+							{% if loop.index == 1 %}
+								{% set type = 'large' %}
+								{% set class = 'col-12' %}
+							{% endif %}
+
+							{% include 'pages/blog/blog-item.twig' with {
+								class: class,
+								type: type,
+								post: post
+							} %}
+						{% endfor %}
+					</div>
+				</div>
+				<div class="col-12 col-sm-3 col-md-4">
+					{{ sidebar }}
+				</div>
+			</div>
+		</div>
+		{% include 'pages/blog/consultation.twig' %}
+	</section>
+{% endblock %}
