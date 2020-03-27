@@ -148,10 +148,10 @@ class StarterSite extends Timber\Site {
             'id'            => "sidebar-blog",
             'description'   => '',
             'class'         => '',
-            'before_widget' => '<ul id="%1$s" class="widget %2$s">',
-            'after_widget'  => "</ul>",
-            'before_title'  => '<h3 class="widget__title">',
-            'after_title'   => "</h3>\n",
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => "</div>",
+            'before_title'  => '<p class="widget__title">',
+            'after_title'   => "</p>",
         ) );
     }
 
