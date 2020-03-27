@@ -2,7 +2,7 @@
 
 {% block content %}
 	{% include 'shared/header.twig' with {
-		class: 'blog-header',
+		class: '',
 		title: post.title,
 		background: post.thumbnail.src|resize(1600, 700),
 		buttons: [
@@ -24,7 +24,7 @@
 					{{ sidebar }}
 				</div>
 			</div>
-			{% include 'pages/blog/consultation.twig' %}
 		</div>
+		{% include 'pages/blog/consultation.twig' %}
 	</section>
 {% endblock %}

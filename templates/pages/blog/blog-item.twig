@@ -1,0 +1,30 @@
+{% set imageWidth = type == 'large' ? 720 : 360 %}
+{% set imageHeight = type == 'large' ? 450 : 250 %}
+
+<article class="blog-item blog-item_{{ type }} {{ class }}">
+    <div class="blog-item__inner">
+        <div class="blog-item__header">
+            <img
+                    src="{{ post.thumbnail|resize(imageWidth, imageHeight) }}"
+                    alt="{{ title|striptags }}"
+                    class="blog-item__image">
+        </div>
+        <div class="blog-item__body">
+            <div class="blog-item__content">
+                {{ function('the_category', '') }}
+                <a href="{{ post.link }}" class="blog-item__title" target="_blank">{{ post.title }}</a>
+                {% if type != 'large' %}
+                    <div class="blog-item__description">
+                        {{ post.preview.read_more('').length(length|default(15)) }}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="blog-item__footer">
+                <span class="blog-item__date">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="blog-item__icon"><path d="m25 2c-12.690705 0-23 10.309295-23 23s10.309295 23 23 23 23-10.309295 23-23-10.309295-23-23-23zm0 2c11.609824 0 21 9.390176 21 21s-9.390176 21-21 21-21-9.390176-21-21 9.390176-21 21-21zm12.039062 6.990234a1.0001 1.0001 0 0 0 -.773437.332032l-10.082031 10.921875a3 3 0 0 0 -1.183594-.244141 3 3 0 0 0 -3 3 3 3 0 0 0 3 3 3 3 0 0 0 .5-.041016l3.625 6.527344a1.0010694 1.0010694 0 1 0 1.75-.972656l-3.628906-6.529297a3 3 0 0 0 .753906-1.984375 3 3 0 0 0 -.347656-1.400391l10.082031-10.921875a1.0001 1.0001 0 0 0 -.695313-1.6875z"></path></svg>
+                    {{ post.date }}
+                </span>
+            </div>
+        </div>
+    </div>
+</article>

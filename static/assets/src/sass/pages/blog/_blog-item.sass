@@ -1,0 +1,117 @@
+.blog-item
+  +r()
+  +mb(30px)
+
+  &__inner
+    +r()
+    +bgc($color-white)
+    box-shadow: 0 0 27px 3px rgba(0, 0, 0, 0.15)
+
+  &__body
+    padding: 15px
+    +min(md)
+      padding: 25px 20px
+
+  &__header
+    +fs(0)
+
+  &__image
+    +w(100%)
+    object-fit: cover
+
+  &__title
+    +d(block)
+    +fw(900)
+    +lh(1.1)
+    +mb(15px)
+    +c(inherit)
+    text-decoration: none
+    +tr()
+    &:hover
+      +c($color-brand-2)
+
+  &__description
+    +fs(14px)
+    +mb(30px)
+
+  &__date
+    +d(flex)
+    +ai(center)
+    +fs(12px)
+
+  &__icon
+    +d(inline-block)
+    +size(20px)
+    +mr(5px)
+
+  .post-categories
+    +mb(5px)
+    list-style: none
+    a
+      text-decoration: none
+      +fs(14px)
+      +tr()
+
+  &_small &
+    &__header
+      +h(250px)
+
+    &__image
+      +h(100%)
+      object-fit: cover
+
+    &__title
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 2
+      -webkit-box-orient: vertical
+      +fs(16px)
+      +min(md)
+        +fs(18px)
+        min-height: 40px
+
+  &_small .post-categories
+    a
+      +c($color-brand-2)
+      &:hover
+        +c($color-brand-1)
+
+  &_large &
+    &__header
+      +r()
+      &:before
+        content: ''
+        +a(0, 0)
+        +size(100%)
+        +bgc(transparentize($color-brand-1, 0.35))
+
+    &__body
+      +a(null, null, 0, 0)
+      z-index: 1
+
+    &__title
+      +c($color-white)
+      &:hover
+        +c($color-brand-2)
+      +min(md)
+        +fs(30px)
+
+    &__date
+      +fw(900)
+      +c($color-white)
+      opacity: 0.5
+      +fs(14px)
+
+    &__icon
+      path
+        fill: $color-white
+
+  &_large .post-categories
+    +mb(15px)
+    a
+      padding: 10px 15px
+      +bgc($color-brand-2)
+      +c($color-white)
+      +fw(900)
+      &:hover
+        +bgc($color-brand-1)
