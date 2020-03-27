@@ -13,6 +13,7 @@ require get_template_directory() . '/functions/filters.php';
 require get_template_directory() . '/functions/footer.php';
 require get_template_directory() . '/functions/cf7.php';
 require get_template_directory() . '/functions/seo.php';
+require get_template_directory() . '/functions/widgets.php';
 
 $composer_autoload = __DIR__ . '/vendor/autoload.php';
 if ( file_exists( $composer_autoload ) ) {

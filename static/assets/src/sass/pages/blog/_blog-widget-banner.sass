@@ -1,0 +1,25 @@
+.widget-banner
+  +r()
+  z-index: 1
+  +c($color-white)
+  &:before
+    content: ''
+    +a(0, 0)
+    +size(100%)
+    background-color: transparentize($color-brand-1, 0.3)
+  &__background
+    +a(0, 0)
+    +size(100%)
+    object-fit: cover
+    z-index: -1
+  &__content
+    +r()
+    z-index: 1
+  &__title
+    +fw(900)
+    +fs(25px)
+    +mb(15px)
+    +min(md)
+      +fs(30px)
+  &__description
+    +mb(20px)
