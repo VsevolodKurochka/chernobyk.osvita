@@ -1,4 +1,23 @@
 .blog-post
+  ol, ul
+    +my(25px)
+
   ol
     +pl(20px)
-    +my(25px)
+
+  ul
+    list-style: none
+    li
+      +r()
+      +offset('b', 7.5px)
+      +pl(15px)
+      +min(md)
+        +pl(20px)
+      &:after
+        content: ""
+        +a(5px, null, null, 0)
+        +size(7px)
+        border-radius: 100%
+        +bgc($color-brand-2)
+        +min(md)
+          +size(12px)
