@@ -41,24 +41,29 @@
 
   &__icon
     +d(inline-block)
-    +size(20px)
+    +size(15px)
     +mr(5px)
+    +min(sm)
+      +fs(20px)
 
   .post-categories
     +mb(5px)
     list-style: none
     a
       text-decoration: none
-      +fs(14px)
+      +fs(11px)
       +tr()
+      +min(sm)
+        +fs(14px)
 
   &_small &
     &__header
-      +h(250px)
+      +h(150px)
+      +min(sm)
+        +h(250px)
 
     &__image
       +h(100%)
-      object-fit: cover
 
     &__title
       overflow: hidden
@@ -100,7 +105,9 @@
       +fw(900)
       +c($color-white)
       opacity: 0.5
-      +fs(14px)
+      +fs(11px)
+      +min(sm)
+        +fs(14px)
 
     &__icon
       path
@@ -109,9 +116,11 @@
   &_large .post-categories
     +mb(15px)
     a
-      padding: 10px 15px
+      padding: 5px 8px
       +bgc($color-brand-2)
       +c($color-white)
       +fw(900)
       &:hover
         +bgc($color-brand-1)
+      +min(sm)
+        padding: 10px 15px
