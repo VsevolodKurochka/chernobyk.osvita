@@ -17,14 +17,16 @@
 $templates = array( 'archive.twig', 'index.twig' );
 
 $context = Timber::context();
+$context['term_page'] = new Timber\Term();
+$context['sidebar'] = Timber::get_sidebar('sidebar.php');
+$context['title'] = 'Архив';
 
-$context['title'] = 'Archive';
 if ( is_day() ) {
-	$context['title'] = 'Archive: ' . get_the_date( 'D M Y' );
+	$context['title'] = 'Архив: ' . get_the_date( 'D M Y' );
 } elseif ( is_month() ) {
-	$context['title'] = 'Archive: ' . get_the_date( 'M Y' );
+	$context['title'] = 'Архив: ' . get_the_date( 'M Y' );
 } elseif ( is_year() ) {
-	$context['title'] = 'Archive: ' . get_the_date( 'Y' );
+	$context['title'] = 'Архив: ' . get_the_date( 'Y' );
 } elseif ( is_tag() ) {
 	$context['title'] = single_tag_title( '', false );
 } elseif ( is_category() ) {
@@ -36,5 +38,11 @@ if ( is_day() ) {
 }
 
 $context['posts'] = new Timber\PostQuery();
+$context['sidebar'] = Timber::get_sidebar('sidebar.php');
+$context['wp_pagenavi'] = wp_pagenavi(
+    [
+        'echo' => false
+    ]
+);
 
 Timber::render( $templates, $context );

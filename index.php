@@ -14,9 +14,14 @@
  */
 
 $context          = Timber::context();
+$context['term_page'] = new Timber\Term();
 $context['posts'] = new Timber\PostQuery();
+$context['sidebar'] = Timber::get_sidebar('sidebar.php');
+
 $templates        = array( 'index.twig' );
+
 if ( is_home() ) {
 	array_unshift( $templates,'home.twig' );
 }
+
 Timber::render( $templates, $context );

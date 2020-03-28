@@ -1,9 +1,14 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<h2>{{ foo }}</h2>
-	<p>{{ qux }}</p>
-	{% for post in posts %}
-		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-	{% endfor %}
+	{% include 'shared/header.twig' with {
+		class: 'blog-header',
+		title: title,
+		background: term_page.background_image|resize(1600, 700)
+	} %}
+	{% include 'pages/blog/blog-content.twig' with {
+		posts: posts,
+		wp_pagenavi: wp_pagenavi,
+		sidebar: sidebar
+	} %}
 {% endblock %}
