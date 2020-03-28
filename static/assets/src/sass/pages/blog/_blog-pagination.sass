@@ -1,0 +1,47 @@
+=pagination-item()
+  +d(inline-block)
+  vertical-align: middle
+  padding: 8px 10px
+  +tr()
+  text-decoration: none
+  color: inherit
+  +min(md)
+    padding: 13px 20px
+
+=pagination-active-item()
+  +bgc($color-brand-2)
+  +c($color-white)
+
+.wp-pagenavi
+  +row()
+  +ai(center)
+  +my(15px)
+  +fs(14px)
+  +c($color-general)
+  +bgc($color-white)
+  +min(sm)
+    +fs(16px)
+  +min(md)
+    +fs(20px)
+
+  .current
+    +pagination-item()
+    +pagination-active-item()
+
+  .page
+    +pagination-item()
+    &:hover
+      +pagination-active-item()
+
+  .previouspostslink,
+  .nextpostslink
+    +pagination-item()
+    &:hover
+      +c($color-brand-2)
+
+  .previouspostslink
+    border-right: 1px solid #f7f7f7
+
+  .nextpostslink
+    margin-left: auto
+    border-left: 1px solid #f7f7f7
