@@ -2,7 +2,7 @@
 
 {% block content %}
 	{% include 'shared/header.twig' with {
-		class: '',
+		class: 'blog-header',
 		title: post.get_field('header_title'),
 		subtitle: post.get_field('header_subtitle'),
 		background: post.thumbnail.src|resize(1600, 700)

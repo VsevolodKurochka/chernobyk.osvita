@@ -2,7 +2,7 @@
 
 {% block content %}
 	{% include 'shared/header.twig' with {
-		class: '',
+		class: 'blog-header',
 		title: post.title,
 		background: post.thumbnail.src|resize(1600, 700),
 		buttons: [

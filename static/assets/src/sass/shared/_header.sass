@@ -37,7 +37,10 @@
     +fw(900)
     +mb(45px)
     +max(sm)
-      +lh(2)
+      display: -webkit-box
+      overflow: hidden
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
     +min(sm)
       +fs(14px)
     +min(md)
@@ -48,7 +51,3 @@
       +c(inherit)
       &:hover
         +c($color-brand-2)
-
-    .breadcrumb_last
-      +max(sm)
-        +d(block)
